@@ -1,0 +1,16 @@
+
+{
+  "tests": [
+    {
+      "test_id": "T_auto_1",
+      "requirement_id": "FR1",
+      "scenario": "Workout Logging Stability",
+      "steps": [
+        "Open the workout logging screen",
+        "Enter workout details",
+        "Submit the workout"
+      ],
+      "expected_result": "The workout is saved successfully and the application remains stable."
+    }
+  ]
+}
