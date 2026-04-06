@@ -1,0 +1,41 @@
+{
+  "app_name": "MindDoc",
+  "app_id": "de.moodpath.android",
+  "source_url": "https://play.google.com/store/apps/details?id=de.moodpath.android&hl=en_CA",
+  "dataset_size": 4267,
+  "raw_dataset_size": 5000,
+  "collection_method": {
+    "tool": "google-play-scraper",
+    "script": "src/01_collect_or_import.py",
+    "platform": "Google Play Store",
+    "lang": "en",
+    "country": "ca",
+    "sort": "newest",
+    "target_raw_review_count": 5000,
+    "notes": "Collected programmatically using paginated review requests."
+  },
+  "collection_notes": {
+  "reviews_extracted": 5000,
+  "reviews_available_on_store_at_collection_time": "about 39500 reviews",
+  "limitation_note": "The app had more reviews available than the assignment required, so 5000 reviews were collected."
+},
+  "cleaning_decisions": {
+    "script": "src/02_clean.py",
+    "removed_duplicates": true,
+    "removed_empty_entries": true,
+    "removed_extremely_short_reviews": true,
+    "extremely_short_threshold": "fewer than 3 tokens after cleaning",
+    "removed_punctuation": true,
+    "removed_special_characters_and_emojis": true,
+    "converted_numbers_to_text": true,
+    "removed_extra_whitespace": true,
+    "lowercased_text": true,
+    "removed_stop_words": true,
+    "lemmatized_reviews": true,
+    "records_removed_as_duplicates": 17,
+    "records_removed_as_empty": 23,
+    "records_removed_as_too_short": 693
+  },
+  "cleaned_dataset_size": 4267
+  
+}
