@@ -1,13 +1,254 @@
-{  "groups": [
+{
+  "groups": [
     {
-      "group_id": "H1",
-      "theme": "Workout logging failures during activity tracking",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
-      "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+      "group_id": "AG1",
+      "theme": "Privacy, data sharing, and access to personal records",
+      "review_ids": [
+        "rev_002819",
+        "rev_002824",
+        "rev_003744",
+        "rev_002820",
+        "rev_002029",
+        "rev_002567",
+        "rev_004717",
+        "rev_002293",
+        "rev_003958",
+        "rev_001102",
+        "rev_000473",
+        "rev_003968",
+        "rev_003381",
+        "rev_001324",
+        "rev_001314"
       ],
-      "notes": "Removed one unrelated review about login problems from the original automated group."
+      "example_reviews": [
+        "Was great until I read privacy agreement. They give your data to Facebook for marketing purposes using your mobile device's ad ID. I took screenshots of my last ~2 years of data and just uninstalled the program.",
+        "After reading the privacy policy I discovered that the app has facebook software development kit integrated in app, which means that all data from app is accessible for facebook. I don't recommend installing it if you don't want your mental health data used against you and sold to advertisers.",
+        "Used to be good. Now you cant access your own past data. Great. 3 years down the drain. Loads of medical a great life events lost. Great. Old school planner still the best thing."
+      ],
+      "group_summary": "This group captures users who are worried about how sensitive mental health data is collected, shared, and stored, as well as users who are frustrated when they cannot access their own past records.",
+      "keywords": [
+        "privacy",
+        "data sharing",
+        "security",
+        "personal data",
+        "records",
+        "data access"
+      ],
+      "representative_review_ids": [
+        "rev_002819",
+        "rev_002824",
+        "rev_003744",
+        "rev_002820",
+        "rev_002029",
+        "rev_002567",
+        "rev_004717",
+        "rev_002293",
+        "rev_003958",
+        "rev_001102",
+        "rev_000473",
+        "rev_003968"
+      ],
+      "notes": "Refined the theme so it is not only about privacy policy concerns but also about access to stored personal records. Replaced one weak generic example review with a stronger review about losing access to past data."
+    },
+    {
+      "group_id": "AG2",
+      "theme": "Technical failures, blank screens, and lost progress",
+      "review_ids": [
+        "rev_000878",
+        "rev_003390",
+        "rev_000728",
+        "rev_000560",
+        "rev_003165",
+        "rev_000552",
+        "rev_002454",
+        "rev_000665",
+        "rev_003242",
+        "rev_000843",
+        "rev_000584",
+        "rev_001146",
+        "rev_002778",
+        "rev_000857",
+        "rev_000540"
+      ],
+      "example_reviews": [
+        "I did a whole 14 days of documenting my emotions and I can't even see my results. Whenever I click on seeing my results, it's a blank page. Please correct this issue.",
+        "I really like it, and the exercises are good, but recently there is a persistent bug happening. When I click the notification reminding me to answer some questions, it opens the app but the page is blank.",
+        "I would not recommend to patients given numerous technical issues"
+      ],
+      "group_summary": "This group focuses on users whose experience is interrupted by bugs such as blank pages, loading problems, lost entries, or broken features after updates.",
+      "keywords": [
+        "bug",
+        "blank page",
+        "error",
+        "crash",
+        "update problem",
+        "lost data"
+      ],
+      "representative_review_ids": [
+        "rev_000878",
+        "rev_003390",
+        "rev_000728",
+        "rev_000560",
+        "rev_003165",
+        "rev_000552",
+        "rev_002454",
+        "rev_000665",
+        "rev_003242",
+        "rev_000843",
+        "rev_000584",
+        "rev_001146"
+      ],
+      "notes": "Kept the membership largely the same because this automated group was already strong. Tightened the theme wording so it clearly reflects the main failure patterns shown in the reviews."
+    },
+    {
+      "group_id": "AG3",
+      "theme": "Subscription cost and paywall frustration",
+      "review_ids": [
+        "rev_000493",
+        "rev_001879",
+        "rev_001191",
+        "rev_000323",
+        "rev_000227",
+        "rev_003955",
+        "rev_000734",
+        "rev_000609",
+        "rev_000297",
+        "rev_000415",
+        "rev_004107",
+        "rev_004765",
+        "rev_000913",
+        "rev_000276",
+        "rev_002922"
+      ],
+      "example_reviews": [
+        "Wow. Cannot believe you've locked the basic bare bones feature of viewing mood history behind your $100/year paywall. I would happily pay a one time price for a premium app, but there's no way I can afford that absurdly expensive subscription model. What is the point of a mood journal app if you can't look back and see your old entries?? I was worried this app would go south when it got bought out. I guess I was right. New users beware, don't waste your time, it's all downhill from here.",
+        "Cool but it's really expensive (probably no regional pricing)",
+        "Pretty good except for the expensive paywall"
+      ],
+      "group_summary": "This group represents users who feel blocked by subscription cost, locked features, or limited value in the free version of the app.",
+      "keywords": [
+        "price",
+        "paywall",
+        "expensive",
+        "subscription",
+        "free features",
+        "locked features"
+      ],
+      "representative_review_ids": [
+        "rev_000493",
+        "rev_001879",
+        "rev_001191",
+        "rev_000323",
+        "rev_000227",
+        "rev_003955",
+        "rev_000734",
+        "rev_000609",
+        "rev_000297",
+        "rev_000415",
+        "rev_004107",
+        "rev_004765"
+      ],
+      "notes": "Kept this group mostly intact because the automated output was already clear. The theme and summary were tightened to focus more directly on subscription cost, locked features, and free-version frustration."
+    },
+    {
+      "group_id": "AG4",
+      "theme": "Interface, question design, and in-app feedback quality",
+      "review_ids": [
+        "rev_001963",
+        "rev_001356",
+        "rev_001380",
+        "rev_000350",
+        "rev_001697",
+        "rev_004979",
+        "rev_003768",
+        "rev_000058",
+        "rev_002466",
+        "rev_001269",
+        "rev_004148",
+        "rev_001642",
+        "rev_000094",
+        "rev_000895",
+        "rev_002203"
+      ],
+      "example_reviews": [
+        "Great feedback from the app",
+        "Been super helpful!!! Great feedback and simple interface",
+        "Questions are repetitive after a while. Reports are not valuable. Feedback feature doesn't seem to work properly"
+      ],
+      "group_summary": "This group covers users commenting on how the app feels to use, including interface clarity, question quality, insights quality, and the usefulness of in-app feedback features.",
+      "keywords": [
+        "usability",
+        "interface",
+        "questions",
+        "insights",
+        "feedback",
+        "reports"
+      ],
+      "representative_review_ids": [
+        "rev_001963",
+        "rev_001356",
+        "rev_001380",
+        "rev_000350",
+        "rev_001697",
+        "rev_004979",
+        "rev_003768",
+        "rev_000058",
+        "rev_002466",
+        "rev_001269",
+        "rev_004148",
+        "rev_001642"
+      ],
+      "notes": "Refined the theme to make it less broad than 'Usability and Feedback'. Replaced a weaker positive-only example with a review that better reflects question repetition, report quality, and feedback feature issues."
+    },
+    {
+      "group_id": "AG5",
+      "theme": "Mood tracking usefulness, reflection, and emotional support",
+      "review_ids": [
+        "rev_004977",
+        "rev_000984",
+        "rev_004492",
+        "rev_003155",
+        "rev_002216",
+        "rev_001920",
+        "rev_000469",
+        "rev_001467",
+        "rev_002940",
+        "rev_002552",
+        "rev_003079",
+        "rev_004020",
+        "rev_000462",
+        "rev_002720",
+        "rev_001934"
+      ],
+      "example_reviews": [
+        "mood tracking with reminder. very helpful.",
+        "Useful mood tracking",
+        "It's very helpful and others support lines"
+      ],
+      "group_summary": "This group captures users who find the app valuable for mood tracking, self-reflection, and feeling supported through reminders, check-ins, or mental health guidance.",
+      "keywords": [
+        "mood tracking",
+        "reflection",
+        "support",
+        "reminders",
+        "helpful",
+        "guidance"
+      ],
+      "representative_review_ids": [
+        "rev_004977",
+        "rev_000984",
+        "rev_004492",
+        "rev_003155",
+        "rev_002216",
+        "rev_001920",
+        "rev_000469",
+        "rev_001467",
+        "rev_002940",
+        "rev_002552",
+        "rev_003079",
+        "rev_004020"
+      ],
+      "notes": "Refined the theme to make it more specific than 'Value and Effectiveness'. The group is now framed around practical value in mood tracking, reflection, reminders, and perceived emotional support."
     }
   ]
 }

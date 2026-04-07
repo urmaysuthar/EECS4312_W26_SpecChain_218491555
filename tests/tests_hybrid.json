@@ -1,16 +1,234 @@
 {
   "tests": [
     {
-      "test_id": "T_hybrid_1",
-      "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
+      "test_id": "T_hybrid_01",
+      "requirement_id": "HFR1",
+      "scenario": "Export saved mood history and journal records",
       "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
+        "Log in to a user account that has saved mood history and journal records",
+        "Open the account settings screen",
+        "Select the export option"
       ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
+      "expected_result": "The system generates an export file containing the user's saved mood history and journal records."
+    },
+    {
+      "test_id": "T_hybrid_02",
+      "requirement_id": "HFR1",
+      "scenario": "Export option with no saved records",
+      "steps": [
+        "Log in to a user account with no saved mood history or journal records",
+        "Open the account settings screen",
+        "Select the export option"
+      ],
+      "expected_result": "The system completes the export action and generates a file with no saved records or shows that no records are available to export."
+    },
+    {
+      "test_id": "T_hybrid_03",
+      "requirement_id": "HFR2",
+      "scenario": "View data usage summary for one data category",
+      "steps": [
+        "Log in to the app",
+        "Open the privacy settings screen",
+        "Select one data category"
+      ],
+      "expected_result": "The system displays the purpose of collection, whether the data is shared, and whether the data is stored in the user account for the selected data category."
+    },
+    {
+      "test_id": "T_hybrid_04",
+      "requirement_id": "HFR2",
+      "scenario": "Switch between multiple data categories in privacy settings",
+      "steps": [
+        "Log in to the app",
+        "Open the privacy settings screen",
+        "Select a first data category",
+        "Select a second data category"
+      ],
+      "expected_result": "The system updates the displayed data usage summary so that each selected data category shows its own purpose, sharing status, and storage status."
+    },
+    {
+      "test_id": "T_hybrid_05",
+      "requirement_id": "HFR3",
+      "scenario": "Show error screen instead of blank page",
+      "steps": [
+        "Log in to the app",
+        "Attempt to open a page or result screen",
+        "Simulate a load failure for that page"
+      ],
+      "expected_result": "The system displays an error screen with a retry button instead of showing a blank page."
+    },
+    {
+      "test_id": "T_hybrid_06",
+      "requirement_id": "HFR3",
+      "scenario": "Retry loading after an error screen appears",
+      "steps": [
+        "Log in to the app",
+        "Attempt to open a page or result screen",
+        "Simulate a load failure so the error screen appears",
+        "Select the retry button"
+      ],
+      "expected_result": "The system makes a new loading attempt after the user selects retry."
+    },
+    {
+      "test_id": "T_hybrid_07",
+      "requirement_id": "HFR4",
+      "scenario": "Restore unsaved questionnaire responses after app closes",
+      "steps": [
+        "Log in to the app",
+        "Start answering a questionnaire without submitting it",
+        "Close the app unexpectedly",
+        "Reopen the app"
+      ],
+      "expected_result": "The system restores the unsaved questionnaire responses from the interrupted session."
+    },
+    {
+      "test_id": "T_hybrid_08",
+      "requirement_id": "HFR4",
+      "scenario": "Restore partially completed questionnaire with multiple answers",
+      "steps": [
+        "Log in to the app",
+        "Answer multiple questionnaire items without submitting them",
+        "Close the app unexpectedly",
+        "Reopen the app and return to the questionnaire"
+      ],
+      "expected_result": "The system restores the previously entered unsaved questionnaire answers."
+    },
+    {
+      "test_id": "T_hybrid_09",
+      "requirement_id": "HFR5",
+      "scenario": "Display Premium label on premium features",
+      "steps": [
+        "Open a screen that lists app features",
+        "Locate one or more premium features"
+      ],
+      "expected_result": "Every premium feature shown in the feature list displays a Premium label."
+    },
+    {
+      "test_id": "T_hybrid_10",
+      "requirement_id": "HFR5",
+      "scenario": "Do not display Premium label on free features",
+      "steps": [
+        "Open a screen that lists app features",
+        "Locate one or more free features"
+      ],
+      "expected_result": "Free features in the feature list do not display a Premium label."
+    },
+    {
+      "test_id": "T_hybrid_11",
+      "requirement_id": "HFR6",
+      "scenario": "Non-subscribed user views last 30 days of mood history",
+      "steps": [
+        "Log in as a non-subscribed user with saved mood history entries",
+        "Open the mood history screen"
+      ],
+      "expected_result": "The system displays the last 30 days of entries with the date, mood rating, and saved note for each entry."
+    },
+    {
+      "test_id": "T_hybrid_12",
+      "requirement_id": "HFR6",
+      "scenario": "Non-subscribed user with older history views mood history",
+      "steps": [
+        "Log in as a non-subscribed user with mood history older than 30 days",
+        "Open the mood history screen",
+        "Review the displayed entries"
+      ],
+      "expected_result": "The system displays only the entries from the last 30 days and does not require a subscription to view them."
+    },
+    {
+      "test_id": "T_hybrid_13",
+      "requirement_id": "HFR7",
+      "scenario": "Submit usability feedback successfully",
+      "steps": [
+        "Log in to the app",
+        "Open the feedback screen",
+        "Select a feedback category",
+        "Enter feedback text",
+        "Submit the form"
+      ],
+      "expected_result": "The system saves the feedback and displays a submission confirmation message."
+    },
+    {
+      "test_id": "T_hybrid_14",
+      "requirement_id": "HFR7",
+      "scenario": "Submit content feedback successfully",
+      "steps": [
+        "Log in to the app",
+        "Open the feedback screen",
+        "Select a feedback category for content",
+        "Enter feedback text",
+        "Submit the form"
+      ],
+      "expected_result": "The system saves the content feedback and displays a submission confirmation message."
+    },
+    {
+      "test_id": "T_hybrid_15",
+      "requirement_id": "HFR8",
+      "scenario": "Mark one question as not applicable",
+      "steps": [
+        "Log in to the app",
+        "Start a question set",
+        "Mark one question as not applicable"
+      ],
+      "expected_result": "The system records that the selected question was marked as not applicable."
+    },
+    {
+      "test_id": "T_hybrid_16",
+      "requirement_id": "HFR8",
+      "scenario": "Exclude a question marked not applicable from future sets",
+      "steps": [
+        "Log in to the app",
+        "Start a question set",
+        "Mark one question as not applicable",
+        "Complete the current session",
+        "Open a future question set"
+      ],
+      "expected_result": "The question previously marked as not applicable is excluded from future question sets for that user."
+    },
+    {
+      "test_id": "T_hybrid_17",
+      "requirement_id": "HFR9",
+      "scenario": "Send notification at saved reminder time",
+      "steps": [
+        "Log in to the app",
+        "Enable reminders",
+        "Save a reminder time",
+        "Wait until the saved time is reached"
+      ],
+      "expected_result": "The system sends a notification for a mood check-in at the saved reminder time."
+    },
+    {
+      "test_id": "T_hybrid_18",
+      "requirement_id": "HFR9",
+      "scenario": "Update reminder time and send notification at new time",
+      "steps": [
+        "Log in to the app",
+        "Enable reminders",
+        "Save an initial reminder time",
+        "Change the reminder time",
+        "Wait until the updated reminder time is reached"
+      ],
+      "expected_result": "The system sends the mood check-in notification at the updated reminder time."
+    },
+    {
+      "test_id": "T_hybrid_19",
+      "requirement_id": "HFR10",
+      "scenario": "Generate weekly mood summary after 7 days of entries",
+      "steps": [
+        "Log in to the app",
+        "Save mood entries on at least 7 different days",
+        "Open the weekly summary screen"
+      ],
+      "expected_result": "The system displays the average mood score for the period and the highest and lowest recorded mood values."
+    },
+    {
+      "test_id": "T_hybrid_20",
+      "requirement_id": "HFR10",
+      "scenario": "Open weekly summary with more than 7 days of entries",
+      "steps": [
+        "Log in to the app",
+        "Save mood entries on more than 7 different days",
+        "Open the weekly summary screen"
+      ],
+      "expected_result": "The system displays a weekly mood summary generated from the saved mood entries for the relevant weekly period."
     }
   ]
 }

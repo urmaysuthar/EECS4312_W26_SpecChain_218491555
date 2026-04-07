@@ -1,31 +1,169 @@
 {
   "personas": [
     {
-      "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
-      "derived_from_group": "H1",
+      "id": "P_auto_1",
+      "name": "Privacy-Conscious Record Keeper",
+      "description": "A user who wants to track sensitive mental health information but is very careful about how that data is stored, shared, and accessed. This user also expects to keep reliable access to past records that were entered into the app.",
+      "derived_from_group": "AG1",
       "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
+        "Track mental health information without unwanted data sharing",
+        "Understand how sensitive data is collected and used",
+        "Keep access to past mood records and journal history",
+        "Feel confident that personal records are handled responsibly"
       ],
       "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
+        "Worries that mental health data may be shared with third parties",
+        "Loses trust when privacy practices feel unclear",
+        "Feels frustrated when past records cannot be accessed",
+        "Sees loss of personal history as a serious problem"
       ],
       "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
+        "Uses the app to store personal mood or mental health information over time",
+        "May read the privacy policy or app permissions before continuing use",
+        "Values long-term access to older records and entries"
       ],
       "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
+        "Sensitive data handling must be explained clearly",
+        "Past records should remain available to the user",
+        "The app should not require blind trust around privacy or storage"
       ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_41"
+        "rev_002819",
+        "rev_002824",
+        "rev_000473"
+      ]
+    },
+    {
+      "id": "P_auto_2",
+      "name": "Interrupted User",
+      "description": "A user who wants to rely on the app regularly but is blocked by bugs such as blank screens, loading failures, broken features, or lost progress after updates.",
+      "derived_from_group": "AG2",
+      "goals": [
+        "Use the app without technical interruptions",
+        "Access results, questions, and entries when needed",
+        "Keep progress and saved information from being lost",
+        "Trust the app to work consistently after updates"
       ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
+      "pain_points": [
+        "Gets blank pages when trying to open important screens",
+        "Cannot access results or complete questionnaires because of bugs",
+        "Feels frustrated when updates break features that used to work",
+        "May lose progress or confidence in the app after repeated issues"
+      ],
+      "context": [
+        "Often uses the app as part of an ongoing mental health routine",
+        "May be returning after updates or reminders and expects normal access",
+        "Notices technical failures quickly because the app is supposed to support regular use"
+      ],
+      "constraints": [
+        "Important screens must load correctly",
+        "Progress and entries should not disappear during failures",
+        "The app should support recovery instead of leaving users stuck"
+      ],
+      "evidence_reviews": [
+        "rev_000878",
+        "rev_003390",
+        "rev_000728"
+      ]
+    },
+    {
+      "id": "P_auto_3",
+      "name": "Cost-Sensitive Free User",
+      "description": "A user who is interested in the app but is quickly discouraged by expensive subscriptions, locked features, or limited value in the free experience.",
+      "derived_from_group": "AG3",
+      "goals": [
+        "Understand what the app offers before paying",
+        "Access meaningful tracking features without high cost",
+        "Decide fairly whether a subscription is worth it",
+        "Use basic core features without feeling blocked too early"
+      ],
+      "pain_points": [
+        "Feels that important features are hidden behind a paywall",
+        "Sees the subscription price as too high or hard to justify",
+        "Gets frustrated when even basic history or tracking is restricted",
+        "May abandon the app if the free version feels too limited"
+      ],
+      "context": [
+        "Usually starts with the free version and evaluates value early",
+        "May compare the app with cheaper or free alternatives",
+        "Often cares about whether the subscription cost matches the actual value provided"
+      ],
+      "constraints": [
+        "Pricing should be understandable before purchase",
+        "Free users should still get meaningful basic functionality",
+        "Locked features should be communicated clearly instead of feeling hidden"
+      ],
+      "evidence_reviews": [
+        "rev_000493",
+        "rev_001879",
+        "rev_000323"
+      ]
+    },
+    {
+      "id": "P_auto_4",
+      "name": "Usability-Focused Reviewer",
+      "description": "A user who pays attention to how the app feels to use and forms strong opinions about interface clarity, question quality, reports, and in-app feedback features.",
+      "derived_from_group": "AG4",
+      "goals": [
+        "Use an interface that feels understandable and manageable",
+        "Receive questions and feedback that feel relevant",
+        "Get reports or app feedback that are worth reading",
+        "See the app respond to common usability frustrations"
+      ],
+      "pain_points": [
+        "Gets annoyed by repetitive or poorly targeted questions",
+        "May find insights or reports too weak to be useful",
+        "Notices when feedback features do not work properly",
+        "Can lose interest if the app experience feels shallow or awkward"
+      ],
+      "context": [
+        "Usually spends enough time with the app to notice patterns in the interface and question flow",
+        "May compare the usefulness of feedback and reports against the effort of daily check-ins",
+        "Often shares opinions about what should be improved in the user experience"
+      ],
+      "constraints": [
+        "Questions should feel relevant enough to continue answering",
+        "Reports and feedback should provide visible value",
+        "Feedback features should behave in a reliable and understandable way"
+      ],
+      "evidence_reviews": [
+        "rev_001963",
+        "rev_001356",
+        "rev_000058"
+      ]
+    },
+    {
+      "id": "P_auto_5",
+      "name": "Reflection-Oriented Support User",
+      "description": "A user who sees value in the app mainly through mood tracking, reflection, reminders, and the feeling of being supported while trying to understand emotional patterns.",
+      "derived_from_group": "AG5",
+      "goals": [
+        "Track mood over time and notice patterns",
+        "Use reminders to stay consistent with check-ins",
+        "Reflect on emotions and daily experiences",
+        "Feel supported by the app’s guidance and structure"
+      ],
+      "pain_points": [
+        "May lose value if tracking feels too shallow or inconsistent",
+        "Can drift away from the app without reminders or structure",
+        "Needs the app to do more than just collect entries",
+        "Wants tracking to actually support reflection and awareness"
+      ],
+      "context": [
+        "Uses the app as part of a personal reflection or mental health support routine",
+        "May rely on reminders or repeated check-ins to build consistency",
+        "Looks for mood tracking that helps connect patterns, feelings, and support resources"
+      ],
+      "constraints": [
+        "Tracking should support reflection, not just data entry",
+        "Reminder support should fit ongoing use",
+        "The app should continue to feel worthwhile over repeated use"
+      ],
+      "evidence_reviews": [
+        "rev_004977",
+        "rev_000984",
+        "rev_004492"
+      ]
     }
   ]
 }
