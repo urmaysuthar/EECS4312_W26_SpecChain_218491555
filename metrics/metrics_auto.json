@@ -8,7 +8,7 @@
   "review_coverage_ratio": 0.0176,
   "traceability_ratio": 1.0,
   "testability_rate": 1.0,
-  "ambiguity_ratio": 0.0,
+  "ambiguity_ratio": 0.1,
   "traceability_breakdown": {
     "review_group_to_review_links": 75,
     "persona_to_group_links": 5,

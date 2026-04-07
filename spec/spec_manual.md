@@ -49,7 +49,7 @@
 
 # Requirement ID: FR8
 
-- Description: [The system shall generate a personalized mood insights report using the user’s recorded mood entries over time.]
+- Description: [The system shall generate a mood insights report using the user’s recorded mood entries over time.]
 - Source Persona: [Insight-Seeking User]
 - Traceability: [Derived from review group G4]
 - Acceptance Criteria: [Given the user has recorded multiple mood entries over time, when the user opens the insights report, then the system must display a report based on the user’s stored entries rather than generic placeholder text.]

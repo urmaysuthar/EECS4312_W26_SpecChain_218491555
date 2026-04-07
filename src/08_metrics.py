@@ -402,3 +402,5 @@ def main() -> None:
             print(f"saved metrics summary to {SUMMARY_PATH}")
         else:
             print("summary not created yet because one or more pipeline metric files are still incomplete")
+if __name__ == "__main__":
+    main()

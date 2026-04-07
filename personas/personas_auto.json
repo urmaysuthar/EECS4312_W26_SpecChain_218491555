@@ -2,133 +2,121 @@
   "personas": [
     {
       "id": "P_auto_1",
-      "name": "Data-Conscious User",
-      "description": "A user concerned about data privacy and security",
+      "name": "Frugal User",
+      "description": "A budget-conscious user who values free or low-cost apps and is sensitive to subscription prices.",
       "derived_from_group": "AG1",
       "goals": [
-        "Protect personal data",
-        "Understand data usage"
+        "Get a useful mood tracking app without overspending"
       ],
       "pain_points": [
-        "Data shared with third parties",
-        "Lack of control over data"
+        "Expensive subscription models",
+        "Lack of free features"
       ],
       "context": [
-        "Reading privacy policies",
-        "Concerned about data sharing"
+        "Seeking affordable mental health tracking solutions"
       ],
       "constraints": [
-        "Limited technical expertise"
+        "Limited budget for app subscriptions"
       ],
       "evidence_reviews": [
-        "rev_002819",
-        "rev_002824",
-        "rev_002029"
+        "rev_000323",
+        "rev_001879",
+        "rev_000214"
       ]
     },
     {
       "id": "P_auto_2",
-      "name": "Frustrated User",
-      "description": "A user experiencing technical issues with the app",
+      "name": "Tech-Savvy Troubleshooter",
+      "description": "A user who experiences technical issues and seeks reliable app performance.",
       "derived_from_group": "AG2",
       "goals": [
-        "Resolve technical issues",
-        "Use the app effectively"
+        "Use an app that works smoothly without technical issues"
       ],
       "pain_points": [
-        "Login problems",
-        "Blank pages",
+        "Frequent crashes",
+        "Login issues",
         "Data loss"
       ],
       "context": [
-        "Encountering bugs",
-        "Trying to troubleshoot issues"
+        "Seeking a reliable and stable app experience"
       ],
       "constraints": [
-        "Limited technical expertise"
+        "Limited patience for troubleshooting"
       ],
       "evidence_reviews": [
-        "rev_000878",
-        "rev_003390",
-        "rev_000560"
+        "rev_000728",
+        "rev_000560",
+        "rev_001324"
       ]
     },
     {
       "id": "P_auto_3",
-      "name": "Budget-Conscious User",
-      "description": "A user sensitive to pricing and paywalls",
+      "name": "Engaged Enthusiast",
+      "description": "A user who values a positive user experience and enjoys using the app.",
       "derived_from_group": "AG3",
       "goals": [
-        "Access features without high costs",
-        "Evaluate app value"
+        "Have a pleasant and engaging experience with the app"
       ],
       "pain_points": [
-        "Expensive subscription model",
-        "Limited free features"
+        "None mentioned"
       ],
       "context": [
-        "Evaluating app costs",
-        "Considering alternatives"
+        "Seeking an enjoyable and user-friendly app"
       ],
       "constraints": [
-        "Limited budget"
+        "Values a well-designed interface"
       ],
       "evidence_reviews": [
-        "rev_000493",
-        "rev_001879",
-        "rev_000323"
+        "rev_002277",
+        "rev_001945",
+        "rev_001820"
       ]
     },
     {
       "id": "P_auto_4",
-      "name": "Feedback-Oriented User",
-      "description": "A user providing feedback on app usability",
+      "name": "Mental Health Advocate",
+      "description": "A user who seeks helpful insights and therapy features from the app.",
       "derived_from_group": "AG4",
       "goals": [
-        "Improve app usability",
-        "Provide constructive feedback"
+        "Gain useful insights and track mood effectively"
       ],
       "pain_points": [
-        "Confusing interface",
-        "Insufficient feedback"
+        "Some users find insights too obvious or broad"
       ],
       "context": [
-        "Using the app regularly",
-        "Providing feedback"
+        "Seeking a helpful mental health tracking app"
       ],
       "constraints": [
-        "Limited technical expertise"
+        "Values accuracy and relevance of insights"
       ],
       "evidence_reviews": [
-        "rev_001963",
-        "rev_001356",
-        "rev_001380"
+        "rev_000984",
+        "rev_001097",
+        "rev_000268"
       ]
     },
     {
       "id": "P_auto_5",
-      "name": "Results-Driven User",
-      "description": "A user seeking effectiveness in mood tracking and support",
+      "name": "Privacy-Conscious User",
+      "description": "A user who prioritizes data privacy and security.",
       "derived_from_group": "AG5",
       "goals": [
-        "Track mood effectively",
-        "Gain insights and support"
+        "Protect personal data and maintain app security"
       ],
       "pain_points": [
-        "Insufficient insights",
-        "Limited support"
+        "Data sharing with third parties",
+        "Lack of anonymization"
       ],
       "context": [
-        "Using the app for mood tracking",
-        "Seeking support"
+        "Seeking a secure and private app experience"
       ],
       "constraints": [
-        "Limited time for app usage"
+        "Values data protection and transparency"
       ],
       "evidence_reviews": [
-        "rev_004977",
-        "rev_000984",
-        "rev_004492"
+        "rev_004238",
+        "rev_003398",
+        "rev_002819"
       ]
     }
   ]

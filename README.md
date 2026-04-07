@@ -1,29 +1,18 @@
-# EECS4312_W26_SpecChain
+# EECS4312_W26_SpecChain_218491555
+# Urmay Suthar
+## Project Overview
+This repository contains my EECS 4312 course project for transforming Google Play app reviews into software requirements engineering artifacts using three pipelines:
 
-## instructions:
-Please update to include: 
-- App name
-- Data collection method
-- Original dataset
-- Final cleaned dataset
-- Exact commands to run pipeline
+- manual pipeline
+- automated pipeline
+- hybrid pipeline
 
-# example
-Application: [MindDoc: Mental Health Support]
+The assigned application for this project is **MindDoc**.
 
-Dataset:
-- reviews_raw.jsonl contains the collected reviews.
-- reviews_clean.jsonl contains the cleaned dataset.
-- The cleaned dataset contains 842 reviews.
+Google Play link:  
+https://play.google.com/store/apps/details?id=de.moodpath.android&hl=en_CA
 
-Repository Structure:
-- data/ contains datasets and review groups
-- personas/ contains persona files
-- spec/ contains specifications
-- tests/ contains validation tests
-- metrics/ contains all metric files
-- src/ contains executable Python scripts
-- reflection/ contains the final reflection
+---
 
 How to Run:
 1. python src/00_validate_repo.py
@@ -31,36 +20,123 @@ How to Run:
 3. python src/run_all.py
 4. Open metrics/metrics_summary.json for comparison results
 
-# EECS4312_W26_SpecChain_218491555
+    ## Groq API Setup
 
-## Project Overview
-This repository contains my EECS 4312 course project for transforming app reviews into software requirements artifacts using manual, automated, and hybrid pipelines.
+    The automated pipeline **will not run** unless the `GROQ_API_KEY` environment variable is set.
 
-**Application studied:** MindDoc  
-**Google Play URL:** https://play.google.com/store/apps/details?id=de.moodpath.android&hl=en_CA
+    ### PowerShell
+    ```powershell
+    $env:GROQ_API_KEY = "your_key_here"
 
 ## Dataset
-- `data/reviews_raw.jsonl` contains the raw reviews collected from the Google Play Store.
-- `data/reviews_clean.jsonl` contains the cleaned review dataset after preprocessing.
-- Raw dataset size: 5000 reviews
-- Cleaned dataset size: 4267 reviews
 
-## Data Collection Method
-The reviews were collected programmatically from the Google Play Store using the `google-play-scraper` Python package through `src/01_collect_or_import.py`.
+### Data collection method
+The raw reviews were collected programmatically from the Google Play Store using the Python package **google-play-scraper** through `src/01_collect_or_import.py`.
 
-## Current Repository Structure
-- `data/` contains datasets and review grouping files
-- `personas/` contains persona files
-- `spec/` contains specification files
-- `tests/` contains validation test files
-- `metrics/` contains metric outputs
-- `src/` contains Python scripts for data collection, cleaning, generation, validation, and metrics
-- `reflection/` contains the final reflection
+### Dataset files
+- `data/reviews_raw.jsonl` contains the raw collected reviews
+- `data/reviews_clean.jsonl` contains the cleaned review dataset after preprocessing
+- `data/dataset_metadata.json` contains dataset metadata, collection details, and cleaning decisions
 
-## Current Commands Used
-For Task 2, the following commands were used:
+### Dataset size
+- Raw dataset size: **5000 reviews**
+- Final cleaned dataset size: **4267 reviews**
+
+### Cleaning steps
+The cleaning script in `src/02_clean.py` performs the following preprocessing steps:
+
+- removes duplicates
+- removes empty entries
+- removes extremely short reviews
+- removes punctuation
+- removes special characters and emojis
+- converts numbers to text
+- removes extra whitespace
+- converts text to lowercase
+- removes stop words
+- lemmatizes the reviews
+
+---
+
+## Repository Structure
+
+### `data/`
+Contains the raw and cleaned datasets, dataset metadata, and review grouping files for all three pipelines.
+
+Files include:
+- `reviews_raw.jsonl`
+- `reviews_clean.jsonl`
+- `dataset_metadata.json`
+- `review_groups_manual.json`
+- `review_groups_auto.json`
+- `review_groups_hybrid.json`
+
+### `personas/`
+Contains persona files for the manual, automated, and hybrid pipelines.
+
+Files include:
+- `personas_manual.json`
+- `personas_auto.json`
+- `personas_hybrid.json`
+
+### `spec/`
+Contains the generated requirement specifications for the three pipelines.
+
+Files include:
+- `spec_manual.md`
+- `spec_auto.md`
+- `spec_hybrid.md`
+
+### `tests/`
+Contains validation test scenarios for the three pipelines.
+
+Files include:
+- `tests_manual.json`
+- `tests_auto.json`
+- `tests_hybrid.json`
+
+### `metrics/`
+Contains the metric outputs for each pipeline and the comparison summary.
+
+Files include:
+- `metrics_manual.json`
+- `metrics_auto.json`
+- `metrics_hybrid.json`
+- `metrics_summary.json`
+
+### `prompts/`
+Contains the prompts used in the automated pipeline.
+
+Files include:
+- `prompt_auto.json`
+
+### `reflection/`
+Contains the final written reflection.
+
+Files include:
+- `reflection.md`
+
+### `src/`
+Contains the Python scripts used for validation, collection, cleaning, automated generation, and metrics.
+
+Files include:
+- `00_validate_repo.py`
+- `01_collect_or_import.py`
+- `02_clean.py`
+- `03_manual_coding_template.py`
+- `04_personas_manual.py`
+- `05_personas_auto.py`
+- `06_spec_generate.py`
+- `07_tests_generate.py`
+- `08_metrics.py`
+- `run_all.py`
+
+---
+
+## Required Python Packages
+
+Install the required packages before running the scripts:
 
 ```bash
-python src/01_collect_or_import.py --count 5000 --lang en --country ca --sort newest
-python src/02_clean.py
+pip install google-play-scraper nltk num2words emoji groq scikit-learn
 

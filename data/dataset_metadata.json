@@ -14,11 +14,6 @@
     "target_raw_review_count": 5000,
     "notes": "Collected programmatically using paginated review requests."
   },
-  "collection_notes": {
-  "reviews_extracted": 5000,
-  "reviews_available_on_store_at_collection_time": "about 39500 reviews",
-  "limitation_note": "The app had more reviews available than the assignment required, so 5000 reviews were collected."
-},
   "cleaning_decisions": {
     "script": "src/02_clean.py",
     "removed_duplicates": true,
@@ -37,5 +32,4 @@
     "records_removed_as_too_short": 693
   },
   "cleaned_dataset_size": 4267
-  
 }

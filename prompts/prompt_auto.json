@@ -8,62 +8,67 @@
       "groups": [
         {
           "group_id": "AG1",
-          "theme": "Privacy and Data Concerns",
-          "summary": "Users express concerns about data sharing, privacy, and access to their own data.",
+          "theme": "Payment and Pricing",
+          "summary": "Users discuss the costs, subscription models, and value for money of the app.",
           "keywords": [
-            "privacy",
-            "data sharing",
-            "security",
-            "access",
-            "paywall"
+            "payment",
+            "subscription",
+            "cost",
+            "pricing",
+            "expensive",
+            "paywall",
+            "free"
           ]
         },
         {
           "group_id": "AG2",
           "theme": "Technical Issues and Bugs",
-          "summary": "Users report various technical issues, such as login problems, blank pages, and data loss.",
+          "summary": "Users report various technical problems, such as login issues, crashes, and data loss.",
           "keywords": [
             "bug",
-            "login issue",
-            "blank page",
-            "data loss",
-            "crash"
+            "crash",
+            "login",
+            "error",
+            "technical issue",
+            "data loss"
           ]
         },
         {
           "group_id": "AG3",
-          "theme": "Pricing and Paywall Concerns",
-          "summary": "Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.",
+          "theme": "Usability and User Experience",
+          "summary": "Users share their thoughts on the app's usability, interface, and overall user experience.",
           "keywords": [
-            "price",
-            "paywall",
-            "expensive",
-            "subscription",
-            "free features"
+            "usability",
+            "interface",
+            "user experience",
+            "reminders",
+            "notifications"
           ]
         },
         {
           "group_id": "AG4",
-          "theme": "Usability and Feedback",
-          "summary": "Users provide feedback on the app's usability, suggesting improvements to the user interface, questions, and insights.",
+          "theme": "Insights and Therapy Usefulness",
+          "summary": "Users discuss the helpfulness of the app's insights, therapy features, and mood tracking capabilities.",
           "keywords": [
-            "usability",
-            "interface",
-            "questions",
             "insights",
-            "feedback"
+            "therapy",
+            "mood tracking",
+            "helpful",
+            "useful",
+            "therapist"
           ]
         },
         {
           "group_id": "AG5",
-          "theme": "Value and Effectiveness",
-          "summary": "Users share their experiences with the app's effectiveness in tracking mood, providing insights, and offering support.",
+          "theme": "Privacy, Data, and Security Concerns",
+          "summary": "Users express concerns about data privacy, security, and sharing with third parties.",
           "keywords": [
-            "helpful",
-            "effective",
-            "mood tracking",
-            "insights",
-            "support"
+            "privacy",
+            "data",
+            "security",
+            "third party",
+            "data sharing",
+            "GDPR"
           ]
         }
       ]
@@ -71,138 +76,126 @@
   },
   "persona_generation": {
     "persona_generation_system_prompt": "You are creating requirements engineering personas from grouped app reviews. Generate one grounded persona for each provided review group. Return strict JSON only with this shape: {\"personas\": [{\"id\": \"P_auto_1\", \"name\": \"...\", \"description\": \"...\", \"derived_from_group\": \"AG1\", \"goals\": [\"...\"], \"pain_points\": [\"...\"], \"context\": [\"...\"], \"constraints\": [\"...\"], \"evidence_reviews\": [\"rev_...\"]}]}. Keep the language simple and practical. Do not invent details that are not supported by the group. Each persona should clearly match the group theme and use exactly 3 evidence review ids from the representative reviews shown.",
-    "persona_generation_user_prompt": "Use the following automated review groups to create personas.\n\nGroup: AG1\nTheme: Privacy and Data Concerns\nSummary: Users express concerns about data sharing, privacy, and access to their own data.\nKeywords: privacy, data sharing, security, access, paywall\nRepresentative reviews:\n- [rev_002819] Was great until I read privacy agreement. They give your data to Facebook for marketing purposes using your mobile device's ad ID. I took screenshots of my last ~2 years of data and just uninstalled the program.\n- [rev_002824] After reading the privacy policy I discovered that the app has facebook software development kit integrated in app, which means that all data from app is accessible for facebook. I don't recommend installing it if you don't want your mental health data used against you and sold to advertisers.\n- [rev_003744] it is a very good it records all data of your day ....\n- [rev_002820] Read the privacy. Info sent to Facebook for advertising purposes. Can't find a way to opt out. If I can't opt out, I will uninstall\n- [rev_002029] When I requested access of my person data held by the app they didn't provide it to me despite section 9(a) of their terms and conditions.\n- [rev_002567] I wish that these kinds of apps didn't have 'Premium' or 'Plus' because, at least for me, I can't afford or get easy access to any sort of therapist and there have been times when I've needed one. Mental health apps are supposed to help you and if you can't have access to all the services, they're not going to help you as much as they could/should. I really hate that it has a paywall of sorts. It would be so much better without one. I understand you need to pay people and profit but... Please...\n- [rev_004717] moodpath is a great app to help me track my symptoms. you can add emotions or experiences and at the end of the tracking period, it offers helpful tips and tricks to help you out. there are links and audio that you can listen to. unfortunately, there is a paywall to access some features but other than that it's a great app.\n- [rev_002293] All my data from the past month just disappeared! Almost a month worth of data is gone! If this is because I restarted my phone then this app sucks! No other app has done this because of that! Definitely uninstalling since some of my data has been wiped away before too!\n\nGroup: AG2\nTheme: Technical Issues and Bugs\nSummary: Users report various technical issues, such as login problems, blank pages, and data loss.\nKeywords: bug, login issue, blank page, data loss, crash\nRepresentative reviews:\n- [rev_000878] I did a whole 14 days of documenting my emotions and I can't even see my results. Whenever I click on seeing my results, it's a blank page. Please correct this issue.\n- [rev_003390] I really like it, and the exercises are good, but recently there is a persistent bug happening. When I click the notification reminding me to answer some questions, it opens the app but the page is blank.\n- [rev_000728] I would not recommend to patients given numerous technical issues\n- [rev_000560] Cant login in when it says login in. It says no Internet connection but I have Internet connection\n- [rev_003165] Encountering a bug frequently that doesn't save the data after recording it or notifications in the recent versions with the updated UI\n- [rev_000552] From night to day it just stopped working. First, whenever I opened the app it appeared completely blank, then I erased it and tried to downloaded it again, but I can't log in because it says that I have no internet (I tried with wifi and mobile data, but in both cases I couldn't make it work). I don't know if it's a bug or something, but if this continues I'll have to erase it one and for all\n- [rev_002454] I really enjoyed this app for tracking my mood during a rough time. The prompts to record data and the questions offered all seem relevant. They do provide you with a connection to a consular if needed. Functions well without many crashes or hang ups. I recommend it.\n- [rev_000665] I loved it. Until it started to no longer give me notification. And if i go in manualyy, there are no questions. The page comes up blank.\n\nGroup: AG3\nTheme: Pricing and Paywall Concerns\nSummary: Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.\nKeywords: price, paywall, expensive, subscription, free features\nRepresentative reviews:\n- [rev_000493] Wow. Cannot believe you've locked the basic bare bones feature of viewing mood history behind your $100/year paywall. I would happily pay a one time price for a premium app, but there's no way I can afford that absurdly expensive subscription model. What is the point of a mood journal app if you can't look back and see your old entries?? I was worried this app would go south when it got bought out. I guess I was right. New users beware, don't waste your time, it's all downhill from here.\n- [rev_001879] Cool but it's really expensive (probably no regional pricing)\n- [rev_001191] Pretty good except for the expensive paywall\n- [rev_000323] Just be honest about your pricing up front. Don't ask me a serious of personal questions, give me no opportunity to evaluate/trial the app, then drop an expensive subscription wall. Give me at least a tiny indication of value before asking for money.\n- [rev_000227] You answer a few simple questions and get a mini assesment. However, there's no free trial cuz all services are behind a paywall, at higher prices than expected in 2 tiers, Felt like I was bait-and-switched when the paywall screen popped up. Uninstalled.\n- [rev_003955] Used to be a good app, but lately most of the content that used to be free is now premium only and require a rather expensive subscription. That's depressing.\n- [rev_000734] I have written a couple reviews and they started good but after I paid the expensive price for a yearly premium subscription I never recieved access to premium content. I've emailed proof if purchase and wrote several emails trying to get help and get what I paid for but have only gotten the run around and MindDoc still won't give me what I paid for. Don't waste your money on this app. Don't purchase this app because they will only steal your money and NEVER GIVE YOU WHAT YOU PAID FOR!!\n- [rev_000609] The Plus subscription is too expensive for me, but the free version is still amazingly helpful and it's really convenient\n\nGroup: AG4\nTheme: Usability and Feedback\nSummary: Users provide feedback on the app's usability, suggesting improvements to the user interface, questions, and insights.\nKeywords: usability, interface, questions, insights, feedback\nRepresentative reviews:\n- [rev_001963] Great feedback from the app\n- [rev_001356] Been super helpful!!! Great feedback and simple interface\n- [rev_001380] I like the therapy options and feedback\n- [rev_000350] Great app for mood tracking! Thanks for being responsive to user feedback too.\n- [rev_001697] Very proffessional and an easy and smooth user interface. Help you reflect and take actions on the reflections.\n- [rev_004979] nice app - its a bit annoying to have it blend \"help\" with \"advertising\" - I get that they've got a service to sell, but its not pleasant to have sales pitches pop up in the middle of a mindfulness exercise... meanwhile, they're saying it'll take 14 days of mood logging before i can get any useful feedback - who wants to bet they'll try to sell me a course when they do... anyhow the interface is nice, and its helpful to track my mood.\n- [rev_003768] Great interface. Helpful chatbot.\n- [rev_000058] Brings a lot of encouragement due to it's well-targeted personalized questions and feedback.\n\nGroup: AG5\nTheme: Value and Effectiveness\nSummary: Users share their experiences with the app's effectiveness in tracking mood, providing insights, and offering support.\nKeywords: helpful, effective, mood tracking, insights, support\nRepresentative reviews:\n- [rev_004977] mood tracking with reminder. very helpful.\n- [rev_000984] Useful mood tracking\n- [rev_004492] It's very helpful and others support lines\n- [rev_003155] Beneficial for mood tracking\n- [rev_002216] Great for mood tracking, awareness, and mindfulness. Really great information and helpful prompts.\n- [rev_001920] Very helpful for tracking moods\n- [rev_000469] MindDoc is an immaculate mental health and emotional support and mood tracking app thta I HIGHLY RECOMMEND to anyone who wishes to record their day to day experience and have a detailed analysis of a 15 day cycle; Morning, afternoon and evening, as well as GREAT insight material for mindfulness, and understanding ones mental health, keep up the amazing work, Nameste 🙏\n- [rev_001467] A great mood tracking app\n",
+    "persona_generation_user_prompt": "Use the following automated review groups to create personas.\n\nGroup: AG1\nTheme: Payment and Pricing\nSummary: Users discuss the costs, subscription models, and value for money of the app.\nKeywords: payment, subscription, cost, pricing, expensive, paywall, free\nRepresentative reviews:\n- [rev_000323] Just be honest about your pricing up front. Don't ask me a serious of personal questions, give me no opportunity to evaluate/trial the app, then drop an expensive subscription wall. Give me at least a tiny indication of value before asking for money.\n- [rev_001879] Cool but it's really expensive (probably no regional pricing)\n- [rev_000214] I feel this is a very helpful app . But I think the discovery part should be free to everyone , coz not everyone is capable of paying of course for the treatment not free . But for the knowledge and knowing thr content abt you should be for everyone and free. No offense but it would be better if there is no subscription or payment for knowing the content .\n- [rev_000609] The Plus subscription is too expensive for me, but the free version is still amazingly helpful and it's really convenient\n- [rev_003955] Used to be a good app, but lately most of the content that used to be free is now premium only and require a rather expensive subscription. That's depressing.\n- [rev_003677] Good Interface, Bad Pricing... I love the way the app looks and work, but having to pay $6.99/month or $56 whatever for a whole year? What a rip off! Daylio does almost the exact same thing but only one payment of $9.99 and you unlock all the features forever. I'm just going to continue to use this one for free.\n- [rev_004765] positively surprised, all the core features are free, interface is great. I love that it tracks mood 3 times per day. paid subscription is definitely on the expensive side.\n- [rev_000276] I'm just looking for a simple mood tracker. MindDoc has a great UI, but I don't need the advice, I just want to track. Too much \"tips\" in this app which are kinda annoying. The subscription is too expensive for an app this kind as there are completely free alternatives like Mind Tracker.\n\nGroup: AG2\nTheme: Technical Issues and Bugs\nSummary: Users report various technical problems, such as login issues, crashes, and data loss.\nKeywords: bug, crash, login, error, technical issue, data loss\nRepresentative reviews:\n- [rev_000728] I would not recommend to patients given numerous technical issues\n- [rev_000560] Cant login in when it says login in. It says no Internet connection but I have Internet connection\n- [rev_001479] If it had a log in option to keep your record up to date and be able to login from different devices that would help a lot , otherwise it is quite good\n- [rev_000549] is it just me that has an error in the app?? the app is empty and i can't log in because it says connection error although my wifi signal is good.\n- [rev_001324] Nice work! Nice app!👍👏 But it could be more better (or best) if you add email addition (login) so that the data is safe for lifelong. Also if there is a passcode (pin code) security option outside to the biometric lock, would make it more and more useful for me. This is bcz I use this as my diary also.😀 That's all i hope from you asap! 😊\n- [rev_003165] Encountering a bug frequently that doesn't save the data after recording it or notifications in the recent versions with the updated UI\n- [rev_002454] I really enjoyed this app for tracking my mood during a rough time. The prompts to record data and the questions offered all seem relevant. They do provide you with a connection to a consular if needed. Functions well without many crashes or hang ups. I recommend it.\n- [rev_001374] I love this app!! It really helps!! I love how you can schedule times during the day, and that the questions are very cool!! And you can see how your mood changed over a couple of weeks. 10/10 recommend 😁. I do wish you didn't have to restart your progress after you uninstall it tho. I wish you could have a login you know? Anyways, I hope you can fix that😁\n\nGroup: AG3\nTheme: Usability and User Experience\nSummary: Users share their thoughts on the app's usability, interface, and overall user experience.\nKeywords: usability, interface, user experience, reminders, notifications\nRepresentative reviews:\n- [rev_002277] Really good user experience, it's made journalling my thoughts really pleasant.\n- [rev_001945] Great user experience, I love the app. It's of great help keeping track with my mood & mindset.\n- [rev_001820] Great user experience. I love that this app gently reminds me to keep tabs on my mental well-being, and that it changes up the questions every time.\n- [rev_001697] Very proffessional and an easy and smooth user interface. Help you reflect and take actions on the reflections.\n- [rev_001720] Worth the experience. Very robust.\n- [rev_003768] Great interface. Helpful chatbot.\n- [rev_001642] Smooth and clean app interface. I enjoy it\n- [rev_003315] Ive been using this app for a while now and, it has been enormously successful and helpful. Ive been using it for a bit. It has a good interface, its user friendly and straight to the point.\n\nGroup: AG4\nTheme: Insights and Therapy Usefulness\nSummary: Users discuss the helpfulness of the app's insights, therapy features, and mood tracking capabilities.\nKeywords: insights, therapy, mood tracking, helpful, useful, therapist\nRepresentative reviews:\n- [rev_000984] Useful mood tracking\n- [rev_004977] mood tracking with reminder. very helpful.\n- [rev_002720] So far has been useful for mood tracking. I like the design a lot.\n- [rev_003155] Beneficial for mood tracking\n- [rev_001097] This app is very helpful and useful for me as I can keep track of mood patterns and fluctuations. It helps when talking to my therapists too.\n- [rev_000268] I was looking for a simple mood tracker. This app promised to be that and much more but, in the end, it wasn't much more than a 14 day as for BetterHelp. The insights ranged from obvious to too broad to be helpful. The questions felt like the app was playing a guessing game about my mental health, but wasn't really THAT interested in delving too deep into my mental health. The mood tracking wasn't nearly as in depth as it needed to be for it to be useful. 2 weeks later and I'm right where I was.\n- [rev_001467] A great mood tracking app\n- [rev_002216] Great for mood tracking, awareness, and mindfulness. Really great information and helpful prompts.\n\nGroup: AG5\nTheme: Privacy, Data, and Security Concerns\nSummary: Users express concerns about data privacy, security, and sharing with third parties.\nKeywords: privacy, data, security, third party, data sharing, GDPR\nRepresentative reviews:\n- [rev_004238] This app has facebook as a third party tool, and they do not anonoymise your data for third parties. This is awful and troubling for an app that collect information on your mental health.\n- [rev_003398] Found out this app has Facebook as a third party source, and it doesn't anonymise your data. Uninstalling.\n- [rev_004356] I hope this app doesn't store my data and then sell it for third parties. We give infos about our intellectual feeling so...\n- [rev_002819] Was great until I read privacy agreement. They give your data to Facebook for marketing purposes using your mobile device's ad ID. I took screenshots of my last ~2 years of data and just uninstalled the program.\n- [rev_000020] It's a really great app, unfortunately it shares device IDs with third parties (according to Play) which is not optional and does not work offline. I like the idea but tracking is an absolute no go with apps that handle data this sensitive.\n- [rev_002824] After reading the privacy policy I discovered that the app has facebook software development kit integrated in app, which means that all data from app is accessible for facebook. I don't recommend installing it if you don't want your mental health data used against you and sold to advertisers.\n- [rev_003259] the app helps me talk my issues out, and it gives me a sense of security\n- [rev_002293] All my data from the past month just disappeared! Almost a month worth of data is gone! If this is because I restarted my phone then this app sucks! No other app has done this because of that! Definitely uninstalling since some of my data has been wiped away before too!\n",
     "persona_generation_raw_response": {
       "personas": [
         {
-          "id": "P_privacy_1",
-          "name": "Data-Conscious User",
-          "description": "A user concerned about data privacy and security",
+          "id": "P_auto_1",
+          "name": "Frugal User",
+          "description": "A budget-conscious user who values free or low-cost apps and is sensitive to subscription prices.",
           "derived_from_group": "AG1",
           "goals": [
-            "Protect personal data",
-            "Understand data usage"
+            "Get a useful mood tracking app without overspending"
           ],
           "pain_points": [
-            "Data shared with third parties",
-            "Lack of control over data"
+            "Expensive subscription models",
+            "Lack of free features"
           ],
           "context": [
-            "Reading privacy policies",
-            "Concerned about data sharing"
+            "Seeking affordable mental health tracking solutions"
           ],
           "constraints": [
-            "Limited technical expertise"
+            "Limited budget for app subscriptions"
           ],
           "evidence_reviews": [
-            "rev_002819",
-            "rev_002824",
-            "rev_002029"
+            "rev_000323",
+            "rev_001879",
+            "rev_000214"
           ]
         },
         {
-          "id": "P_technical_1",
-          "name": "Frustrated User",
-          "description": "A user experiencing technical issues with the app",
+          "id": "P_auto_2",
+          "name": "Tech-Savvy Troubleshooter",
+          "description": "A user who experiences technical issues and seeks reliable app performance.",
           "derived_from_group": "AG2",
           "goals": [
-            "Resolve technical issues",
-            "Use the app effectively"
+            "Use an app that works smoothly without technical issues"
           ],
           "pain_points": [
-            "Login problems",
-            "Blank pages",
+            "Frequent crashes",
+            "Login issues",
             "Data loss"
           ],
           "context": [
-            "Encountering bugs",
-            "Trying to troubleshoot issues"
+            "Seeking a reliable and stable app experience"
           ],
           "constraints": [
-            "Limited technical expertise"
+            "Limited patience for troubleshooting"
           ],
           "evidence_reviews": [
-            "rev_000878",
-            "rev_003390",
-            "rev_000560"
+            "rev_000728",
+            "rev_000560",
+            "rev_001324"
           ]
         },
         {
-          "id": "P_price_sensitive_1",
-          "name": "Budget-Conscious User",
-          "description": "A user sensitive to pricing and paywalls",
+          "id": "P_auto_3",
+          "name": "Engaged Enthusiast",
+          "description": "A user who values a positive user experience and enjoys using the app.",
           "derived_from_group": "AG3",
           "goals": [
-            "Access features without high costs",
-            "Evaluate app value"
+            "Have a pleasant and engaging experience with the app"
           ],
           "pain_points": [
-            "Expensive subscription model",
-            "Limited free features"
+            "None mentioned"
           ],
           "context": [
-            "Evaluating app costs",
-            "Considering alternatives"
+            "Seeking an enjoyable and user-friendly app"
           ],
           "constraints": [
-            "Limited budget"
+            "Values a well-designed interface"
           ],
           "evidence_reviews": [
-            "rev_000493",
-            "rev_001879",
-            "rev_000323"
+            "rev_002277",
+            "rev_001945",
+            "rev_001820"
           ]
         },
         {
-          "id": "P_usability_1",
-          "name": "Feedback-Oriented User",
-          "description": "A user providing feedback on app usability",
+          "id": "P_auto_4",
+          "name": "Mental Health Advocate",
+          "description": "A user who seeks helpful insights and therapy features from the app.",
           "derived_from_group": "AG4",
           "goals": [
-            "Improve app usability",
-            "Provide constructive feedback"
+            "Gain useful insights and track mood effectively"
           ],
           "pain_points": [
-            "Confusing interface",
-            "Insufficient feedback"
+            "Some users find insights too obvious or broad"
           ],
           "context": [
-            "Using the app regularly",
-            "Providing feedback"
+            "Seeking a helpful mental health tracking app"
           ],
           "constraints": [
-            "Limited technical expertise"
+            "Values accuracy and relevance of insights"
           ],
           "evidence_reviews": [
-            "rev_001963",
-            "rev_001356",
-            "rev_001380"
+            "rev_000984",
+            "rev_001097",
+            "rev_000268"
           ]
         },
         {
-          "id": "P_effectiveness_1",
-          "name": "Results-Driven User",
-          "description": "A user seeking effectiveness in mood tracking and support",
+          "id": "P_auto_5",
+          "name": "Privacy-Conscious User",
+          "description": "A user who prioritizes data privacy and security.",
           "derived_from_group": "AG5",
           "goals": [
-            "Track mood effectively",
-            "Gain insights and support"
+            "Protect personal data and maintain app security"
           ],
           "pain_points": [
-            "Insufficient insights",
-            "Limited support"
+            "Data sharing with third parties",
+            "Lack of anonymization"
           ],
           "context": [
-            "Using the app for mood tracking",
-            "Seeking support"
+            "Seeking a secure and private app experience"
           ],
           "constraints": [
-            "Limited time for app usage"
+            "Values data protection and transparency"
           ],
           "evidence_reviews": [
-            "rev_004977",
-            "rev_000984",
-            "rev_004492"
+            "rev_004238",
+            "rev_003398",
+            "rev_002819"
           ]
         }
       ]
@@ -216,48 +209,37 @@
       {
         "persona_id": "P_auto_1",
         "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
-        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_1\nPersona Name: Data-Conscious User\nPersona Description: A user concerned about data privacy and security\nDerived Group: AG1\nGroup Theme: Privacy and Data Concerns\nGroup Summary: Users express concerns about data sharing, privacy, and access to their own data.\nGoals: Protect personal data; Understand data usage\nPain Points: Data shared with third parties; Lack of control over data\nContext: Reading privacy policies; Concerned about data sharing\nConstraints: Limited technical expertise\nKeywords: privacy, data sharing, security, access, paywall\nExample Reviews:\n- Was great until I read privacy agreement. They give your data to Facebook for marketing purposes using your mobile device's ad ID. I took screenshots of my last ~2 years of data and just uninstalled the program.\n- After reading the privacy policy I discovered that the app has facebook software development kit integrated in app, which means that all data from app is accessible for facebook. I don't recommend installing it if you don't want your mental health data used against you and sold to advertisers.\n- it is a very good it records all data of your day ....\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_1\nPersona Name: Frugal User\nPersona Description: A budget-conscious user who values free or low-cost apps and is sensitive to subscription prices.\nDerived Group: AG1\nGroup Theme: Payment and Pricing\nGroup Summary: Users discuss the costs, subscription models, and value for money of the app.\nGoals: Get a useful mood tracking app without overspending\nPain Points: Expensive subscription models; Lack of free features\nContext: Seeking affordable mental health tracking solutions\nConstraints: Limited budget for app subscriptions\nKeywords: payment, subscription, cost, pricing, expensive, paywall, free\nExample Reviews:\n- Just be honest about your pricing up front. Don't ask me a serious of personal questions, give me no opportunity to evaluate/trial the app, then drop an expensive subscription wall. Give me at least a tiny indication of value before asking for money.\n- Cool but it's really expensive (probably no regional pricing)\n- I feel this is a very helpful app . But I think the discovery part should be free to everyone , coz not everyone is capable of paying of course for the treatment not free . But for the knowledge and knowing thr content abt you should be for everyone and free. No offense but it would be better if there is no subscription or payment for knowing the content .\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
         "first_attempt_raw_response": {
           "requirements": [
             {
-              "description": "The system shall provide a data export feature for users to download their mental health data.",
-              "acceptance_criteria": "Given the user is logged in, When they navigate to the account settings page, Then they are able to initiate a data export, and receive a downloadable file containing their mental health data within 24 hours."
+              "description": "The system shall display the pricing information for all subscription plans on the app's main screen, before the user attempts to sign up or log in.",
+              "acceptance_criteria": "Given the app's main screen is displayed, When the user views the screen, Then the pricing information for all subscription plans is visible and clearly listed."
             },
             {
-              "description": "The system shall display a clear list of third-party services used by the app and their purposes.",
-              "acceptance_criteria": "Given the user is viewing the app's privacy policy, When they scroll to the section on data sharing, Then they see a list of third-party services used by the app, including Facebook, and a brief description of why each service is used."
+              "description": "The system shall offer a free trial period of at least 7 days for new users to access all premium features before requiring a subscription.",
+              "acceptance_criteria": "Given a new user signs up for the app, When the user starts the onboarding process, Then the user is granted access to all premium features for a free trial period of at least 7 days."
             }
           ]
         },
-        "retry_attempt_system_prompt": "You are rewriting weak requirements into stronger software requirements. Generate exactly 2 functional requirements only. They must be concrete, testable, and written as system behavior. Do not use vague words. Acceptance criteria must use Given, When, Then and define observable behavior. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
-        "retry_attempt_user_prompt": "Rewrite the requirements so they are more concrete.\nFor example, instead of saying the system should be effective or helpful, say exactly what data it displays, stores, exports, or sends.\nGenerate exactly 2 better requirements now.\n\nPersona Name: Data-Conscious User\nDerived Group: AG1\nGroup Theme: Privacy and Data Concerns\nGroup Summary: Users express concerns about data sharing, privacy, and access to their own data.\nGoals: Protect personal data; Understand data usage\nPain Points: Data shared with third parties; Lack of control over data\nKeywords: privacy, data sharing, security, access, paywall\nThe earlier requirements were weak:\n- The system shall provide a data export feature for users to download their mental health data.\n- The system shall display a clear list of third-party services used by the app and their purposes.\nProblems to avoid:\n- vague language found in description: The system shall display a clear list of third-party services used by the app and their purposes.",
-        "retry_attempt_raw_response": {
-          "requirements": [
-            {
-              "description": "The system shall export user mental health data in a CSV file format when requested by the user.",
-              "acceptance_criteria": "Given a user has created an account and logged in, When the user navigates to the account settings and clicks the 'Export Data' button, Then the system shall generate a CSV file containing the user's mental health data, including date, time, and entries, and send it to the user's registered email address."
-            },
-            {
-              "description": "The system shall display a list of third-party services used for data processing, including their names, purposes, and data sharing policies.",
-              "acceptance_criteria": "Given a user is logged in and navigates to the 'About' or 'Settings' section, When the user clicks on 'Third-Party Services', Then the system shall display a table with the following columns: 'Service Name', 'Purpose', and 'Data Sharing Policy', and populate it with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
-            }
-          ]
-        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
         "used_fallback": false
       },
       {
         "persona_id": "P_auto_2",
         "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
-        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_2\nPersona Name: Frustrated User\nPersona Description: A user experiencing technical issues with the app\nDerived Group: AG2\nGroup Theme: Technical Issues and Bugs\nGroup Summary: Users report various technical issues, such as login problems, blank pages, and data loss.\nGoals: Resolve technical issues; Use the app effectively\nPain Points: Login problems; Blank pages; Data loss\nContext: Encountering bugs; Trying to troubleshoot issues\nConstraints: Limited technical expertise\nKeywords: bug, login issue, blank page, data loss, crash\nExample Reviews:\n- I did a whole 14 days of documenting my emotions and I can't even see my results. Whenever I click on seeing my results, it's a blank page. Please correct this issue.\n- I really like it, and the exercises are good, but recently there is a persistent bug happening. When I click the notification reminding me to answer some questions, it opens the app but the page is blank.\n- I would not recommend to patients given numerous technical issues\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_2\nPersona Name: Tech-Savvy Troubleshooter\nPersona Description: A user who experiences technical issues and seeks reliable app performance.\nDerived Group: AG2\nGroup Theme: Technical Issues and Bugs\nGroup Summary: Users report various technical problems, such as login issues, crashes, and data loss.\nGoals: Use an app that works smoothly without technical issues\nPain Points: Frequent crashes; Login issues; Data loss\nContext: Seeking a reliable and stable app experience\nConstraints: Limited patience for troubleshooting\nKeywords: bug, crash, login, error, technical issue, data loss\nExample Reviews:\n- I would not recommend to patients given numerous technical issues\n- Cant login in when it says login in. It says no Internet connection but I have Internet connection\n- If it had a log in option to keep your record up to date and be able to login from different devices that would help a lot , otherwise it is quite good\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
         "first_attempt_raw_response": {
           "requirements": [
             {
-              "description": "The system shall display an error message when a user's data cannot be loaded.",
-              "acceptance_criteria": "Given a user has logged in and attempted to view their results, When the system is unable to retrieve the user's data, Then the system displays an error message with a specific error code and a link to contact support."
+              "description": "The system shall allow users to successfully log in from multiple devices.",
+              "acceptance_criteria": "Given a user has a valid account, When the user attempts to log in from a second device, Then the system shall authenticate the user and display their account information without error."
             },
             {
-              "description": "The system shall prevent data loss when a user encounters a technical issue.",
-              "acceptance_criteria": "Given a user has entered data and the system encounters a technical issue, When the issue occurs, Then the system saves the user's data and displays a recovery message with instructions on how to resume where they left off."
+              "description": "The system shall prevent data loss when a user closes the app unexpectedly.",
+              "acceptance_criteria": "Given a user has entered data into a session, When the app closes unexpectedly due to a technical issue, Then the system shall recover the unsaved data and display it to the user upon reopening the app."
             }
           ]
         },
@@ -269,48 +251,37 @@
       {
         "persona_id": "P_auto_3",
         "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
-        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_3\nPersona Name: Budget-Conscious User\nPersona Description: A user sensitive to pricing and paywalls\nDerived Group: AG3\nGroup Theme: Pricing and Paywall Concerns\nGroup Summary: Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.\nGoals: Access features without high costs; Evaluate app value\nPain Points: Expensive subscription model; Limited free features\nContext: Evaluating app costs; Considering alternatives\nConstraints: Limited budget\nKeywords: price, paywall, expensive, subscription, free features\nExample Reviews:\n- Wow. Cannot believe you've locked the basic bare bones feature of viewing mood history behind your $100/year paywall. I would happily pay a one time price for a premium app, but there's no way I can afford that absurdly expensive subscription model. What is the point of a mood journal app if you can't look back and see your old entries?? I was worried this app would go south when it got bought out. I guess I was right. New users beware, don't waste your time, it's all downhill from here.\n- Cool but it's really expensive (probably no regional pricing)\n- Pretty good except for the expensive paywall\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_3\nPersona Name: Engaged Enthusiast\nPersona Description: A user who values a positive user experience and enjoys using the app.\nDerived Group: AG3\nGroup Theme: Usability and User Experience\nGroup Summary: Users share their thoughts on the app's usability, interface, and overall user experience.\nGoals: Have a pleasant and engaging experience with the app\nPain Points: None mentioned\nContext: Seeking an enjoyable and user-friendly app\nConstraints: Values a well-designed interface\nKeywords: usability, interface, user experience, reminders, notifications\nExample Reviews:\n- Really good user experience, it's made journalling my thoughts really pleasant.\n- Great user experience, I love the app. It's of great help keeping track with my mood & mindset.\n- Great user experience. I love that this app gently reminds me to keep tabs on my mental well-being, and that it changes up the questions every time.\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
         "first_attempt_raw_response": {
           "requirements": [
             {
-              "description": "The system shall display a clear price for each premium feature before the user attempts to open that feature.",
-              "acceptance_criteria": "Given the user is viewing a list of features, When the user hovers over or clicks on a premium feature, Then the system displays the price of the premium feature and a brief description of what the feature offers."
+              "description": "The system shall display a daily motivational quote on the home screen.",
+              "acceptance_criteria": "Given the user has opened the app on a day when a motivational quote is scheduled, When the user views the home screen, Then the system displays a daily motivational quote with a visually appealing design."
             },
             {
-              "description": "The system shall allow users to view a limited number of past mood history entries without requiring a subscription.",
-              "acceptance_criteria": "Given the user has created at least 5 mood history entries, When the user navigates to the mood history section, Then the system displays the 5 most recent entries without requiring the user to log in or subscribe to a premium plan."
+              "description": "The system shall send a reminder notification to users at a user-selected time.",
+              "acceptance_criteria": "Given the user has set a reminder time in the settings, When the current time matches the user-selected reminder time, Then the system sends a notification to the user with a message prompting them to check in with their mental well-being."
             }
           ]
         },
-        "retry_attempt_system_prompt": "You are rewriting weak requirements into stronger software requirements. Generate exactly 2 functional requirements only. They must be concrete, testable, and written as system behavior. Do not use vague words. Acceptance criteria must use Given, When, Then and define observable behavior. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
-        "retry_attempt_user_prompt": "Rewrite the requirements so they are more concrete.\nFor example, instead of saying the system should be effective or helpful, say exactly what data it displays, stores, exports, or sends.\nGenerate exactly 2 better requirements now.\n\nPersona Name: Budget-Conscious User\nDerived Group: AG3\nGroup Theme: Pricing and Paywall Concerns\nGroup Summary: Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.\nGoals: Access features without high costs; Evaluate app value\nPain Points: Expensive subscription model; Limited free features\nKeywords: price, paywall, expensive, subscription, free features\nThe earlier requirements were weak:\n- The system shall display a clear price for each premium feature before the user attempts to open that feature.\n- The system shall allow users to view a limited number of past mood history entries without requiring a subscription.\nProblems to avoid:\n- vague language found in description: The system shall display a clear price for each premium feature before the user attempts to open that feature.",
-        "retry_attempt_raw_response": {
-          "requirements": [
-            {
-              "description": "The system shall display a tooltip with the exact price and a link to the subscription page when a user hovers over a premium feature icon.",
-              "acceptance_criteria": "Given the user is not logged in, When the user hovers over a premium feature icon, Then the tooltip displays the price and a link to the subscription page."
-            },
-            {
-              "description": "The system shall allow users to view the last 30 days of mood history entries without requiring a subscription, with each entry including the date, mood rating, and a brief note.",
-              "acceptance_criteria": "Given the user is not subscribed, When the user navigates to the mood history section, Then the system displays the last 30 days of entries with date, mood rating, and brief note for each entry."
-            }
-          ]
-        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
         "used_fallback": false
       },
       {
         "persona_id": "P_auto_4",
         "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
-        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_4\nPersona Name: Feedback-Oriented User\nPersona Description: A user providing feedback on app usability\nDerived Group: AG4\nGroup Theme: Usability and Feedback\nGroup Summary: Users provide feedback on the app's usability, suggesting improvements to the user interface, questions, and insights.\nGoals: Improve app usability; Provide constructive feedback\nPain Points: Confusing interface; Insufficient feedback\nContext: Using the app regularly; Providing feedback\nConstraints: Limited technical expertise\nKeywords: usability, interface, questions, insights, feedback\nExample Reviews:\n- Great feedback from the app\n- Been super helpful!!! Great feedback and simple interface\n- I like the therapy options and feedback\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_4\nPersona Name: Mental Health Advocate\nPersona Description: A user who seeks helpful insights and therapy features from the app.\nDerived Group: AG4\nGroup Theme: Insights and Therapy Usefulness\nGroup Summary: Users discuss the helpfulness of the app's insights, therapy features, and mood tracking capabilities.\nGoals: Gain useful insights and track mood effectively\nPain Points: Some users find insights too obvious or broad\nContext: Seeking a helpful mental health tracking app\nConstraints: Values accuracy and relevance of insights\nKeywords: insights, therapy, mood tracking, helpful, useful, therapist\nExample Reviews:\n- Useful mood tracking\n- mood tracking with reminder. very helpful.\n- So far has been useful for mood tracking. I like the design a lot.\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
         "first_attempt_raw_response": {
           "requirements": [
             {
-              "description": "The system shall display a confirmation message to the user after they submit feedback on app usability.",
-              "acceptance_criteria": "Given the user is logged in and on the feedback page, When the user submits their feedback, Then the system displays a confirmation message that reads 'Thank you for your feedback.'"
+              "description": "The system shall store a user selected reminder time and send a notification at that time to track their mood.",
+              "acceptance_criteria": "Given a user has set a reminder time, When the system reaches that time, Then it shall send a notification to the user to track their mood."
             },
             {
-              "description": "The system shall store and display all submitted feedback on a dedicated page for review.",
-              "acceptance_criteria": "Given the user is an administrator and logged in, When they navigate to the feedback page, Then the system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp."
+              "description": "The system shall allow users to export their saved mood history as a file.",
+              "acceptance_criteria": "Given a user has saved mood history, When they request to export their mood history, Then the system shall generate a file containing their mood history."
             }
           ]
         },
@@ -322,16 +293,16 @@
       {
         "persona_id": "P_auto_5",
         "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
-        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_5\nPersona Name: Results-Driven User\nPersona Description: A user seeking effectiveness in mood tracking and support\nDerived Group: AG5\nGroup Theme: Value and Effectiveness\nGroup Summary: Users share their experiences with the app's effectiveness in tracking mood, providing insights, and offering support.\nGoals: Track mood effectively; Gain insights and support\nPain Points: Insufficient insights; Limited support\nContext: Using the app for mood tracking; Seeking support\nConstraints: Limited time for app usage\nKeywords: helpful, effective, mood tracking, insights, support\nExample Reviews:\n- mood tracking with reminder. very helpful.\n- Useful mood tracking\n- It's very helpful and others support lines\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_5\nPersona Name: Privacy-Conscious User\nPersona Description: A user who prioritizes data privacy and security.\nDerived Group: AG5\nGroup Theme: Privacy, Data, and Security Concerns\nGroup Summary: Users express concerns about data privacy, security, and sharing with third parties.\nGoals: Protect personal data and maintain app security\nPain Points: Data sharing with third parties; Lack of anonymization\nContext: Seeking a secure and private app experience\nConstraints: Values data protection and transparency\nKeywords: privacy, data, security, third party, data sharing, GDPR\nExample Reviews:\n- This app has facebook as a third party tool, and they do not anonoymise your data for third parties. This is awful and troubling for an app that collect information on your mental health.\n- Found out this app has Facebook as a third party source, and it doesn't anonymise your data. Uninstalling.\n- I hope this app doesn't store my data and then sell it for third parties. We give infos about our intellectual feeling so...\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
         "first_attempt_raw_response": {
           "requirements": [
             {
-              "description": "The system shall store a user-selected reminder time and send a notification at that time to track mood.",
-              "acceptance_criteria": "Given a user has set a reminder time, When the system reaches that time, Then it shall send a notification to the user to track their mood."
+              "description": "The system shall provide a data export option for users to retrieve their mental health data.",
+              "acceptance_criteria": "Given the user is logged in, When they navigate to the account settings, Then they can select an option to export their mental health data in a CSV file format."
             },
             {
-              "description": "The system shall generate a weekly summary of the user's mood history and provide insights into their mood trends.",
-              "acceptance_criteria": "Given a user has tracked their mood for at least 7 days, When the system generates a weekly summary, Then it shall display the user's average mood score and highlight any notable trends or patterns in their mood history."
+              "description": "The system shall anonymize user data when shared with third-party services.",
+              "acceptance_criteria": "Given the user has opted to share their data with a third-party service, When the system sends the data to the third-party service, Then the data is anonymized and does not contain any personally identifiable information."
             }
           ]
         },
@@ -349,50 +320,49 @@
       {
         "requirement_id": "AFR1",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR1\nDescription: The system shall export user mental health data in a CSV file format when requested by the user.\nSource Persona: Data-Conscious User\nSource Group: AG1\nAcceptance Criteria: Given a user has created an account and logged in, When the user navigates to the account settings and clicks the 'Export Data' button, Then the system shall generate a CSV file containing the user's mental health data, including date, time, and entries, and send it to the user's registered email address.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR1\nDescription: The system shall display the pricing information for all subscription plans on the app's main screen, before the user attempts to sign up or log in.\nSource Persona: Frugal User\nSource Group: AG1\nAcceptance Criteria: Given the app's main screen is displayed, When the user views the screen, Then the pricing information for all subscription plans is visible and clearly listed.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Valid Export Request",
+              "scenario": "Visible Pricing Information on Main Screen",
               "steps": [
-                "Create a new user account",
-                "Log in to the account",
-                "Navigate to account settings",
-                "Click the 'Export Data' button"
+                "Launch the app and navigate to the main screen",
+                "Verify that the main screen is displayed with no login or signup attempts"
               ],
-              "expected_result": "A CSV file containing the user's mental health data, including date, time, and entries, is sent to the user's registered email address."
+              "expected_result": "The pricing information for all subscription plans is visible and clearly listed on the main screen"
             },
             {
-              "scenario": "Invalid Export Request - Unregistered User",
+              "scenario": "Pricing Information Displayed Before Login or Signup",
               "steps": [
-                "Attempt to navigate to account settings without logging in",
-                "Click the 'Export Data' button (if available) or simulate the action"
+                "Launch the app and navigate to the main screen",
+                "Attempt to navigate to the signup or login screen",
+                "Cancel the navigation and return to the main screen"
               ],
-              "expected_result": "The system prevents the export action and displays an error message indicating that the user must be logged in to export their data."
+              "expected_result": "The pricing information for all subscription plans remains visible and clearly listed on the main screen"
             }
           ]
         },
         "retry_attempt_system_prompt": "You are rewriting weak software validation tests into stronger tests. Generate exactly 2 validation test scenarios only. Each test must be concrete, readable, and clearly executable. Each test must include a scenario, steps list, and expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "retry_attempt_user_prompt": "Rewrite the tests so they are stronger and more concrete.\nGenerate exactly 2 better validation tests now.\n\nRequirement ID: AFR1\nDescription: The system shall export user mental health data in a CSV file format when requested by the user.\nAcceptance Criteria: Given a user has created an account and logged in, When the user navigates to the account settings and clicks the 'Export Data' button, Then the system shall generate a CSV file containing the user's mental health data, including date, time, and entries, and send it to the user's registered email address.\nEarlier weak tests:\n- Valid Export Request\n- Invalid Export Request - Unregistered User\nProblems to avoid:\n- a test does not have at least 3 steps",
+        "retry_attempt_user_prompt": "Rewrite the tests so they are stronger and more concrete.\nGenerate exactly 2 better validation tests now.\n\nRequirement ID: AFR1\nDescription: The system shall display the pricing information for all subscription plans on the app's main screen, before the user attempts to sign up or log in.\nAcceptance Criteria: Given the app's main screen is displayed, When the user views the screen, Then the pricing information for all subscription plans is visible and clearly listed.\nEarlier weak tests:\n- Visible Pricing Information on Main Screen\n- Pricing Information Displayed Before Login or Signup\nProblems to avoid:\n- a test does not have at least 3 steps",
         "retry_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Valid Export Request",
+              "scenario": "Pricing information is displayed on the main screen",
               "steps": [
-                "Create a new user account with a valid email address and login credentials",
-                "Log in to the account with the created credentials",
-                "Navigate to the account settings and click the 'Export Data' button"
+                "Launch the app and navigate to the main screen",
+                "Verify that the main screen is fully loaded and displayed",
+                "Check the main screen for a section or table listing all subscription plans with their corresponding prices"
               ],
-              "expected_result": "A CSV file containing the user's mental health data, including date, time, and entries, is sent to the user's registered email address within 5 minutes"
+              "expected_result": "The pricing information for all subscription plans is visible, clearly listed, and easily readable on the main screen"
             },
             {
-              "scenario": "Invalid Export Request - Unregistered User",
+              "scenario": "Pricing information is displayed before login or signup actions",
               "steps": [
-                "Attempt to log in with an invalid email address and login credentials",
-                "Verify that the login attempt fails and an error message is displayed",
-                "Attempt to navigate to the account settings and click the 'Export Data' button"
+                "Launch the app and navigate to the main screen",
+                "Verify that the login and signup buttons or links are visible on the main screen",
+                "Check that the pricing information for all subscription plans is displayed above or alongside the login and signup options"
               ],
-              "expected_result": "An error message is displayed indicating that the user is not registered, and no CSV file is sent to the email address"
+              "expected_result": "The pricing information for all subscription plans is displayed prominently on the main screen, before the user can access the login or signup functionality"
             }
           ]
         },
@@ -401,26 +371,30 @@
       {
         "requirement_id": "AFR2",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR2\nDescription: The system shall display a list of third-party services used for data processing, including their names, purposes, and data sharing policies.\nSource Persona: Data-Conscious User\nSource Group: AG1\nAcceptance Criteria: Given a user is logged in and navigates to the 'About' or 'Settings' section, When the user clicks on 'Third-Party Services', Then the system shall display a table with the following columns: 'Service Name', 'Purpose', and 'Data Sharing Policy', and populate it with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR2\nDescription: The system shall offer a free trial period of at least 7 days for new users to access all premium features before requiring a subscription.\nSource Persona: Frugal User\nSource Group: AG1\nAcceptance Criteria: Given a new user signs up for the app, When the user starts the onboarding process, Then the user is granted access to all premium features for a free trial period of at least 7 days.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Valid Third-Party Services Display",
+              "scenario": "New User Free Trial Period Validation",
               "steps": [
-                "Log in to the system with a valid user account",
-                "Navigate to the 'About' section",
-                "Click on 'Third-Party Services'"
+                "Create a new user account on the app.",
+                "Complete the onboarding process as a new user.",
+                "Verify that all premium features are accessible immediately after onboarding.",
+                "Wait for 7 days from the start of the onboarding process.",
+                "Verify that the user still has access to all premium features after 7 days."
               ],
-              "expected_result": "The system displays a table with columns 'Service Name', 'Purpose', and 'Data Sharing Policy', populated with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+              "expected_result": "The user has access to all premium features for at least 7 days without requiring a subscription."
             },
             {
-              "scenario": "Third-Party Services Display from Settings Section",
+              "scenario": "Free Trial Expiration Validation",
               "steps": [
-                "Log in to the system with a valid user account",
-                "Navigate to the 'Settings' section",
-                "Click on 'Third-Party Services'"
+                "Create a new user account on the app.",
+                "Complete the onboarding process as a new user.",
+                "Verify that all premium features are accessible immediately after onboarding.",
+                "Wait for 8 days from the start of the onboarding process.",
+                "Verify that the user is prompted to subscribe to access premium features."
               ],
-              "expected_result": "The system displays a table with columns 'Service Name', 'Purpose', and 'Data Sharing Policy', populated with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+              "expected_result": "After 8 days, the user is no longer able to access premium features without a subscription."
             }
           ]
         },
@@ -432,28 +406,32 @@
       {
         "requirement_id": "AFR3",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR3\nDescription: The system shall display an error message when a user's data cannot be loaded.\nSource Persona: Frustrated User\nSource Group: AG2\nAcceptance Criteria: Given a user has logged in and attempted to view their results, When the system is unable to retrieve the user's data, Then the system displays an error message with a specific error code and a link to contact support.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR3\nDescription: The system shall allow users to successfully log in from multiple devices.\nSource Persona: Tech-Savvy Troubleshooter\nSource Group: AG2\nAcceptance Criteria: Given a user has a valid account, When the user attempts to log in from a second device, Then the system shall authenticate the user and display their account information without error.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Test Successful Error Display for Unavailable User Data",
+              "scenario": "Successful Login from Second Device",
               "steps": [
-                "Log in as an existing user",
-                "Simulate a failure in retrieving the user's data",
-                "Attempt to view the user's results"
+                "Create a new user account and verify it is active.",
+                "Log in to the system from a first device using the created account credentials.",
+                "Verify the user account information is displayed correctly on the first device.",
+                "Log in to the system from a second device using the same account credentials.",
+                "Verify the user account information is displayed correctly on the second device."
               ],
-              "expected_result": "The system displays an error message with a specific error code and a link to contact support."
+              "expected_result": "The system successfully authenticates the user on both devices and displays their account information without error."
             },
             {
-              "scenario": "Test Error Display with Correct Error Code and Support Link",
+              "scenario": "Multiple Device Login with Concurrent Sessions",
               "steps": [
-                "Log in as an existing user",
-                "Simulate a failure in retrieving the user's data with a known error code",
-                "Attempt to view the user's results",
-                "Verify the error code in the displayed error message",
-                "Verify the presence and functionality of the support link"
+                "Create a new user account and verify it is active.",
+                "Log in to the system from a first device using the created account credentials.",
+                "Log in to the system from a second device using the same account credentials.",
+                "Perform actions on the first device that require account information.",
+                "Verify the account information on the first device remains up-to-date and accurate.",
+                "Perform actions on the second device that require account information.",
+                "Verify the account information on the second device remains up-to-date and accurate."
               ],
-              "expected_result": "The system displays an error message with the correct error code and a functional link to contact support."
+              "expected_result": "The system maintains concurrent sessions across multiple devices, ensuring both devices have access to the user's account information in real-time without error."
             }
           ]
         },
@@ -465,30 +443,28 @@
       {
         "requirement_id": "AFR4",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR4\nDescription: The system shall prevent data loss when a user encounters a technical issue.\nSource Persona: Frustrated User\nSource Group: AG2\nAcceptance Criteria: Given a user has entered data and the system encounters a technical issue, When the issue occurs, Then the system saves the user's data and displays a recovery message with instructions on how to resume where they left off.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR4\nDescription: The system shall prevent data loss when a user closes the app unexpectedly.\nSource Persona: Tech-Savvy Troubleshooter\nSource Group: AG2\nAcceptance Criteria: Given a user has entered data into a session, When the app closes unexpectedly due to a technical issue, Then the system shall recover the unsaved data and display it to the user upon reopening the app.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Successful Data Recovery",
+              "scenario": "Unexpected App Closure with Unsaved Data",
               "steps": [
-                "1. Log in to the system as a valid user.",
-                "2. Enter sample data into the required fields.",
-                "3. Simulate a technical issue (e.g., server crash, network error) while the user is entering data.",
-                "4. Verify the system saves the entered data.",
-                "5. Check the system displays a recovery message with instructions."
+                "Launch the app and navigate to a session where data can be entered.",
+                "Enter some data into the session (e.g., text, numbers).",
+                "Simulate an unexpected app closure (e.g., force close, crash).",
+                "Reopen the app."
               ],
-              "expected_result": "The system saves the user's data and displays a recovery message with instructions on how to resume where they left off."
+              "expected_result": "The app recovers and displays the unsaved data entered before the unexpected closure."
             },
             {
-              "scenario": "Data Recovery with Multiple Fields",
+              "scenario": "App Closure During Data Entry Without Saving",
               "steps": [
-                "1. Log in to the system as a valid user.",
-                "2. Enter sample data into multiple required fields (e.g., name, address, phone number).",
-                "3. Simulate a technical issue (e.g., server crash, network error) while the user is entering data.",
-                "4. Verify the system saves all entered data.",
-                "5. Check the system displays a recovery message with instructions."
+                "Launch the app and start a new session.",
+                "Enter data into the session but do not save it.",
+                "Simulate an unexpected shutdown or technical failure (e.g., device shutdown, app crash).",
+                "Restart the device and reopen the app."
               ],
-              "expected_result": "The system saves all the user's data and displays a recovery message with instructions on how to resume where they left off."
+              "expected_result": "Upon reopening, the app successfully recovers and displays the unsaved data that was entered before the app closed unexpectedly."
             }
           ]
         },
@@ -500,58 +476,76 @@
       {
         "requirement_id": "AFR5",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR5\nDescription: The system shall display a tooltip with the exact price and a link to the subscription page when a user hovers over a premium feature icon.\nSource Persona: Budget-Conscious User\nSource Group: AG3\nAcceptance Criteria: Given the user is not logged in, When the user hovers over a premium feature icon, Then the tooltip displays the price and a link to the subscription page.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR5\nDescription: The system shall display a daily motivational quote on the home screen.\nSource Persona: Engaged Enthusiast\nSource Group: AG3\nAcceptance Criteria: Given the user has opened the app on a day when a motivational quote is scheduled, When the user views the home screen, Then the system displays a daily motivational quote with a visually appealing design.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Hover over premium feature icon as logged out user",
+              "scenario": "Daily Motivational Quote Displayed on Home Screen",
               "steps": [
-                "Log out of the system",
-                "Navigate to a page containing a premium feature icon",
-                "Hover over the premium feature icon"
+                "Open the app on a day when a motivational quote is scheduled",
+                "Navigate to the home screen"
               ],
-              "expected_result": "A tooltip is displayed with the exact price and a link to the subscription page"
+              "expected_result": "The system displays a daily motivational quote with a visually appealing design on the home screen"
             },
             {
-              "scenario": "Verify tooltip consistency across multiple premium features",
+              "scenario": "No Daily Motivational Quote on Non-Scheduled Day",
               "steps": [
-                "Log out of the system",
-                "Navigate to a page containing multiple premium feature icons",
-                "Hover over each premium feature icon one by one"
+                "Open the app on a day when no motivational quote is scheduled",
+                "Navigate to the home screen"
               ],
-              "expected_result": "For each premium feature icon, a tooltip is displayed with the exact price and a link to the subscription page"
+              "expected_result": "The system does not display a daily motivational quote on the home screen or displays a default message indicating no quote is available for the day"
             }
           ]
         },
-        "retry_attempt_system_prompt": "",
-        "retry_attempt_user_prompt": "",
-        "retry_attempt_raw_response": {},
+        "retry_attempt_system_prompt": "You are rewriting weak software validation tests into stronger tests. Generate exactly 2 validation test scenarios only. Each test must be concrete, readable, and clearly executable. Each test must include a scenario, steps list, and expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "retry_attempt_user_prompt": "Rewrite the tests so they are stronger and more concrete.\nGenerate exactly 2 better validation tests now.\n\nRequirement ID: AFR5\nDescription: The system shall display a daily motivational quote on the home screen.\nAcceptance Criteria: Given the user has opened the app on a day when a motivational quote is scheduled, When the user views the home screen, Then the system displays a daily motivational quote with a visually appealing design.\nEarlier weak tests:\n- Daily Motivational Quote Displayed on Home Screen\n- No Daily Motivational Quote on Non-Scheduled Day\nProblems to avoid:\n- a test does not have at least 3 steps\n- a test does not have at least 3 steps",
+        "retry_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Daily Motivational Quote Displayed on Home Screen on a Scheduled Day",
+              "steps": [
+                "Open the app on a day when a motivational quote is scheduled (e.g., Monday)",
+                "Navigate to the home screen",
+                "Verify the home screen is fully loaded"
+              ],
+              "expected_result": "The system displays a daily motivational quote with a visually appealing design on the home screen"
+            },
+            {
+              "scenario": "No Daily Motivational Quote on Non-Scheduled Day or If Feature is Disabled",
+              "steps": [
+                "Open the app on a day when no motivational quote is scheduled (e.g., a day with no quote assigned)",
+                "Navigate to the home screen",
+                "Verify the home screen is fully loaded"
+              ],
+              "expected_result": "The system does not display a daily motivational quote on the home screen or displays a message indicating that no quote is available for the day"
+            }
+          ]
+        },
         "used_fallback": false
       },
       {
         "requirement_id": "AFR6",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR6\nDescription: The system shall allow users to view the last 30 days of mood history entries without requiring a subscription, with each entry including the date, mood rating, and a brief note.\nSource Persona: Budget-Conscious User\nSource Group: AG3\nAcceptance Criteria: Given the user is not subscribed, When the user navigates to the mood history section, Then the system displays the last 30 days of entries with date, mood rating, and brief note for each entry.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR6\nDescription: The system shall send a reminder notification to users at a user-selected time.\nSource Persona: Engaged Enthusiast\nSource Group: AG3\nAcceptance Criteria: Given the user has set a reminder time in the settings, When the current time matches the user-selected reminder time, Then the system sends a notification to the user with a message prompting them to check in with their mental well-being.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "View Last 30 Days of Mood History as Non-Subscribed User",
+              "scenario": "Reminder Notification at Selected Time",
               "steps": [
-                "Log in as a non-subscribed user",
-                "Navigate to the mood history section",
-                "Verify the display of the last 30 days of mood history entries"
+                "Set the user-selected reminder time to 10:00 AM",
+                "Simulate the current time to be 10:00 AM",
+                "Verify the user has a pending notification"
               ],
-              "expected_result": "The system displays a list of the last 30 days of mood history entries, including date, mood rating, and brief note for each entry, without prompting for a subscription."
+              "expected_result": "The system sends a notification to the user with a message prompting them to check in with their mental well-being at 10:00 AM"
             },
             {
-              "scenario": "Verify Date Range and Details for Non-Subscribed User",
+              "scenario": "No Reminder Notification if Time Not Matched",
               "steps": [
-                "Log in as a non-subscribed user",
-                "Navigate to the mood history section",
-                "Check the date range of displayed mood history entries",
-                "Verify that each entry includes date, mood rating, and brief note"
+                "Set the user-selected reminder time to 10:00 AM",
+                "Simulate the current time to be 9:59 AM",
+                "Verify the user has no pending notifications"
               ],
-              "expected_result": "The system displays mood history entries for the last 30 days only, and each entry includes the date, a mood rating, and a brief note, without requiring a subscription."
+              "expected_result": "The system does not send a notification to the user at 9:59 AM"
             }
           ]
         },
@@ -563,28 +557,28 @@
       {
         "requirement_id": "AFR7",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR7\nDescription: The system shall display a confirmation message to the user after they submit feedback on app usability.\nSource Persona: Feedback-Oriented User\nSource Group: AG4\nAcceptance Criteria: Given the user is logged in and on the feedback page, When the user submits their feedback, Then the system displays a confirmation message that reads 'Thank you for your feedback.'\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR7\nDescription: The system shall store a user selected reminder time and send a notification at that time to track their mood.\nSource Persona: Mental Health Advocate\nSource Group: AG4\nAcceptance Criteria: Given a user has set a reminder time, When the system reaches that time, Then it shall send a notification to the user to track their mood.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Valid Feedback Submission",
+              "scenario": "Valid Reminder Time Notification",
               "steps": [
-                "Log in to the app as a registered user",
-                "Navigate to the feedback page",
-                "Enter valid feedback on app usability",
-                "Click the submit button"
+                "Set the current system time to 10:00 AM",
+                "Log in as a user and set a reminder for 10:05 AM to track their mood",
+                "Wait until the system time reaches 10:05 AM",
+                "Verify the user receives a notification to track their mood"
               ],
-              "expected_result": "A confirmation message is displayed that reads 'Thank you for your feedback.'"
+              "expected_result": "The user receives a notification at 10:05 AM to track their mood"
             },
             {
-              "scenario": "Empty Feedback Submission",
+              "scenario": "Reminder Time Notification When User is Not Logged In",
               "steps": [
-                "Log in to the app as a registered user",
-                "Navigate to the feedback page",
-                "Leave the feedback field empty",
-                "Click the submit button"
+                "Log in as a user and set a reminder for 11:00 AM to track their mood",
+                "Log out of the system",
+                "Wait until the system time reaches 11:00 AM",
+                "Verify the user receives a notification to track their mood"
               ],
-              "expected_result": "A confirmation message is displayed that reads 'Thank you for your feedback.'"
+              "expected_result": "The user receives a notification at 11:00 AM to track their mood even when they are not logged in"
             }
           ]
         },
@@ -596,26 +590,29 @@
       {
         "requirement_id": "AFR8",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR8\nDescription: The system shall store and display all submitted feedback on a dedicated page for review.\nSource Persona: Feedback-Oriented User\nSource Group: AG4\nAcceptance Criteria: Given the user is an administrator and logged in, When they navigate to the feedback page, Then the system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR8\nDescription: The system shall allow users to export their saved mood history as a file.\nSource Persona: Mental Health Advocate\nSource Group: AG4\nAcceptance Criteria: Given a user has saved mood history, When they request to export their mood history, Then the system shall generate a file containing their mood history.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Valid Feedback Display",
+              "scenario": "Export Mood History with Existing Data",
               "steps": [
-                "Log in as an administrator with valid credentials",
-                "Navigate to the dedicated feedback page",
-                "Verify that the page displays a list of submitted feedback"
+                "Log in as an existing user",
+                "Navigate to the mood history section",
+                "Ensure the user has saved mood history data",
+                "Request to export mood history as a file",
+                "Verify the system generates a file containing the user's mood history"
               ],
-              "expected_result": "The system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp for each feedback entry."
+              "expected_result": "A file is downloaded containing the user's mood history data in a readable format."
             },
             {
-              "scenario": "No Feedback Display",
+              "scenario": "Export Mood History with No Saved Data",
               "steps": [
-                "Log in as an administrator with valid credentials",
-                "Navigate to the dedicated feedback page",
-                "Verify that there is no feedback submitted"
+                "Log in as an existing user",
+                "Navigate to the mood history section",
+                "Ensure the user has no saved mood history data",
+                "Request to export mood history as a file"
               ],
-              "expected_result": "The system displays an empty list or a message indicating that no feedback has been submitted yet."
+              "expected_result": "The system displays a message indicating that there is no mood history data to export."
             }
           ]
         },
@@ -627,27 +624,29 @@
       {
         "requirement_id": "AFR9",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR9\nDescription: The system shall store a user-selected reminder time and send a notification at that time to track mood.\nSource Persona: Results-Driven User\nSource Group: AG5\nAcceptance Criteria: Given a user has set a reminder time, When the system reaches that time, Then it shall send a notification to the user to track their mood.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR9\nDescription: The system shall provide a data export option for users to retrieve their mental health data.\nSource Persona: Privacy-Conscious User\nSource Group: AG5\nAcceptance Criteria: Given the user is logged in, When they navigate to the account settings, Then they can select an option to export their mental health data in a CSV file format.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Valid Reminder Time Notification",
+              "scenario": "Valid Data Export",
               "steps": [
-                "Set user's reminder time to 10:00 AM",
-                "Simulate system time to 10:00 AM",
-                "Verify system sends notification to user to track mood"
+                "Log in to the system with valid credentials",
+                "Navigate to the account settings page",
+                "Verify the 'Export Mental Health Data' option is available",
+                "Select the 'Export Mental Health Data' option",
+                "Verify the system generates a CSV file containing the user's mental health data"
               ],
-              "expected_result": "The user receives a notification at 10:00 AM to track their mood."
+              "expected_result": "A CSV file is downloaded containing the user's mental health data."
             },
             {
-              "scenario": "Reminder Time Notification When System Time Changes",
+              "scenario": "Unauthorized Access",
               "steps": [
-                "Set user's reminder time to 11:30 AM",
-                "Simulate system time to 11:29 AM",
-                "Simulate system time to 11:30 AM",
-                "Verify system sends notification to user to track mood"
+                "Log out of the system",
+                "Attempt to navigate to the account settings page",
+                "Verify the 'Export Mental Health Data' option is not available",
+                "Try to access the export option directly via URL or API call"
               ],
-              "expected_result": "The user receives a notification at 11:30 AM to track their mood."
+              "expected_result": "The system prevents access to the account settings and export option, displaying an error message or redirecting to the login page."
             }
           ]
         },
@@ -659,27 +658,28 @@
       {
         "requirement_id": "AFR10",
         "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
-        "first_attempt_user_prompt": "Requirement ID: AFR10\nDescription: The system shall generate a weekly summary of the user's mood history and provide insights into their mood trends.\nSource Persona: Results-Driven User\nSource Group: AG5\nAcceptance Criteria: Given a user has tracked their mood for at least 7 days, When the system generates a weekly summary, Then it shall display the user's average mood score and highlight any notable trends or patterns in their mood history.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_user_prompt": "Requirement ID: AFR10\nDescription: The system shall anonymize user data when shared with third-party services.\nSource Persona: Privacy-Conscious User\nSource Group: AG5\nAcceptance Criteria: Given the user has opted to share their data with a third-party service, When the system sends the data to the third-party service, Then the data is anonymized and does not contain any personally identifiable information.\n\nGenerate exactly 2 test scenarios for this requirement.",
         "first_attempt_raw_response": {
           "tests": [
             {
-              "scenario": "Valid Weekly Summary Generation",
+              "scenario": "Valid Data Sharing with Anonymization",
               "steps": [
-                "Create a user account and log in",
-                "Track the user's mood for 7 consecutive days with varying scores",
-                "Navigate to the weekly summary page",
-                "Verify the system generates a weekly summary"
+                "Configure a third-party service for data sharing",
+                "Opt-in to share user data with the third-party service",
+                "Send a sample user data packet to the third-party service",
+                "Verify the data packet received by the third-party service"
               ],
-              "expected_result": "The system displays the user's average mood score and highlights notable trends or patterns in their mood history."
+              "expected_result": "The received data packet does not contain any personally identifiable information and is in an anonymized format."
             },
             {
-              "scenario": "Insufficient Data for Weekly Summary",
+              "scenario": "Data Sharing without Opt-in",
               "steps": [
-                "Create a user account and log in",
-                "Track the user's mood for only 3 days",
-                "Navigate to the weekly summary page"
+                "Configure a third-party service for data sharing",
+                "Do not opt-in to share user data with the third-party service",
+                "Attempt to send a sample user data packet to the third-party service",
+                "Verify the data packet received by the third-party service, if any"
               ],
-              "expected_result": "The system does not display a weekly summary and instead prompts the user to track their mood for at least 7 days."
+              "expected_result": "No data packet is sent to the third-party service or the data packet does not contain any user data."
             }
           ]
         },

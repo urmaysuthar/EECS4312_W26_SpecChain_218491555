@@ -1,69 +1,69 @@
 # Requirement ID: AFR1
 
-- Description: [The system shall export user mental health data in a CSV file format when requested by the user.]
-- Source Persona: [Data-Conscious User]
+- Description: [The system shall display the pricing information for all subscription plans on the app's main screen, before the user attempts to sign up or log in.]
+- Source Persona: [Frugal User]
 - Traceability: [Derived from review group AG1]
-- Acceptance Criteria: [Given a user has created an account and logged in, When the user navigates to the account settings and clicks the 'Export Data' button, Then the system shall generate a CSV file containing the user's mental health data, including date, time, and entries, and send it to the user's registered email address.]
+- Acceptance Criteria: [Given the app's main screen is displayed, When the user views the screen, Then the pricing information for all subscription plans is visible and clearly listed.]
 
 # Requirement ID: AFR2
 
-- Description: [The system shall display a list of third-party services used for data processing, including their names, purposes, and data sharing policies.]
-- Source Persona: [Data-Conscious User]
+- Description: [The system shall offer a free trial period of at least 7 days for new users to access all premium features before requiring a subscription.]
+- Source Persona: [Frugal User]
 - Traceability: [Derived from review group AG1]
-- Acceptance Criteria: [Given a user is logged in and navigates to the 'About' or 'Settings' section, When the user clicks on 'Third-Party Services', Then the system shall display a table with the following columns: 'Service Name', 'Purpose', and 'Data Sharing Policy', and populate it with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information.]
+- Acceptance Criteria: [Given a new user signs up for the app, When the user starts the onboarding process, Then the user is granted access to all premium features for a free trial period of at least 7 days.]
 
 # Requirement ID: AFR3
 
-- Description: [The system shall display an error message when a user's data cannot be loaded.]
-- Source Persona: [Frustrated User]
+- Description: [The system shall allow users to successfully log in from multiple devices.]
+- Source Persona: [Tech-Savvy Troubleshooter]
 - Traceability: [Derived from review group AG2]
-- Acceptance Criteria: [Given a user has logged in and attempted to view their results, When the system is unable to retrieve the user's data, Then the system displays an error message with a specific error code and a link to contact support.]
+- Acceptance Criteria: [Given a user has a valid account, When the user attempts to log in from a second device, Then the system shall authenticate the user and display their account information without error.]
 
 # Requirement ID: AFR4
 
-- Description: [The system shall prevent data loss when a user encounters a technical issue.]
-- Source Persona: [Frustrated User]
+- Description: [The system shall prevent data loss when a user closes the app unexpectedly.]
+- Source Persona: [Tech-Savvy Troubleshooter]
 - Traceability: [Derived from review group AG2]
-- Acceptance Criteria: [Given a user has entered data and the system encounters a technical issue, When the issue occurs, Then the system saves the user's data and displays a recovery message with instructions on how to resume where they left off.]
+- Acceptance Criteria: [Given a user has entered data into a session, When the app closes unexpectedly due to a technical issue, Then the system shall recover the unsaved data and display it to the user upon reopening the app.]
 
 # Requirement ID: AFR5
 
-- Description: [The system shall display a tooltip with the exact price and a link to the subscription page when a user hovers over a premium feature icon.]
-- Source Persona: [Budget-Conscious User]
+- Description: [The system shall display a daily motivational quote on the home screen.]
+- Source Persona: [Engaged Enthusiast]
 - Traceability: [Derived from review group AG3]
-- Acceptance Criteria: [Given the user is not logged in, When the user hovers over a premium feature icon, Then the tooltip displays the price and a link to the subscription page.]
+- Acceptance Criteria: [Given the user has opened the app on a day when a motivational quote is scheduled, When the user views the home screen, Then the system displays a daily motivational quote with a visually appealing design.]
 
 # Requirement ID: AFR6
 
-- Description: [The system shall allow users to view the last 30 days of mood history entries without requiring a subscription, with each entry including the date, mood rating, and a brief note.]
-- Source Persona: [Budget-Conscious User]
+- Description: [The system shall send a reminder notification to users at a user-selected time.]
+- Source Persona: [Engaged Enthusiast]
 - Traceability: [Derived from review group AG3]
-- Acceptance Criteria: [Given the user is not subscribed, When the user navigates to the mood history section, Then the system displays the last 30 days of entries with date, mood rating, and brief note for each entry.]
+- Acceptance Criteria: [Given the user has set a reminder time in the settings, When the current time matches the user-selected reminder time, Then the system sends a notification to the user with a message prompting them to check in with their mental well-being.]
 
 # Requirement ID: AFR7
 
-- Description: [The system shall display a confirmation message to the user after they submit feedback on app usability.]
-- Source Persona: [Feedback-Oriented User]
+- Description: [The system shall store a user selected reminder time and send a notification at that time to track their mood.]
+- Source Persona: [Mental Health Advocate]
 - Traceability: [Derived from review group AG4]
-- Acceptance Criteria: [Given the user is logged in and on the feedback page, When the user submits their feedback, Then the system displays a confirmation message that reads 'Thank you for your feedback.']
+- Acceptance Criteria: [Given a user has set a reminder time, When the system reaches that time, Then it shall send a notification to the user to track their mood.]
 
 # Requirement ID: AFR8
 
-- Description: [The system shall store and display all submitted feedback on a dedicated page for review.]
-- Source Persona: [Feedback-Oriented User]
+- Description: [The system shall allow users to export their saved mood history as a file.]
+- Source Persona: [Mental Health Advocate]
 - Traceability: [Derived from review group AG4]
-- Acceptance Criteria: [Given the user is an administrator and logged in, When they navigate to the feedback page, Then the system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp.]
+- Acceptance Criteria: [Given a user has saved mood history, When they request to export their mood history, Then the system shall generate a file containing their mood history.]
 
 # Requirement ID: AFR9
 
-- Description: [The system shall store a user-selected reminder time and send a notification at that time to track mood.]
-- Source Persona: [Results-Driven User]
+- Description: [The system shall provide a data export option for users to retrieve their mental health data.]
+- Source Persona: [Privacy-Conscious User]
 - Traceability: [Derived from review group AG5]
-- Acceptance Criteria: [Given a user has set a reminder time, When the system reaches that time, Then it shall send a notification to the user to track their mood.]
+- Acceptance Criteria: [Given the user is logged in, When they navigate to the account settings, Then they can select an option to export their mental health data in a CSV file format.]
 
 # Requirement ID: AFR10
 
-- Description: [The system shall generate a weekly summary of the user's mood history and provide insights into their mood trends.]
-- Source Persona: [Results-Driven User]
+- Description: [The system shall anonymize user data when shared with third-party services.]
+- Source Persona: [Privacy-Conscious User]
 - Traceability: [Derived from review group AG5]
-- Acceptance Criteria: [Given a user has tracked their mood for at least 7 days, When the system generates a weekly summary, Then it shall display the user's average mood score and highlight any notable trends or patterns in their mood history.]
+- Acceptance Criteria: [Given the user has opted to share their data with a third-party service, When the system sends the data to the third-party service, Then the data is anonymized and does not contain any personally identifiable information.]

@@ -3,233 +3,244 @@
     {
       "test_id": "T_auto_1",
       "requirement_id": "AFR1",
-      "scenario": "Valid Export Request",
+      "scenario": "Pricing information is displayed on the main screen",
       "steps": [
-        "Create a new user account with a valid email address and login credentials",
-        "Log in to the account with the created credentials",
-        "Navigate to the account settings and click the 'Export Data' button"
+        "Launch the app and navigate to the main screen",
+        "Verify that the main screen is fully loaded and displayed",
+        "Check the main screen for a section or table listing all subscription plans with their corresponding prices"
       ],
-      "expected_result": "A CSV file containing the user's mental health data, including date, time, and entries, is sent to the user's registered email address within 5 minutes"
+      "expected_result": "The pricing information for all subscription plans is visible, clearly listed, and easily readable on the main screen"
     },
     {
       "test_id": "T_auto_2",
       "requirement_id": "AFR1",
-      "scenario": "Invalid Export Request - Unregistered User",
+      "scenario": "Pricing information is displayed before login or signup actions",
       "steps": [
-        "Attempt to log in with an invalid email address and login credentials",
-        "Verify that the login attempt fails and an error message is displayed",
-        "Attempt to navigate to the account settings and click the 'Export Data' button"
+        "Launch the app and navigate to the main screen",
+        "Verify that the login and signup buttons or links are visible on the main screen",
+        "Check that the pricing information for all subscription plans is displayed above or alongside the login and signup options"
       ],
-      "expected_result": "An error message is displayed indicating that the user is not registered, and no CSV file is sent to the email address"
+      "expected_result": "The pricing information for all subscription plans is displayed prominently on the main screen, before the user can access the login or signup functionality"
     },
     {
       "test_id": "T_auto_3",
       "requirement_id": "AFR2",
-      "scenario": "Valid Third-Party Services Display",
+      "scenario": "New User Free Trial Period Validation",
       "steps": [
-        "Log in to the system with a valid user account",
-        "Navigate to the 'About' section",
-        "Click on 'Third-Party Services'"
+        "Create a new user account on the app.",
+        "Complete the onboarding process as a new user.",
+        "Verify that all premium features are accessible immediately after onboarding.",
+        "Wait for 7 days from the start of the onboarding process.",
+        "Verify that the user still has access to all premium features after 7 days."
       ],
-      "expected_result": "The system displays a table with columns 'Service Name', 'Purpose', and 'Data Sharing Policy', populated with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+      "expected_result": "The user has access to all premium features for at least 7 days without requiring a subscription."
     },
     {
       "test_id": "T_auto_4",
       "requirement_id": "AFR2",
-      "scenario": "Third-Party Services Display from Settings Section",
+      "scenario": "Free Trial Expiration Validation",
       "steps": [
-        "Log in to the system with a valid user account",
-        "Navigate to the 'Settings' section",
-        "Click on 'Third-Party Services'"
+        "Create a new user account on the app.",
+        "Complete the onboarding process as a new user.",
+        "Verify that all premium features are accessible immediately after onboarding.",
+        "Wait for 8 days from the start of the onboarding process.",
+        "Verify that the user is prompted to subscribe to access premium features."
       ],
-      "expected_result": "The system displays a table with columns 'Service Name', 'Purpose', and 'Data Sharing Policy', populated with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+      "expected_result": "After 8 days, the user is no longer able to access premium features without a subscription."
     },
     {
       "test_id": "T_auto_5",
       "requirement_id": "AFR3",
-      "scenario": "Test Successful Error Display for Unavailable User Data",
+      "scenario": "Successful Login from Second Device",
       "steps": [
-        "Log in as an existing user",
-        "Simulate a failure in retrieving the user's data",
-        "Attempt to view the user's results"
+        "Create a new user account and verify it is active.",
+        "Log in to the system from a first device using the created account credentials.",
+        "Verify the user account information is displayed correctly on the first device.",
+        "Log in to the system from a second device using the same account credentials.",
+        "Verify the user account information is displayed correctly on the second device."
       ],
-      "expected_result": "The system displays an error message with a specific error code and a link to contact support."
+      "expected_result": "The system successfully authenticates the user on both devices and displays their account information without error."
     },
     {
       "test_id": "T_auto_6",
       "requirement_id": "AFR3",
-      "scenario": "Test Error Display with Correct Error Code and Support Link",
+      "scenario": "Multiple Device Login with Concurrent Sessions",
       "steps": [
-        "Log in as an existing user",
-        "Simulate a failure in retrieving the user's data with a known error code",
-        "Attempt to view the user's results",
-        "Verify the error code in the displayed error message",
-        "Verify the presence and functionality of the support link"
+        "Create a new user account and verify it is active.",
+        "Log in to the system from a first device using the created account credentials.",
+        "Log in to the system from a second device using the same account credentials.",
+        "Perform actions on the first device that require account information.",
+        "Verify the account information on the first device remains up-to-date and accurate.",
+        "Perform actions on the second device that require account information.",
+        "Verify the account information on the second device remains up-to-date and accurate."
       ],
-      "expected_result": "The system displays an error message with the correct error code and a functional link to contact support."
+      "expected_result": "The system maintains concurrent sessions across multiple devices, ensuring both devices have access to the user's account information in real-time without error."
     },
     {
       "test_id": "T_auto_7",
       "requirement_id": "AFR4",
-      "scenario": "Successful Data Recovery",
+      "scenario": "Unexpected App Closure with Unsaved Data",
       "steps": [
-        "1. Log in to the system as a valid user.",
-        "2. Enter sample data into the required fields.",
-        "3. Simulate a technical issue (e.g., server crash, network error) while the user is entering data.",
-        "4. Verify the system saves the entered data.",
-        "5. Check the system displays a recovery message with instructions."
+        "Launch the app and navigate to a session where data can be entered.",
+        "Enter some data into the session (e.g., text, numbers).",
+        "Simulate an unexpected app closure (e.g., force close, crash).",
+        "Reopen the app."
       ],
-      "expected_result": "The system saves the user's data and displays a recovery message with instructions on how to resume where they left off."
+      "expected_result": "The app recovers and displays the unsaved data entered before the unexpected closure."
     },
     {
       "test_id": "T_auto_8",
       "requirement_id": "AFR4",
-      "scenario": "Data Recovery with Multiple Fields",
+      "scenario": "App Closure During Data Entry Without Saving",
       "steps": [
-        "1. Log in to the system as a valid user.",
-        "2. Enter sample data into multiple required fields (e.g., name, address, phone number).",
-        "3. Simulate a technical issue (e.g., server crash, network error) while the user is entering data.",
-        "4. Verify the system saves all entered data.",
-        "5. Check the system displays a recovery message with instructions."
+        "Launch the app and start a new session.",
+        "Enter data into the session but do not save it.",
+        "Simulate an unexpected shutdown or technical failure (e.g., device shutdown, app crash).",
+        "Restart the device and reopen the app."
       ],
-      "expected_result": "The system saves all the user's data and displays a recovery message with instructions on how to resume where they left off."
+      "expected_result": "Upon reopening, the app successfully recovers and displays the unsaved data that was entered before the app closed unexpectedly."
     },
     {
       "test_id": "T_auto_9",
       "requirement_id": "AFR5",
-      "scenario": "Hover over premium feature icon as logged out user",
+      "scenario": "Daily Motivational Quote Displayed on Home Screen on a Scheduled Day",
       "steps": [
-        "Log out of the system",
-        "Navigate to a page containing a premium feature icon",
-        "Hover over the premium feature icon"
+        "Open the app on a day when a motivational quote is scheduled (e.g., Monday)",
+        "Navigate to the home screen",
+        "Verify the home screen is fully loaded"
       ],
-      "expected_result": "A tooltip is displayed with the exact price and a link to the subscription page"
+      "expected_result": "The system displays a daily motivational quote with a visually appealing design on the home screen"
     },
     {
       "test_id": "T_auto_10",
       "requirement_id": "AFR5",
-      "scenario": "Verify tooltip consistency across multiple premium features",
+      "scenario": "No Daily Motivational Quote on Non-Scheduled Day or If Feature is Disabled",
       "steps": [
-        "Log out of the system",
-        "Navigate to a page containing multiple premium feature icons",
-        "Hover over each premium feature icon one by one"
+        "Open the app on a day when no motivational quote is scheduled (e.g., a day with no quote assigned)",
+        "Navigate to the home screen",
+        "Verify the home screen is fully loaded"
       ],
-      "expected_result": "For each premium feature icon, a tooltip is displayed with the exact price and a link to the subscription page"
+      "expected_result": "The system does not display a daily motivational quote on the home screen or displays a message indicating that no quote is available for the day"
     },
     {
       "test_id": "T_auto_11",
       "requirement_id": "AFR6",
-      "scenario": "View Last 30 Days of Mood History as Non-Subscribed User",
+      "scenario": "Reminder Notification at Selected Time",
       "steps": [
-        "Log in as a non-subscribed user",
-        "Navigate to the mood history section",
-        "Verify the display of the last 30 days of mood history entries"
+        "Set the user-selected reminder time to 10:00 AM",
+        "Simulate the current time to be 10:00 AM",
+        "Verify the user has a pending notification"
       ],
-      "expected_result": "The system displays a list of the last 30 days of mood history entries, including date, mood rating, and brief note for each entry, without prompting for a subscription."
+      "expected_result": "The system sends a notification to the user with a message prompting them to check in with their mental well-being at 10:00 AM"
     },
     {
       "test_id": "T_auto_12",
       "requirement_id": "AFR6",
-      "scenario": "Verify Date Range and Details for Non-Subscribed User",
+      "scenario": "No Reminder Notification if Time Not Matched",
       "steps": [
-        "Log in as a non-subscribed user",
-        "Navigate to the mood history section",
-        "Check the date range of displayed mood history entries",
-        "Verify that each entry includes date, mood rating, and brief note"
+        "Set the user-selected reminder time to 10:00 AM",
+        "Simulate the current time to be 9:59 AM",
+        "Verify the user has no pending notifications"
       ],
-      "expected_result": "The system displays mood history entries for the last 30 days only, and each entry includes the date, a mood rating, and a brief note, without requiring a subscription."
+      "expected_result": "The system does not send a notification to the user at 9:59 AM"
     },
     {
       "test_id": "T_auto_13",
       "requirement_id": "AFR7",
-      "scenario": "Valid Feedback Submission",
+      "scenario": "Valid Reminder Time Notification",
       "steps": [
-        "Log in to the app as a registered user",
-        "Navigate to the feedback page",
-        "Enter valid feedback on app usability",
-        "Click the submit button"
+        "Set the current system time to 10:00 AM",
+        "Log in as a user and set a reminder for 10:05 AM to track their mood",
+        "Wait until the system time reaches 10:05 AM",
+        "Verify the user receives a notification to track their mood"
       ],
-      "expected_result": "A confirmation message is displayed that reads 'Thank you for your feedback.'"
+      "expected_result": "The user receives a notification at 10:05 AM to track their mood"
     },
     {
       "test_id": "T_auto_14",
       "requirement_id": "AFR7",
-      "scenario": "Empty Feedback Submission",
+      "scenario": "Reminder Time Notification When User is Not Logged In",
       "steps": [
-        "Log in to the app as a registered user",
-        "Navigate to the feedback page",
-        "Leave the feedback field empty",
-        "Click the submit button"
+        "Log in as a user and set a reminder for 11:00 AM to track their mood",
+        "Log out of the system",
+        "Wait until the system time reaches 11:00 AM",
+        "Verify the user receives a notification to track their mood"
       ],
-      "expected_result": "A confirmation message is displayed that reads 'Thank you for your feedback.'"
+      "expected_result": "The user receives a notification at 11:00 AM to track their mood even when they are not logged in"
     },
     {
       "test_id": "T_auto_15",
       "requirement_id": "AFR8",
-      "scenario": "Valid Feedback Display",
+      "scenario": "Export Mood History with Existing Data",
       "steps": [
-        "Log in as an administrator with valid credentials",
-        "Navigate to the dedicated feedback page",
-        "Verify that the page displays a list of submitted feedback"
+        "Log in as an existing user",
+        "Navigate to the mood history section",
+        "Ensure the user has saved mood history data",
+        "Request to export mood history as a file",
+        "Verify the system generates a file containing the user's mood history"
       ],
-      "expected_result": "The system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp for each feedback entry."
+      "expected_result": "A file is downloaded containing the user's mood history data in a readable format."
     },
     {
       "test_id": "T_auto_16",
       "requirement_id": "AFR8",
-      "scenario": "No Feedback Display",
+      "scenario": "Export Mood History with No Saved Data",
       "steps": [
-        "Log in as an administrator with valid credentials",
-        "Navigate to the dedicated feedback page",
-        "Verify that there is no feedback submitted"
+        "Log in as an existing user",
+        "Navigate to the mood history section",
+        "Ensure the user has no saved mood history data",
+        "Request to export mood history as a file"
       ],
-      "expected_result": "The system displays an empty list or a message indicating that no feedback has been submitted yet."
+      "expected_result": "The system displays a message indicating that there is no mood history data to export."
     },
     {
       "test_id": "T_auto_17",
       "requirement_id": "AFR9",
-      "scenario": "Valid Reminder Time Notification",
+      "scenario": "Valid Data Export",
       "steps": [
-        "Set user's reminder time to 10:00 AM",
-        "Simulate system time to 10:00 AM",
-        "Verify system sends notification to user to track mood"
+        "Log in to the system with valid credentials",
+        "Navigate to the account settings page",
+        "Verify the 'Export Mental Health Data' option is available",
+        "Select the 'Export Mental Health Data' option",
+        "Verify the system generates a CSV file containing the user's mental health data"
       ],
-      "expected_result": "The user receives a notification at 10:00 AM to track their mood."
+      "expected_result": "A CSV file is downloaded containing the user's mental health data."
     },
     {
       "test_id": "T_auto_18",
       "requirement_id": "AFR9",
-      "scenario": "Reminder Time Notification When System Time Changes",
+      "scenario": "Unauthorized Access",
       "steps": [
-        "Set user's reminder time to 11:30 AM",
-        "Simulate system time to 11:29 AM",
-        "Simulate system time to 11:30 AM",
-        "Verify system sends notification to user to track mood"
+        "Log out of the system",
+        "Attempt to navigate to the account settings page",
+        "Verify the 'Export Mental Health Data' option is not available",
+        "Try to access the export option directly via URL or API call"
       ],
-      "expected_result": "The user receives a notification at 11:30 AM to track their mood."
+      "expected_result": "The system prevents access to the account settings and export option, displaying an error message or redirecting to the login page."
     },
     {
       "test_id": "T_auto_19",
       "requirement_id": "AFR10",
-      "scenario": "Valid Weekly Summary Generation",
+      "scenario": "Valid Data Sharing with Anonymization",
       "steps": [
-        "Create a user account and log in",
-        "Track the user's mood for 7 consecutive days with varying scores",
-        "Navigate to the weekly summary page",
-        "Verify the system generates a weekly summary"
+        "Configure a third-party service for data sharing",
+        "Opt-in to share user data with the third-party service",
+        "Send a sample user data packet to the third-party service",
+        "Verify the data packet received by the third-party service"
       ],
-      "expected_result": "The system displays the user's average mood score and highlights notable trends or patterns in their mood history."
+      "expected_result": "The received data packet does not contain any personally identifiable information and is in an anonymized format."
     },
     {
       "test_id": "T_auto_20",
       "requirement_id": "AFR10",
-      "scenario": "Insufficient Data for Weekly Summary",
+      "scenario": "Data Sharing without Opt-in",
       "steps": [
-        "Create a user account and log in",
-        "Track the user's mood for only 3 days",
-        "Navigate to the weekly summary page"
+        "Configure a third-party service for data sharing",
+        "Do not opt-in to share user data with the third-party service",
+        "Attempt to send a sample user data packet to the third-party service",
+        "Verify the data packet received by the third-party service, if any"
       ],
-      "expected_result": "The system does not display a weekly summary and instead prompts the user to track their mood for at least 7 days."
+      "expected_result": "No data packet is sent to the third-party service or the data packet does not contain any user data."
     }
   ]
 }

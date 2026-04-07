@@ -16,10 +16,5 @@
     "requirement_to_persona_links": 12,
     "requirement_to_group_links": 12,
     "test_to_requirement_links": 24
-  },
-  "notes": {
-    "review_coverage_explanation": "60 cleaned reviews were explicitly grouped across 5 manual review groups out of 4267 total cleaned reviews.",
-    "traceability_explanation": "Traceability links were counted using all explicit references between artifacts in the manual pipeline.",
-    "ambiguity_explanation": "The manual requirements were reviewed and written to avoid vague words and non measurable language."
   }
 }
