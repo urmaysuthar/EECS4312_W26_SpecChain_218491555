@@ -9,7 +9,7 @@
     "review_coverage_ratio": 0.0141,
     "traceability_ratio": 1.0,
     "testability_rate": 1.0,
-    "ambiguity_ratio": 0.0833,
+    "ambiguity_ratio": 0.0,
     "traceability_breakdown": {
       "review_group_to_review_links": 60,
       "persona_to_group_links": 5,
@@ -29,7 +29,7 @@
     "review_coverage_ratio": 0.0176,
     "traceability_ratio": 1.0,
     "testability_rate": 1.0,
-    "ambiguity_ratio": 0.0,
+    "ambiguity_ratio": 0.1,
     "traceability_breakdown": {
       "review_group_to_review_links": 75,
       "persona_to_group_links": 5,
@@ -101,8 +101,8 @@
       "hybrid": 1.0
     },
     "ambiguity_ratio": {
-      "manual": 0.0833,
-      "auto": 0.0,
+      "manual": 0.0,
+      "auto": 0.1,
       "hybrid": 0.0
     }
   }
