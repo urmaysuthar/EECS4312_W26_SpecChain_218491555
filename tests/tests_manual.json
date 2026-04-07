@@ -1,16 +1,266 @@
-
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
+      "test_id": "T_manual_01",
       "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "scenario": "Save a mood check in with timestamp",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Open the mood check in screen",
+        "Select a mood",
+        "Submit the mood entry",
+        "Open the saved entry"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The system saves the mood entry and shows the selected mood with the date and time of submission."
+    },
+    {
+      "test_id": "T_manual_02",
+      "requirement_id": "FR1",
+      "scenario": "Complete a mood check in in one session",
+      "steps": [
+        "Open the mood check in screen",
+        "Select a mood",
+        "Submit the entry without leaving the screen"
+      ],
+      "expected_result": "The entry is saved successfully in one session and appears in the user record."
+    },
+    {
+      "test_id": "T_manual_03",
+      "requirement_id": "FR2",
+      "scenario": "Add a journal note to a mood entry",
+      "steps": [
+        "Open the mood check in screen",
+        "Select a mood",
+        "Type a journal note",
+        "Submit the entry"
+      ],
+      "expected_result": "The system saves the mood entry together with the written journal note."
+    },
+    {
+      "test_id": "T_manual_04",
+      "requirement_id": "FR2",
+      "scenario": "Save a mood entry with a longer written note",
+      "steps": [
+        "Open the mood check in screen",
+        "Select a mood",
+        "Enter a multi sentence journal note",
+        "Submit the entry",
+        "Open the saved entry"
+      ],
+      "expected_result": "The saved entry includes the full journal note that was entered before submission."
+    },
+    {
+      "test_id": "T_manual_05",
+      "requirement_id": "FR3",
+      "scenario": "View mood history in date order",
+      "steps": [
+        "Save at least two mood entries on different dates",
+        "Open the history view"
+      ],
+      "expected_result": "The system shows the saved entries in chronological order."
+    },
+    {
+      "test_id": "T_manual_06",
+      "requirement_id": "FR3",
+      "scenario": "View journal notes in entry history",
+      "steps": [
+        "Save at least two mood entries with written notes",
+        "Open the history view"
+      ],
+      "expected_result": "Each displayed history item includes its associated journal note."
+    },
+    {
+      "test_id": "T_manual_07",
+      "requirement_id": "FR4",
+      "scenario": "Generate a summary for a selected date range",
+      "steps": [
+        "Save mood entries across multiple days",
+        "Open the summary feature",
+        "Select a start date and end date",
+        "Generate the summary"
+      ],
+      "expected_result": "The system shows a summary based only on entries recorded within the selected date range."
+    },
+    {
+      "test_id": "T_manual_08",
+      "requirement_id": "FR4",
+      "scenario": "Exclude entries outside the selected date range",
+      "steps": [
+        "Save mood entries before, within, and after a test date range",
+        "Open the summary feature",
+        "Select the test date range",
+        "Generate the summary"
+      ],
+      "expected_result": "The summary includes only entries inside the selected range and excludes entries outside it."
+    },
+    {
+      "test_id": "T_manual_09",
+      "requirement_id": "FR5",
+      "scenario": "Review past entries before an appointment",
+      "steps": [
+        "Save multiple mood entries with notes",
+        "Open the review screen"
+      ],
+      "expected_result": "The system displays past entries in one readable view for appointment preparation."
+    },
+    {
+      "test_id": "T_manual_10",
+      "requirement_id": "FR5",
+      "scenario": "Show dates moods and notes together in review view",
+      "steps": [
+        "Save mood entries with notes",
+        "Open the review screen"
+      ],
+      "expected_result": "Each entry in the review screen shows the date, the mood, and the written note together."
+    },
+    {
+      "test_id": "T_manual_11",
+      "requirement_id": "FR6",
+      "scenario": "Label premium features before access",
+      "steps": [
+        "Open a screen that lists app features"
+      ],
+      "expected_result": "Any premium feature is clearly marked as premium before the user tries to open it."
+    },
+    {
+      "test_id": "T_manual_12",
+      "requirement_id": "FR6",
+      "scenario": "Do not mark free features as premium",
+      "steps": [
+        "Open a screen that lists both free and premium features"
+      ],
+      "expected_result": "Free features appear without a premium restriction label while premium features remain labeled."
+    },
+    {
+      "test_id": "T_manual_13",
+      "requirement_id": "FR7",
+      "scenario": "Show subscription price before purchase confirmation",
+      "steps": [
+        "Select a premium upgrade option",
+        "Open the purchase screen"
+      ],
+      "expected_result": "The purchase screen shows the subscription price before the user confirms payment."
+    },
+    {
+      "test_id": "T_manual_14",
+      "requirement_id": "FR7",
+      "scenario": "Show billing period before purchase confirmation",
+      "steps": [
+        "Select a premium upgrade option",
+        "Open the purchase screen"
+      ],
+      "expected_result": "The purchase screen shows the billing period and a confirmation action before payment is submitted."
+    },
+    {
+      "test_id": "T_manual_15",
+      "requirement_id": "FR8",
+      "scenario": "Generate a mood insights report from user data",
+      "steps": [
+        "Save multiple mood entries over time",
+        "Open the insights report"
+      ],
+      "expected_result": "The system displays an insights report based on the user’s recorded entries."
+    },
+    {
+      "test_id": "T_manual_16",
+      "requirement_id": "FR8",
+      "scenario": "Do not show generic placeholder text in insights report",
+      "steps": [
+        "Save multiple mood entries over time",
+        "Open the insights report"
+      ],
+      "expected_result": "The report content reflects the user’s stored mood history instead of only generic placeholder text."
+    },
+    {
+      "test_id": "T_manual_17",
+      "requirement_id": "FR9",
+      "scenario": "Provide feedback based on recorded mood patterns",
+      "steps": [
+        "Save at least seven mood entries",
+        "Open the feedback section"
+      ],
+      "expected_result": "The system provides feedback that refers to patterns found in the saved mood history."
+    },
+    {
+      "test_id": "T_manual_18",
+      "requirement_id": "FR9",
+      "scenario": "Use mood history when generating feedback",
+      "steps": [
+        "Save at least seven mood entries with different moods",
+        "Open the feedback section"
+      ],
+      "expected_result": "The feedback reflects the user’s recorded mood history rather than showing unrelated generic advice only."
+    },
+    {
+      "test_id": "T_manual_19",
+      "requirement_id": "FR10",
+      "scenario": "Save preferred reminder times",
+      "steps": [
+        "Open reminder settings",
+        "Select one or more reminder times",
+        "Save the settings"
+      ],
+      "expected_result": "The system stores the selected reminder times successfully."
+    },
+    {
+      "test_id": "T_manual_20",
+      "requirement_id": "FR10",
+      "scenario": "Display saved reminder times in settings",
+      "steps": [
+        "Open reminder settings",
+        "Select one or more reminder times",
+        "Save the settings",
+        "Reopen reminder settings"
+      ],
+      "expected_result": "The previously selected reminder times are shown in the reminder settings screen."
+    },
+    {
+      "test_id": "T_manual_21",
+      "requirement_id": "FR11",
+      "scenario": "Send a reminder at a saved time",
+      "steps": [
+        "Open reminder settings",
+        "Enable reminders",
+        "Save a reminder time a few minutes ahead",
+        "Wait until the saved time is reached"
+      ],
+      "expected_result": "The system sends a mood check in notification at the saved reminder time."
+    },
+    {
+      "test_id": "T_manual_22",
+      "requirement_id": "FR11",
+      "scenario": "Send reminders only when enabled",
+      "steps": [
+        "Open reminder settings",
+        "Enable reminders",
+        "Save a reminder time",
+        "Wait until the saved reminder time is reached"
+      ],
+      "expected_result": "A notification is sent because reminders are enabled and a valid reminder time was saved."
+    },
+    {
+      "test_id": "T_manual_23",
+      "requirement_id": "FR12",
+      "scenario": "Keep saved reminder times after turning reminders off and on",
+      "steps": [
+        "Open reminder settings",
+        "Save one or more reminder times",
+        "Turn reminders off",
+        "Turn reminders on again",
+        "Reopen reminder settings"
+      ],
+      "expected_result": "The system still shows the previously saved reminder times after reminders are turned back on."
+    },
+    {
+      "test_id": "T_manual_24",
+      "requirement_id": "FR12",
+      "scenario": "Do not delete reminder times when disabling reminders",
+      "steps": [
+        "Open reminder settings",
+        "Save one or more reminder times",
+        "Turn reminders off",
+        "Reopen reminder settings"
+      ],
+      "expected_result": "Turning reminders off does not delete the saved reminder times."
     }
   ]
 }

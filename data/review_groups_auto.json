@@ -1,12 +1,243 @@
 {
   "groups": [
     {
-      "group_id": "A1",
-      "theme": "Workout logging issues",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
+      "group_id": "AG1",
+      "theme": "Privacy and Data Concerns",
+      "review_ids": [
+        "rev_002819",
+        "rev_002824",
+        "rev_003744",
+        "rev_002820",
+        "rev_002029",
+        "rev_002567",
+        "rev_004717",
+        "rev_002293",
+        "rev_003958",
+        "rev_001102",
+        "rev_000473",
+        "rev_003968",
+        "rev_003381",
+        "rev_001324",
+        "rev_001314"
+      ],
       "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+        "Was great until I read privacy agreement. They give your data to Facebook for marketing purposes using your mobile device's ad ID. I took screenshots of my last ~2 years of data and just uninstalled the program.",
+        "After reading the privacy policy I discovered that the app has facebook software development kit integrated in app, which means that all data from app is accessible for facebook. I don't recommend installing it if you don't want your mental health data used against you and sold to advertisers.",
+        "it is a very good it records all data of your day ...."
+      ],
+      "group_summary": "Users express concerns about data sharing, privacy, and access to their own data.",
+      "keywords": [
+        "privacy",
+        "data sharing",
+        "security",
+        "access",
+        "paywall"
+      ],
+      "representative_review_ids": [
+        "rev_002819",
+        "rev_002824",
+        "rev_003744",
+        "rev_002820",
+        "rev_002029",
+        "rev_002567",
+        "rev_004717",
+        "rev_002293",
+        "rev_003958",
+        "rev_001102",
+        "rev_000473",
+        "rev_003968"
+      ]
+    },
+    {
+      "group_id": "AG2",
+      "theme": "Technical Issues and Bugs",
+      "review_ids": [
+        "rev_000878",
+        "rev_003390",
+        "rev_000728",
+        "rev_000560",
+        "rev_003165",
+        "rev_000552",
+        "rev_002454",
+        "rev_000665",
+        "rev_003242",
+        "rev_000843",
+        "rev_000584",
+        "rev_001146",
+        "rev_002778",
+        "rev_000857",
+        "rev_000540"
+      ],
+      "example_reviews": [
+        "I did a whole 14 days of documenting my emotions and I can't even see my results. Whenever I click on seeing my results, it's a blank page. Please correct this issue.",
+        "I really like it, and the exercises are good, but recently there is a persistent bug happening. When I click the notification reminding me to answer some questions, it opens the app but the page is blank.",
+        "I would not recommend to patients given numerous technical issues"
+      ],
+      "group_summary": "Users report various technical issues, such as login problems, blank pages, and data loss.",
+      "keywords": [
+        "bug",
+        "login issue",
+        "blank page",
+        "data loss",
+        "crash"
+      ],
+      "representative_review_ids": [
+        "rev_000878",
+        "rev_003390",
+        "rev_000728",
+        "rev_000560",
+        "rev_003165",
+        "rev_000552",
+        "rev_002454",
+        "rev_000665",
+        "rev_003242",
+        "rev_000843",
+        "rev_000584",
+        "rev_001146"
+      ]
+    },
+    {
+      "group_id": "AG3",
+      "theme": "Pricing and Paywall Concerns",
+      "review_ids": [
+        "rev_000493",
+        "rev_001879",
+        "rev_001191",
+        "rev_000323",
+        "rev_000227",
+        "rev_003955",
+        "rev_000734",
+        "rev_000609",
+        "rev_000297",
+        "rev_000415",
+        "rev_004107",
+        "rev_004765",
+        "rev_000913",
+        "rev_000276",
+        "rev_002922"
+      ],
+      "example_reviews": [
+        "Wow. Cannot believe you've locked the basic bare bones feature of viewing mood history behind your $100/year paywall. I would happily pay a one time price for a premium app, but there's no way I can afford that absurdly expensive subscription model. What is the point of a mood journal app if you can't look back and see your old entries?? I was worried this app would go south when it got bought out. I guess I was right. New users beware, don't waste your time, it's all downhill from here.",
+        "Cool but it's really expensive (probably no regional pricing)",
+        "Pretty good except for the expensive paywall"
+      ],
+      "group_summary": "Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.",
+      "keywords": [
+        "price",
+        "paywall",
+        "expensive",
+        "subscription",
+        "free features"
+      ],
+      "representative_review_ids": [
+        "rev_000493",
+        "rev_001879",
+        "rev_001191",
+        "rev_000323",
+        "rev_000227",
+        "rev_003955",
+        "rev_000734",
+        "rev_000609",
+        "rev_000297",
+        "rev_000415",
+        "rev_004107",
+        "rev_004765"
+      ]
+    },
+    {
+      "group_id": "AG4",
+      "theme": "Usability and Feedback",
+      "review_ids": [
+        "rev_001963",
+        "rev_001356",
+        "rev_001380",
+        "rev_000350",
+        "rev_001697",
+        "rev_004979",
+        "rev_003768",
+        "rev_000058",
+        "rev_002466",
+        "rev_001269",
+        "rev_004148",
+        "rev_001642",
+        "rev_000094",
+        "rev_000895",
+        "rev_002203"
+      ],
+      "example_reviews": [
+        "Great feedback from the app",
+        "Been super helpful!!! Great feedback and simple interface",
+        "I like the therapy options and feedback"
+      ],
+      "group_summary": "Users provide feedback on the app's usability, suggesting improvements to the user interface, questions, and insights.",
+      "keywords": [
+        "usability",
+        "interface",
+        "questions",
+        "insights",
+        "feedback"
+      ],
+      "representative_review_ids": [
+        "rev_001963",
+        "rev_001356",
+        "rev_001380",
+        "rev_000350",
+        "rev_001697",
+        "rev_004979",
+        "rev_003768",
+        "rev_000058",
+        "rev_002466",
+        "rev_001269",
+        "rev_004148",
+        "rev_001642"
+      ]
+    },
+    {
+      "group_id": "AG5",
+      "theme": "Value and Effectiveness",
+      "review_ids": [
+        "rev_004977",
+        "rev_000984",
+        "rev_004492",
+        "rev_003155",
+        "rev_002216",
+        "rev_001920",
+        "rev_000469",
+        "rev_001467",
+        "rev_002940",
+        "rev_002552",
+        "rev_003079",
+        "rev_004020",
+        "rev_000462",
+        "rev_002720",
+        "rev_001934"
+      ],
+      "example_reviews": [
+        "mood tracking with reminder. very helpful.",
+        "Useful mood tracking",
+        "It's very helpful and others support lines"
+      ],
+      "group_summary": "Users share their experiences with the app's effectiveness in tracking mood, providing insights, and offering support.",
+      "keywords": [
+        "helpful",
+        "effective",
+        "mood tracking",
+        "insights",
+        "support"
+      ],
+      "representative_review_ids": [
+        "rev_004977",
+        "rev_000984",
+        "rev_004492",
+        "rev_003155",
+        "rev_002216",
+        "rev_001920",
+        "rev_000469",
+        "rev_001467",
+        "rev_002940",
+        "rev_002552",
+        "rev_003079",
+        "rev_004020"
       ]
     }
   ]

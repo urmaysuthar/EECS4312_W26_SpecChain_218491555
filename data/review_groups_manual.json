@@ -2,11 +2,113 @@
   "groups": [
     {
       "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
+      "theme": "Users building a daily mood tracking and journaling habit",
+      "review_ids": [
+        "rev_000035",
+        "rev_000038",
+        "rev_000047",
+        "rev_000101",
+        "rev_000132",
+        "rev_000142",
+        "rev_000165",
+        "rev_000190",
+        "rev_000192",
+        "rev_000200",
+        "rev_000246",
+        "rev_000281"
+      ],
       "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
+        "mindDoc is a really great app for journaling and tracking moods because sometimes we ourselves don't know what we're feeling. These exercises help us clear our thoughts greatly.",
+        "I've been trying to keep a journal for years and I'm just terrible at it. I've been using this app for about 5 weeks and this is the first time I've successfully kept up with something like this! It's been very helpful to track my mood and I like that I can go back and read my entries. I do wish the \"emotions\" board had some more options to choose from but it's not bad. The push notifications 3 times a day is very helpful, I usually get at least one entry in per day because of the reminders."
+      ]
+    },
+    {
+      "group_id": "G2",
+      "theme": "Users using MindDoc to support therapy, doctor visits, or symptom conversations",
+      "review_ids": [
+        "rev_000007",
+        "rev_000053",
+        "rev_000062",
+        "rev_000097",
+        "rev_000113",
+        "rev_000129",
+        "rev_000141",
+        "rev_000147",
+        "rev_000150",
+        "rev_000193",
+        "rev_000291",
+        "rev_000388"
+      ],
+      "example_reviews": [
+        "I started using this app back in 2019, when it was still called Moodpath. This app helped me understand my symptoms and patterns, making it easier to navigate my mental health day to day. Because I used it consistently, I never came to therapy or doctor appointments with a blank mind. I used the notes from the app to guide discussions, and my doctor even said it made working with me easier. A simple but powerful tool that truly supports professional care.",
+        "it has been really helpful for me to track my mood throughout the period of time and also helps my therapist understand how my mood has been like every two weeks to better understand my situation."
+      ]
+    },
+    {
+      "group_id": "G3",
+      "theme": "Cost-sensitive users blocked by premium paywalls and subscription limits",
+      "review_ids": [
+        "rev_000002",
+        "rev_000023",
+        "rev_000026",
+        "rev_000031",
+        "rev_000036",
+        "rev_000057",
+        "rev_000080",
+        "rev_000096",
+        "rev_000118",
+        "rev_000137",
+        "rev_000167",
+        "rev_000197"
+      ],
+      "example_reviews": [
+        "Everything but the introduction is paywalled. I do not need an app to notice what affects mood. Downloaded for the mental health resources, but will use something that offers a chance to text the benefits before charging.",
+        "Listen, if 90 percent of the app is unusable without purchasing a subscription just make the app paid instead. Otherwise, it just feels exploitative."
+      ]
+    },
+    {
+      "group_id": "G4",
+      "theme": "Users seeking meaningful insights, reports, and personalized feedback",
+      "review_ids": [
+        "rev_000009",
+        "rev_000017",
+        "rev_000048",
+        "rev_000058",
+        "rev_000066",
+        "rev_000071",
+        "rev_000094",
+        "rev_000103",
+        "rev_000111",
+        "rev_000130",
+        "rev_000145",
+        "rev_000158"
+      ],
+      "example_reviews": [
+        "So far I love this app. comprehensive insight, accurate and helpful information, and more in a well put together application. Nice work y'all.",
+        "Questions are repetitive after a while. Reports are not valuable. Feedback feature doesn't seem to work properly"
+      ]
+    },
+    {
+      "group_id": "G5",
+      "theme": "Users who rely on reminders and need notifications to be reliable and well timed",
+      "review_ids": [
+        "rev_000041",
+        "rev_000128",
+        "rev_000203",
+        "rev_000233",
+        "rev_000236",
+        "rev_000285",
+        "rev_000298",
+        "rev_000362",
+        "rev_000434",
+        "rev_000490",
+        "rev_000520",
+        "rev_000588"
+      ],
+      "example_reviews": [
+        "not getting notifications to answer the questions",
+        "Only been using a few days. So far so good. I hate the reminders come at odd times and I miss them."
       ]
     }
-  ]}
+  ]
+}

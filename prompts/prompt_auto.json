@@ -1,3 +1,693 @@
 {
-    "prompt": ""
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "theme_discovery": {
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "theme_discovery_system_prompt": "You are helping with software requirements engineering for a mental health app. Read the sampled user reviews and discover exactly 5 DISTINCT review group themes. Each theme must represent a clear user situation, recurring complaint, recurring need, or recurring value point. The 5 themes must be meaningfully different from each other. Do not produce five versions of general mood tracking or emotional support. If present in the reviews, try to capture different concerns such as pricing or paywalls, technical or login issues, reminders or habit support, insights or therapy usefulness, and usability, accessibility, language, privacy, or customization. The themes should be similar in granularity to manual requirements engineering groups, but not identical to any manual set. Return strict JSON only with this shape: {\"groups\": [{\"group_id\": \"AG1\", \"theme\": \"...\", \"summary\": \"...\", \"keywords\": [\"...\", \"...\"]}]}. Use exactly 5 groups named AG1 to AG5. Each keywords list should contain 6 to 10 short keywords or short phrases. Avoid overlap as much as possible.",
+    "theme_discovery_user_prompt": "Here is a sample of cleaned MindDoc reviews.\nCreate exactly 5 distinct automated review group blueprints.\n\nSample reviews:\n[rev_000020 | score=2] It's a really great app, unfortunately it shares device IDs with third parties (according to Play) which is not optional and does not work offline. I like the idea but tracking is an absolute no go with apps that handle data this sensitive.\n[rev_000034 | score=3] Right away requires a user account be created and the mandatory terms include you have to agree to the sharing of your personal and health information. NOT FOR ME!\n[rev_000036 | score=1] Puts results behind a paywall after using for 14 days, thus making it useless\n[rev_000048 | score=1] What a useless app, answered questions for 14 days to get a 'report' which told me my mental health was poor, well duhhh, that's why I was using the app, questions about Covid which was 5 years ago and are not relevant, and wanting to charge extortionate amounts.\n[rev_000060 | score=5] ok so what's hard is knowing I'm not ok, no fault of mine, and the price of healing is far more than I can afford expecially as I lost my job (again) due to the trauma inflicted upon me as a child I need to over come this but the tools and resources are only available if I'm a productive member of society and I cant learn and heal and work. If only I could qualify for some kind of special service or a discount. Thank you for what I can use. I appreciate your app and the efforts it took to launch\n[rev_000110 | score=1] Great app, BUT there is currently an error when you try to sign up to premium membership. It's impossible to upgrade at the moment, so I cannot use any premium features. I've sent an email about this, and I was told that there is a known issue and it would be resolved soon. However, it's still not resolved and I still cannot upgrade. Resolve the issue and I will change my rating. Thanks 😊\n[rev_000118 | score=1] Any decent features are locked, and it's just an ad for better health\n[rev_000144 | score=5] Great app ! Really insightful!\n[rev_000178 | score=1] Typical Money Grab\n[rev_000192 | score=5] I've been trying to keep a journal for years and I'm just terrible at it. I've been using this app for about 5 weeks and this is the first time I've successfully kept up with something like this! It's been very helpful to track my mood and I like that I can go back and read my entries. I do wish the \"emotions\" board had some more options to choose from but it's not bad. The push notifications 3 times a day is very helpful, I usually get at least one entry in per day because of the reminders.\n[rev_000268 | score=1] I was looking for a simple mood tracker. This app promised to be that and much more but, in the end, it wasn't much more than a 14 day as for BetterHelp. The insights ranged from obvious to too broad to be helpful. The questions felt like the app was playing a guessing game about my mental health, but wasn't really THAT interested in delving too deep into my mental health. The mood tracking wasn't nearly as in depth as it needed to be for it to be useful. 2 weeks later and I'm right where I was.\n[rev_000279 | score=2] These days the app often logs me out and disables the app lock. I don't get it, can you do something about this quickly? I would like to keep my data safe and I'm beginning to lose trust in this app.\n[rev_000287 | score=5] The app helps me recognize unhealthy patterns that I'm having, which is very useful in battling depression and other conditions. It's overall very supportive and wholesome. And the tech support team is cool! Love it <3 2022 update: also incredibly grateful for MindDocs support for Ukrainian users!\n[rev_000305 | score=5] I think this app is AMAZING. And the fact it is in connection with Betterhelp is awesome and why I feel it is credible to use as helping those in need. The feature where it gives u an evaluation of how ur mental health has changed i really like because I have always had a problem with keeping track of times my overall mental health is doing good. I've lived many years believing I'm not happy and so the times that I am in good moods I always believe it's temporary and that's what keeps me stuck.\n[rev_000306 | score=3] I like the guided questions but I find the insights to be extremely generic and not focused. It needs to be more specific.\n[rev_000319 | score=3] I only use it in addition to a mind doc psychologist for the mood statistics. And it is good for that I'd say.. But the rest is pretty silly. They ask you if you are in financial trouble and then you have to pay for the full version and the full version is just some texts to read with information wich one could easily google... But at least they give you a teaser on how little you get for your money so you know it makes no sense to buy the full version.. thanks for that I guess\n[rev_000347 | score=1] Do yourselves a favor and stay away from this app. These people after I cancel my membership before the trial was over four days later accepted the money that Google took off of my account and refuse to give it back. I do not have very much income I barely make it as it is and they refuse to give my money back even though I had deleted the app before they took my money\n[rev_000369 | score=2] I wish there was a way to go back to the old theme. This one hurts my eyes and I also struggle with change. I think I'm going to end up picking the wrong mood a lot because the colours aren't logical to me. I've been a user for years but I don't enjoy using it now. I hope you'll consider an option to use the old colours or any that are a little less strident.\n[rev_000370 | score=1] Don't get me wrong I love the app but it needs improvement. I understand the color change for spring but it's harder for me to read everything. I also have issues with change. The mix of these two things are confusing and frustrating. I wish there was an option for which color scheme you want. Or at least an accessibility option for those who have a hard time reading with bright/darker colors depending on our needs.\n[rev_000423 | score=5] This app is top notch although the price is high\n[rev_000425 | score=2] It feels like every time I try to do something they try to get me to pay to unlock the content- even for notifications. I don't find it very insightful. There are apps that do more for less. I guess it's helpful if you've just been diagnosed with general depression or anxiety and are baffled by it, but nothing new to teach a psych major who has been coping for many years with more than just that. The constant ads to unlock more are annoying enough to not want to bother.\n[rev_000439 | score=3] non arrivano più le notifiche\n[rev_000473 | score=1] Used to be good. Now you cant access your own past data. Great. 3 years down the drain. Loads of medical a great life events lost. Great. Old school planner still the best thing.\n[rev_000481 | score=4] The app is great, help you keep track of your mood, but everytime there is an update, I can't log back in....\n[rev_000487 | score=2] Used to be a really good app but then underwent some bad changes. I had the app before it got changed, accidentally deleted it and after I installed it again I noticed all these. You could add tags about your mood for free – now it is suddenly not free anymore. There are more questions now, some better, some not. If you report the mistakes, nothing is done about it.But the answers don’t always make sense. You don’t have access to your progress from past months. Used to be possible–now pay for it\n[rev_000496 | score=1] They used to have one free thing to listen to, called Take a Pause. I used it almost every night to relax. They got greedy and removed it 😥 Uninstalling now.\n[rev_000520 | score=2] Reminders not working again. Checked settings in app checked app and notification settings in phone and allowed to run in backgroud. Still no reminders. Keep missing questionnaires sometimes for days. Did work for a while. But not anymore again. This keeps being an issue it returns over and over. Starts to get annoying.\n[rev_000556 | score=2] it can be very helpful. It has free courses to offer & insight that you can share with your doctor. The only thing I found rather disappointing is the way to truly take advantage of this great app is to pay fees buy unlocking lessons. Some of the more basic skills are available & you can keep working with them to try to keep yourself on track. At this time there is a glitch and wont identify internet.\n[rev_000559 | score=3] I answered the questions of the first week and then the questions no longer appeared on my screen.\n[rev_000566 | score=2] Decided to reinstall this garbage after deleting it after 5 years of use because it wouldn't work. It worked! For 3 whole days! Now the whole app is blank on every page. Sort by recent and see that its broken for everyone, and take note of the lack of developer response. Thats what you get with this app. They have the audacity to charge because they have to pay their team to break the app every week. There was a time where i would have paid, the app used to be top notch. Just for $ now.\n[rev_000572 | score=2] I thought that it was a really good apps. But Why i can't open my apps after I updated to the latest version. I try to login & click in 'forget password' option to reset password but it always shows a pop up message that it has no Internet connection, meanwhile my Internet connection is active & really good. Can you help me fix this, please??\n[rev_000581 | score=4] I love this app and I have had it for more than a year now but all of a sudden I can no longer answer questions or see my results, everything comes up completely blank with no options to do these, you also cant scroll up on the journal section to see past entries and when I go to create an account (as I was worried incase I could loose what I have ) it said there was no internet connection to do so. I love this app but im a bit upset that it has kinda broke for me now. I hope this is fixed soon\n[rev_000582 | score=2] A bug has affected this app on my phone and is freezing everytime I open it and has wiped my history. Can anyone help as I have just started using this app and was absolutely fabulous!!!!\n[rev_000586 | score=4] It really helps talkin 2 some one. And i really like the questions they it the day. Makes me feel like some one cares 🙂\n[rev_000631 | score=2] I don't know but this app asksme the sad questions everyday. What's the point of it?\n[rev_000633 | score=4] Have 16 days continuous use and today has been blocked out which means I will lose my data yet again and for the second time I will have to start another 14 days... Emailed developer who quickly responded. Seems you need to answer at least 55% of questions, which makes sense. Am pleased with support given and have therefore edited my review and increased stars. Worth getting this app\n[rev_000640 | score=1] the fact that we have to pay to access our previous progress & stats is sad. i'm a student, i barely have funds, & that's not even counting the conversion rate. how is it a mood tracker if we can't even see our previous months of entries ? i was using it to vent & i kept it all in the app instead of messily writing things everywhere. now i can't even look back at them. or important things that happened in my life bc i have really bad memory. thanks. /sarcasm\n[rev_000644 | score=5] I am only a week and a half into this and it is great so far. It asks relevant questions about my mood etc and how I react to situations and gives me insights to help me tackle different areas. I am finding it good to be able to feed my moods back too as it helps me to realise where I need to work on because when you are feeling anxious/depressed everything seems to hit you harder than it should. You can feel like the smallest of things are a massive hurdle and this app is really helping me.\n[rev_000668 | score=1] Notification stopped working. Tried everything and reached out to support as well. This is causing more anxiety than help.\n[rev_000673 | score=2] The timing is off, so it keeps asking questions in the middle of the night. No way to adjust it apparently? Useless if so.\n[rev_000722 | score=4] I like this app a lot , it is helping me to keep track of my mood and provides some interesting insights on my mental health. Hey you guys need to make questions based on the marital status of the user\n[rev_000734 | score=1] I have written a couple reviews and they started good but after I paid the expensive price for a yearly premium subscription I never recieved access to premium content. I've emailed proof if purchase and wrote several emails trying to get help and get what I paid for but have only gotten the run around and MindDoc still won't give me what I paid for. Don't waste your money on this app. Don't purchase this app because they will only steal your money and NEVER GIVE YOU WHAT YOU PAID FOR!!\n[rev_000768 | score=5] I never write reviews and I've never recorded my mood, but this is an excellent resource. Even though this is no substitute for therapy, it even gives you resources to try to help you understand what's going on and to me that's a lot of consideration put in for a free app. Thank you.\n[rev_000798 | score=3] This seems to be a good app. But not for me. I already know I am mentally I'll, so this is not the app for me.\n[rev_000814 | score=4] I use the free part of the app. I have been thinking about doing the payment part, I believe it will be worth it. It has been very helpful. I am Bipolar 1 and have PTSD, my doctor suggested the app so I can see my ups and downs. So I can learn to watch, know my triggers and to help manage my feelings. It is very secure and I am able to forward info to the doc. I have been using for almost a year. I am comfortable amd pleased with it. Tho the mans voice is monotone on the insights I don't like.\n[rev_000839 | score=4] this app has been so helpful to me. i'm so much more aware of how i feel generally and also what can trigger me feeling bad. it helps me practise gratitude for the life i live simply by describing what happened to make me happy. only things i don't like about the app are the questions (q) 'do you currently have a job' and the sex-based qs (about activity/interest in sex). as a student, the first q is unneeded for me. i hate the sex-based qs. i wish there was an option to stop them being asked.\n[rev_000846 | score=2] Before I updated it, it was really an outstanding application. But after the update, I can't sign up. It says that my email add is invalid. It's the same email add I've been using ever since.\n[rev_000890 | score=4] It's a good app that works as intended There is also a premium version that you can get if you want some additional content/help My only complaint is that after a certain time there is no way to fill in missing questions; sometimes I miss a deadline to make an entry but there is no option to fill it in even if I know exactly how I was feeling at the missed time. It's not too big of a problem, it's just a little frustrating when I don't have an opportunity to fill it out until after the deadline.\n[rev_000894 | score=1] Disappointed with this app. It ask a series of questions every day and after 2 weeks gives your results. After 2 weeks of answering how I feel (Very Good) app's results are poor emotional health, recommend seeing a doctor, delete!!\n[rev_000919 | score=1] I've been using this app over a year, but the recent change to minddoc means i can't look at previous months without paying, which is utter nonsense.\n[rev_000942 | score=3] I enjoy the concept of this app but i need a reminder if i must input info 3 X's daily. Personally, I feel like one in depth check in would be sufficient and an expanded emotional declaration section might be more insightful. TY 😸\n[rev_000961 | score=2] Buggy, and not useful at all. The \"insights\" are all stuff you've definitely already googled before.\n[rev_000967 | score=4] Great app to measure my mood. Great to see how differently my mood changes but I feel like on bad days it worsens my mood by admitting to myself that I am feeling bad. But on good days, it is a good thing to say I am feeling good. Depends on the mindset really. Only one thing I would suggest is to remove or alter the question about sex drive, I am sexually abstinent so that question is not valid for me.\n[rev_000974 | score=4] It helps me keep track of my feelings which in turn makes me get in-tuned with myself. I just wish there was a 'i don't know' option between the yes and no choices. Because sometimes I really don't know. Overall though, good app\n[rev_000977 | score=5] Really helpful in keeping track of thoughts and feelings 👌🏻\n[rev_001065 | score=5] I've been using this for about 4 months now since before it changed to MindDoc and the app is working the same if not better than before for me. I like that there seems to be added questions now. Its such an easy way to document daily mood changes and changes over longer periods of time and has helped me in this stupid stupid year to really know when I'm going through a negative time and not.\n[rev_001068 | score=1] It stopped working this week.\n[rev_001102 | score=1] On installing you find they will collect personal data from you, and it seems everything is behind a paywall. Not very impressed by the few free portions of this app. Not recommended.\n[rev_001124 | score=5] This app is a very good jurnal and helped me across this 1 year of use ,but one thing I don't understand... As all the negative questions (especially those that reflect bad thoughts) are coloured in pink and the positives are in teal, why at the LGBTQ question the answer \"no\" is pink? It should be both teal as neither is wrong ,it makes you think that is wrong to be straight 😂. Please make them equal coloured!\n[rev_001198 | score=4] I am only starting moodpath but I can already tell that I am going to stick with it. I only have a couple problems with the app. I don't have good wifi and even if there are no questions I would still like to track my emotions. Plus you cant get rid of insights or questions even if you complain. You have to look at them all day! One insight happened to be an excuse my family uses to blame me for my problems and it made me tear up thinking about it but it was stuck there all day in plain view...\n[rev_001260 | score=3] I like the app, but I don't like how when I finally tried to reach out for help with my life falling apart around me, they said they weren't able to help me. I'm a teen. I'm spiralling and I need the help. I can't reach out if no one is willing to listen or even try. Honestly that message popping up is not helping at all. They don't even try to find any other help for the ones \"they can't help\".\n[rev_001286 | score=3] i wish it was free:( some of us can't afford it but it does sound like its pretty helpful\n[rev_001301 | score=1] U have to pay money\n[rev_001312 | score=5] very good app it helps me feel better and also gives me a report of symptoms that I might have like depression or anxiety a d gives me insights of how they affect the body and what I can do to help myself. I'm a young adult and going through my last year of high school and with everything going on it helps me so much and even if u aren't a \"sad person\" it's just good to keep a daily account of ur mental wellbeing. there are other mental diary checks but this is more easier to understand\n[rev_001391 | score=5] I love this app! Its non-intrusive, simple, and really insightful. It asks you a few questions a few times per day, and uses that information to give really good assesments of your emotional state. I have been using it for a couple of weeks, at the beginning not much, but after seeing the type of insights it gives I am very motivated to answer all questions to see how it evaluates my mood. I definitely recommend it if you are interesting in tracking your mood and emotional state.\n[rev_001424 | score=5] I absolutely love it. Due to this app I have become aware of myself and have gotten alot of useful tips and insight into what may be the cause of my problem. I thank the developers for creating this app\n[rev_001480 | score=5] Im still depressed\n[rev_001662 | score=5] I really enjoy using this app. Very useful and helpful for tracking my day to day mental health condition. Moreover, it has insights to give me information, reminder, and guidance to do mindful breathing exercise. I love it so far!\n[rev_001716 | score=5] The app is very well done. Easy to use & somewhat of a stress reliever. It's a calming way to keep track of how you're feeling daily plus resources & easy to read info for you based off what you track. Even if the information offered wasn't life changing, I still find it helpful and uplifting just to be able to easily track how I'm doing. Other apps have solely a journal, but this is easier bc it asks questions as well as a jot place so it still tracks when you don't wanna write. Really enjoy👍\n[rev_001719 | score=2] Kinda sad that you only put \"have you been trying to lose weight\" when theres a lot of us who are skinny and are pressured to gain weight to the point we develop eating disorders like I did almost. Nobody cares about us who overeat and overexert ourselves with exercises just to be bigger and sexier, so people stop telling us how ugly we're for being skinny. As a mental health app, you should know better than this.\n[rev_001727 | score=5] The best depression app ever, thank you guys for creating such a great app like that.\n[rev_001775 | score=4] Very helpful and with great visuals\n[rev_001777 | score=5] Very helpful, allows you to track your mood and habits over two week span. Helps you detect any mental problems you might have\n[rev_001824 | score=3] I wish the app saved progress when answering the questions rather than just timing out and saying they've been missed - you lose data if you haven't reached the save button at the end, yet you can go back and edit any saved entries as required. Kind of frustrating. I like that you can add your own 'emotions & situations' but I feel this may be a bit buggy as not all stay in the list - I have to manually add 'fatigue' every time I want to use it. Also some issues with the audio files crashing.\n[rev_001843 | score=3] I only had this app since 2 days, but it's helpful. But it's also sad that u have to pay money for reading/hearing specific courses that u may need atm:/\n[rev_001923 | score=2] It's ok, but for it to be any real help you have to pay way too much\n[rev_001950 | score=5] Insightful and well made\n[rev_002016 | score=4] I kept forgetting to use this so my progress kept resetting. I'm back in the swing now and it feels kinda good to just sort of journal my thoughts in a way. Just wished when I said I woke up at 7, it didn't send me notifications at 7. It's like \"come on guys, I'm still waking up\". But I changed the recorded time so I can actually experience my day before I answer questions. It really did help me sort of tell when I had a depression coming on. I'm hoping it can help me keep track of coming growth\n[rev_002052 | score=4] I have only had it 2 days, and it does help. I dont like how you have to pay for things, because everyone desirves help. They may not be able to afford it. Overall, it helps me relize whats happening with my self. And gives creative questions. (Pls excuse my mispellings I have dyslexia)\n[rev_002066 | score=4] Overall a really great and helpful app for tracking moods. I do wish that questions were maybe a bit more customized to the users current mood (i.e. follow-up questions) Right now they seem pretty random and aren't always applicable when other questions might be. I would also like to see a option for users to customize the window of time they want to evaluate (ex. what if the last week in the previous evaluation period and the first week of the next are the ones where there were problems).\n[rev_002193 | score=3] It's not bad but could be better\n[rev_002217 | score=5] It has been giving me alot of advice and I can control my suicidal thoughts now. I thank you for making this app.\n[rev_002265 | score=4] Its helps me keep track of my moods.\n[rev_002290 | score=3] Disappearing Days I have answered and submitted responses every day for over a month; the last three weeks responses all disappeared?! What the heck??\n[rev_002318 | score=2] I used to think this app was great and the £4.39 a month was reasonable for the content. However, seems I've now been locked out of the content and I'm now expected to pay £24.99 per quarter which is a ridiculous increase. Such a shame as the content is great.\n[rev_002339 | score=2] I lost all of my data at their website and they will not provide it back to me after almost 2 months of input\n[rev_002351 | score=4] Helps me be a healthier and happier person :)\n[rev_002387 | score=4] Should provide larger variation of questions\n[rev_002396 | score=4] I dont really know what to say about the app other than it helped me realise the state of my mental health. All it takes is 14 days for it to give you an idea to what it may be, you can even miss a few days. of course you have to be fully honest with the questions or you wont get an accurate answer. Edit: I wish that certain features were still free, like adding emotions, ect. It still is very helpful in maybe giving you an idea, but you cant be as in depth as you may want without paying.\n[rev_002499 | score=2] I've used this app for a while and I always found it really useful until they changed the app so you have to pay for additional features. This wouldn't even be that much of a problem if I could still put in more emotions because I have more than just 20 and I don't see how I'm going to be able to actually track my moods if I can't put the majority of them in. So far I've liked this app but I'm not sure how much longer I'll be able to use it for if I only have a limited amount of options to use.\n[rev_002503 | score=5] I suffer from pmdd and from a general anxiety disorder and this app really helps center me and keeps me aware of my mood swings. It is also fantastic in helping me see that I am not always sad and that I can pull through.\n[rev_002527 | score=1] just wish the app wasnt so expensive . so I had access to the things I need\n[rev_002538 | score=2] Don't like the update. Emotions are scattered, you're unable to add your own.\n[rev_002642 | score=2] Disappointed in the feedback.. Didn't get assessments past the first one, kept saying \"taking longer than usual\" but never came even after a couple weeks. Expected a bit more I guess. Just tells me (what little feed back I got) what I already knew.\n[rev_002683 | score=3] Havent done the full 14 days yet but so far is pretty good\n[rev_002863 | score=3] Enjoying the app, I even subscribed to see what else it had to offer. However it seemed to have some technical difficulties after I subscribed...as the premium benefits never appeared. I cancelled my subscription for now...until I can get advice. Thanks.\n[rev_002880 | score=1] Will Not Rate!! too many bugs..they don't allow you to give the info they ask for which then they give you wrong advice..I will not recommend to anyone!! Ty\n[rev_002887 | score=4] it's really cool but I cant make the call they are talking about\n[rev_002904 | score=4] I dont use it 3x per day like it wants, I'm lucky to get 2. I'm not sure how to check my entries because when I look its blank but says that there are entries, I'm sure I'm doing it wrong. I like that the app gets me to stop and evaluate, go over my thoughts and things that happened today, it gives perspective. Sometimes it's hard not to write biased, or the choices are y/ no and not middle ground, but over all I like it.\n[rev_002929 | score=4] Idk if it's helping me rn because I have t had it long but it feels good to get things out and down\n[rev_002963 | score=4] Free version seems to be good, dont have my first review/assessment yet\n[rev_002978 | score=5] This app has helped me so much in my life. It enables me to keep track of my mental health without me having to put what I feel into words. The questions that you're asked not only help you track your state of mind and your place in life, but they also open your eyes to the way your mind and body are responding to your mental illness. It helps you realise when and why you need help. If you're feeling overwhelmed by your thoughts and emotions or feeling numb - get this app. Trust me. Just do it.\n[rev_003040 | score=5] Moodpath has helped me track my emotional patterns. I had a feeling there was some sort of rhythm to my feelings and emotions but I didn't take the time to track them. Moodpath asked insightful questions and a few times a day I take a moment to evaluate myself.\n[rev_003050 | score=3] I am in the first week. the app seems to be making sure I am not depressed, suicidal or have voices in my head. I thought this was a mindfulness app, I am starting to wonder. It takes two weeks to get your assessment and plan. This should be interesting. It has a lot of classes about mood related stuff. I haven't done them yet.\n[rev_003084 | score=5] Honestly my favorite app. I like being able to keep track of my progress and see how I've changed with my mental health! Would recommend to a friend! I love having the ability to share the diagnosis with my doctor.\n[rev_003096 | score=4] This app has been very helpful. I like the new journaling feature, which was not there last time I used the app consistently. I also like being able to see the mood graph over time to see how I have been. The only thing I am not as happy with is the vast amount of emotion and situation tags. I would suggest having a feature where you can select your most selected emotions and situations and save them in a tab or something, so you don't have to scroll through to find what you want in the future.\n[rev_003120 | score=5] amazing app, definitely recommend\n[rev_003151 | score=2] I hate the update, it just gives you a blank and asks what you are thinking about, the old version would just ask you to pick a situation and emotions to go with it, there were so many options to get a quick overview and association, which is what you need if you are supposed to answer questions about your well-being 3 times a day. The reminders don't work after last update. Shame as this was my main tool for following my depression but i can't seem to keep up with the app to get a result\n[rev_003242 | score=1] I loved the app until the update. Doesnt work on my phone anymore- all pages go blank and I cant enter a mood or view any data. Hate the new tags feature.\n[rev_003243 | score=1] Was working quite well until the most recent update. The changes made to the UI make it more cumbersome and complex to input the data regarding the status at that moment. The previous UI was more easy to use. Also, the tags appear and disappear from the list without any obvious reason. This only makes it even harder to input data because you keep looking for a tag that used to be there and is not there anymore. This makes answering the questions a very cumbersome, irritating, and infuriating task; exactly the opposite of what it is supposed to be. Used to be very helpful but the last update made it quite useless.\n[rev_003255 | score=5] Im 23yrs, I really learned to love this! I havent reached the 14th day to get results but this app has really helped me put feelings down on paper and see how I feel throughout the day. I love seeing and adding journal entries and being able to assest what's going on throughout the day. It's a really good app to help you put thoughts into a safe place and to get you thinking. I cant wait to see the results to show my doctor. I think this will really help open a line of communication between us.\n[rev_003257 | score=5] I believe that this app is extremely helpful in making you more aware of what might really be going on inside your head. It definitely is not a diagnosis (you find that out by talking to a professional); however, using the app's ability to document your moods, as well as the what and why's of your situation can aid you in talking to a therapist. You get the diagnosis from a doctor, but this app can be a great step in the right direction if you are someone struggling with absolutely anything.\n[rev_003259 | score=5] the app helps me talk my issues out, and it gives me a sense of security\n[rev_003263 | score=3] I like that I can see how much I've improved mood wise. The results are spot on. But, it takes a long time to load and I'm not a fan of the new update. It makes it more journal like, which is fine. But since this app asks questions 3 times a day and I have a busy schedule, it doesn't help making the typing more important than pressing with emotions I'm feeling. The simple buttons (prior to the newest update) make it easier and quicker for me to put everything in.\n[rev_003264 | score=3] Really liked the app before the update because it was so simple and quick. Just adding a tag and then I'm done is so neat. I just cant stick with ones that require more so this fit me perfectly. Now I have to go into a long list of tags and then answer if it's negative, neutral or positive. The new layout of adding things is just unnecessarily complicated. The only reason I stuck with this was because it was so simple. I'll try and stick with it still but I'm having doubts I'll be able to.\n[rev_003283 | score=1] Ever since the update 2 days ago the app either crashes every time I open it, or it won't save my answers to questions. My results are now delayed b/c it hasn't recorded anything since the update even though I have answered all sets of Qs since then. It also is no longer displaying most of my previous months' answers and notes. I love this app & it is very helpful for me, but it seems to be no longer functional after the update. Please fix it soon :( P.S. Not a fan of the new tagging system.\n[rev_003466 | score=5] It really helps track mood and experience and situations daily.\n[rev_003535 | score=5] So I've had this for a few months now and it is honestly a great way to track how you're feeling. Everybody experiences emotion, but it's nice to have a way to see if you need help or not given how often you're feeling a certain way. This app does all of that and I'm really glad to have it. It's given me some really deep insights into how I feel and helped me want to seek further help. For anyone out there who's struggling, this app is a really good place to start. You're not alone remember!\n[rev_003669 | score=3] This app does help track my mood to find out how depressed I am but I can't keep up with constantly answering the questions as it's becoming a chore and when I miss a day or 2 it all might reset.\n[rev_003677 | score=3] Good Interface, Bad Pricing... I love the way the app looks and work, but having to pay $6.99/month or $56 whatever for a whole year? What a rip off! Daylio does almost the exact same thing but only one payment of $9.99 and you unlock all the features forever. I'm just going to continue to use this one for free.\n[rev_003711 | score=5] I like this app because I feel like I am in session where I can be 100% me and tell my true self my own feelings and i will not get put away for saying how I feel. And then of course there is the extras the app comes with that are informative and help me understand a lot more about why my mind is so severely depressed. When I do get hospitalized I'm sure they will be able to use this app as a way to help understand what I've been going threw and it will help further my recovery.\n[rev_003793 | score=3] I really enjoy all the talks/meditation portions they offer, but mood tracking isn't intuitive. Before, after answering questions and entering your mood, you could add additional emotions and activities/events, so you can really track what affected you most. Post update, the intuitive emotion/activity adding changed. They are all listed as \"tags\" and you have to guess or scroll through hundreds of options to pick them. I'll be cancelling membership.\n[rev_003817 | score=4] Its great! Helps me vent out sometimes. Even though it's just aood tracking app, i feel like I'm being heard sometimes. I don't feel ignored. I feel better and better having this little companion by my side. I wish there was a feature of being able to edit your thoughts since i made many typos. Maybe there was a feature and I didn't notice it... However, it's a great app. If you feel alone, or you feel upset and you feel like you have no one to speak to... This app will do it for you. 😊\n[rev_003838 | score=3] Won't move past when it says about loading the first questions\n[rev_003883 | score=4] Excellent App but... Why do my personsiled situations etc. not remain saved? Is this normal. Thank you in advance for any help you can give :)\n[rev_003933 | score=4] The insights are helpful and interesting. I find that the app could use a bit more of a neutral ground in the answers.\n[rev_003943 | score=4] Love it but i dont have the $ for the upgraded version so i cant get all the amazing/helpful things this app has to offer..... 😔 oh well.\n[rev_003955 | score=3] Used to be a good app, but lately most of the content that used to be free is now premium only and require a rather expensive subscription. That's depressing.\n[rev_003997 | score=5] Really helpful for me. Questions 3 times a day that take under 15 seconds to answer, if you're quick. The insights providsd are interesting, but mostly this app H Helped me to be more mindful of my mood.\n[rev_004171 | score=4] I just think it's a good way to reflect on your day and try to better your mood or what you do during the day, I feel like it helps me slot for how how simple it is.\n[rev_004208 | score=3] It's alright but the \"morning questions missed\" or \"midday questions missed\" is negative. Sometimes I dread even going on the app because I'll see that I've missed questions.\n[rev_004209 | score=4] Great app, encouraging...also seems to have decent AI based on clinical criteria. Wish they hadn't changed almost all supplemental content a paid-only status.\n[rev_004214 | score=2] Premium is a bit pricy\n[rev_004274 | score=1] Missed a gew days and nearly the entire month of data was reset? Uninstalled, what a waste of time.\n[rev_004317 | score=4] Great app, I find it helpful. Would be good of when I add a n experience, it stayed in the list, or if you could edit the fast find experiences. Otherwise it has everything I wanted in the app.\n[rev_004322 | score=4] So far I like it the chart is helpful but I am still on the free trial so we will see how it is after.\n[rev_004353 | score=5] This app really helps keep track of how im feeling, even helps me explain to my doctors and therapists every 2 weeks it gives me something i can give my doctors so they can help me better control my bi polar disorder. Helps me see the patterns of ny mood swings and manic episodes. And it reminds me to do it. It works best if you make sure you check in all 3 times a day. Its so helpful i havent found anything like this that actually helps! Im so amazed and its helping me manage so well!\n[rev_004358 | score=2] It asks the same questions very frequently. Like do you think about death a lot. When i answer it asks me again a couple days later. I think it needs to wait a few weeks to see if anything has changed. Then when it asks it should also ask if you feel that you would go through with it.\n[rev_004376 | score=3] I don't like the \"questions missed\" aspect of the app, but I do like the questions. Missing questions doesn't make me want to answer more. It also gives you helplines and resources from your answers.\n[rev_004391 | score=2] It's okay i guess. I mean the questions are very biased and the answers are only negative. Y'all do realize that depression isnt just being sad 24/7 you can be happy in the morning and sad af at night or vice versa. Or like smiling a lot when u don't feel happy,or pushing people away when u need them the most. I feel as if these questions are just based off the fact that y'all believe u can diagnose someone is depressed if they've been feeling sad for 2 weeks and its more complex than that.\n[rev_004439 | score=2] To be quite honest i don't know what I was expecting from an app, I mean it should be obvious that I wouldn't get an diagnostic just from it. But initially I liked it, thought of it as an cute way to look at my mood throughout the day, but after some time it just gets boring, it is always the same questions even when you always answers negatively to them. There are better apps for keeping track of my days so I unnistalled it today with the feeling that it was just a loss of time.\n[rev_004502 | score=2] The last update rearranged a visual style I had liked and just gotten used to. Notifications stopped coming to me despite my settings. This app was really useful but I will no longer be using it, which is upsetting.\n[rev_004513 | score=5] For some reason since the last update. The notifications has stopped and when I do go in to the app, the questions take a while to load up. I'm going to reinstall the app to see if that fixes the issue. Other than that at this point, it is a very helpful app that gives great insights into mental health. So at this time I have to give it 4 stars till these issues are sorted out. Update - after reinstalling the app, the notifications work and I didn't lose any previous data. So 5 stars from here!\n[rev_004515 | score=1] since last update i answered the questions daily just to find out this morning everything disappeared! since it become a pay app it's decreasing the quality\n[rev_004539 | score=5] I think its really helped me because its like having a friend or a psychiatrist without having to be face to face with them. I really recommend it\n[rev_004599 | score=5] help me to explain my situation to my psychiatrist\n[rev_004605 | score=4] I think this app is very helpful. It is helpful to Express your feelings and evaluate them. It's nice that it tells you if you should get a therapist or not. I gave it a 4 out of 5 cause it gives you the info you need but you still would have to pay for a therapist in the app or outside of the app. I don't have enough money to get a therapist right now so I wish there was some more help. overall the app is helpful and can be an eye opener to family members if you are trying to get consoling.\n[rev_004637 | score=2] It's only been 4 days installed. I will start off by telling you I have TBI, CPTSD, Amputee (L leg) and Chronic pain. I was just typing in an episode I had this morning. All of a sudden, the questions pop up. So I answered them all. Then I leave a comment, (it was longer but) will I be able to continue with my comment I was just writing. I found out that everything I did write is gone. Now, why did I tell you so much about myself? TBI, that interruption made me lose my thoughts.  EDIT: Do you have an app for people like me? This is the best one I have found this far.\n[rev_004642 | score=1] since the last update I'm not getting questions to answer anymore. I can't compete the tasks\n[rev_004708 | score=2] whatever update you guys did took away the ability to actually answer the questions, so now this app is not helpful for me . also, they got rid of the answeres about mental health for free you now have to pay for them, so i think after 1 year of using the app i will be deleting.\n[rev_004720 | score=5] I was having a really hard time lately so I looked for a mood tracking app and the other ones were too complex or you had to pay for the good parts of it so I decided to check out this one. The survey questions that it asked you in the beginning before you do the rest of the questions helped me think about what's going on in my life but without stressing me out. I like that it gives you tips based on what you're feeling in the relaxation video. I'm so glad that I found this app.\n[rev_004784 | score=4] Really cool, quite useful. The courses and exercises require payments though. But my main focus is the questions they ask, keeping up on my entries, and the assessment they offer each week. I do really like this app!\n[rev_004863 | score=5] Greetings Creator. So far this app is Ok for me so I gave it a 4stars. I am suffering from Chronic Depression and non-military PTSD. I really hope that this app can help me out . OH and one more thing : dank je 🙂❤ ❤ Dear Creator, I reinstalled this app again. I just wanted to say \" CONGRATS! YOU GOT 5 STARS FROM ME! Yaayyy~\" . This app had been so HELPFUL for me in my daily life. I may have a hard time in life but again I THANK YOU so so sooo much 😘\n[rev_004864 | score=4] Have only had the app for 3 days but I find it useful if for no other reason than identifying what I'm feeling throughout the day. Looking forward to seeing how I fare after the 14 days.\n[rev_004886 | score=1] did not help, takes too long to complete and have to refresh after each task, completely locks on a page Had to restart the phone.\n[rev_004892 | score=3] if you have a ton of time and aren't forgetful then it's a great app but because I have very little time and am forgetful, I don't get to answer the strong majority of the. Let people answer all the days questions at the end of the day if the please\n[rev_004983 | score=3] this app is a great start! I'd hesitate to call it more than a start though, as I could think of at least five major improvements in the two weeks I had to improve accessibility. I give it 3 stars, because it does what it promises, but requires further improvement.",
+    "theme_discovery_raw_response": {
+      "groups": [
+        {
+          "group_id": "AG1",
+          "theme": "Privacy and Data Concerns",
+          "summary": "Users express concerns about data sharing, privacy, and access to their own data.",
+          "keywords": [
+            "privacy",
+            "data sharing",
+            "security",
+            "access",
+            "paywall"
+          ]
+        },
+        {
+          "group_id": "AG2",
+          "theme": "Technical Issues and Bugs",
+          "summary": "Users report various technical issues, such as login problems, blank pages, and data loss.",
+          "keywords": [
+            "bug",
+            "login issue",
+            "blank page",
+            "data loss",
+            "crash"
+          ]
+        },
+        {
+          "group_id": "AG3",
+          "theme": "Pricing and Paywall Concerns",
+          "summary": "Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.",
+          "keywords": [
+            "price",
+            "paywall",
+            "expensive",
+            "subscription",
+            "free features"
+          ]
+        },
+        {
+          "group_id": "AG4",
+          "theme": "Usability and Feedback",
+          "summary": "Users provide feedback on the app's usability, suggesting improvements to the user interface, questions, and insights.",
+          "keywords": [
+            "usability",
+            "interface",
+            "questions",
+            "insights",
+            "feedback"
+          ]
+        },
+        {
+          "group_id": "AG5",
+          "theme": "Value and Effectiveness",
+          "summary": "Users share their experiences with the app's effectiveness in tracking mood, providing insights, and offering support.",
+          "keywords": [
+            "helpful",
+            "effective",
+            "mood tracking",
+            "insights",
+            "support"
+          ]
+        }
+      ]
+    }
+  },
+  "persona_generation": {
+    "persona_generation_system_prompt": "You are creating requirements engineering personas from grouped app reviews. Generate one grounded persona for each provided review group. Return strict JSON only with this shape: {\"personas\": [{\"id\": \"P_auto_1\", \"name\": \"...\", \"description\": \"...\", \"derived_from_group\": \"AG1\", \"goals\": [\"...\"], \"pain_points\": [\"...\"], \"context\": [\"...\"], \"constraints\": [\"...\"], \"evidence_reviews\": [\"rev_...\"]}]}. Keep the language simple and practical. Do not invent details that are not supported by the group. Each persona should clearly match the group theme and use exactly 3 evidence review ids from the representative reviews shown.",
+    "persona_generation_user_prompt": "Use the following automated review groups to create personas.\n\nGroup: AG1\nTheme: Privacy and Data Concerns\nSummary: Users express concerns about data sharing, privacy, and access to their own data.\nKeywords: privacy, data sharing, security, access, paywall\nRepresentative reviews:\n- [rev_002819] Was great until I read privacy agreement. They give your data to Facebook for marketing purposes using your mobile device's ad ID. I took screenshots of my last ~2 years of data and just uninstalled the program.\n- [rev_002824] After reading the privacy policy I discovered that the app has facebook software development kit integrated in app, which means that all data from app is accessible for facebook. I don't recommend installing it if you don't want your mental health data used against you and sold to advertisers.\n- [rev_003744] it is a very good it records all data of your day ....\n- [rev_002820] Read the privacy. Info sent to Facebook for advertising purposes. Can't find a way to opt out. If I can't opt out, I will uninstall\n- [rev_002029] When I requested access of my person data held by the app they didn't provide it to me despite section 9(a) of their terms and conditions.\n- [rev_002567] I wish that these kinds of apps didn't have 'Premium' or 'Plus' because, at least for me, I can't afford or get easy access to any sort of therapist and there have been times when I've needed one. Mental health apps are supposed to help you and if you can't have access to all the services, they're not going to help you as much as they could/should. I really hate that it has a paywall of sorts. It would be so much better without one. I understand you need to pay people and profit but... Please...\n- [rev_004717] moodpath is a great app to help me track my symptoms. you can add emotions or experiences and at the end of the tracking period, it offers helpful tips and tricks to help you out. there are links and audio that you can listen to. unfortunately, there is a paywall to access some features but other than that it's a great app.\n- [rev_002293] All my data from the past month just disappeared! Almost a month worth of data is gone! If this is because I restarted my phone then this app sucks! No other app has done this because of that! Definitely uninstalling since some of my data has been wiped away before too!\n\nGroup: AG2\nTheme: Technical Issues and Bugs\nSummary: Users report various technical issues, such as login problems, blank pages, and data loss.\nKeywords: bug, login issue, blank page, data loss, crash\nRepresentative reviews:\n- [rev_000878] I did a whole 14 days of documenting my emotions and I can't even see my results. Whenever I click on seeing my results, it's a blank page. Please correct this issue.\n- [rev_003390] I really like it, and the exercises are good, but recently there is a persistent bug happening. When I click the notification reminding me to answer some questions, it opens the app but the page is blank.\n- [rev_000728] I would not recommend to patients given numerous technical issues\n- [rev_000560] Cant login in when it says login in. It says no Internet connection but I have Internet connection\n- [rev_003165] Encountering a bug frequently that doesn't save the data after recording it or notifications in the recent versions with the updated UI\n- [rev_000552] From night to day it just stopped working. First, whenever I opened the app it appeared completely blank, then I erased it and tried to downloaded it again, but I can't log in because it says that I have no internet (I tried with wifi and mobile data, but in both cases I couldn't make it work). I don't know if it's a bug or something, but if this continues I'll have to erase it one and for all\n- [rev_002454] I really enjoyed this app for tracking my mood during a rough time. The prompts to record data and the questions offered all seem relevant. They do provide you with a connection to a consular if needed. Functions well without many crashes or hang ups. I recommend it.\n- [rev_000665] I loved it. Until it started to no longer give me notification. And if i go in manualyy, there are no questions. The page comes up blank.\n\nGroup: AG3\nTheme: Pricing and Paywall Concerns\nSummary: Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.\nKeywords: price, paywall, expensive, subscription, free features\nRepresentative reviews:\n- [rev_000493] Wow. Cannot believe you've locked the basic bare bones feature of viewing mood history behind your $100/year paywall. I would happily pay a one time price for a premium app, but there's no way I can afford that absurdly expensive subscription model. What is the point of a mood journal app if you can't look back and see your old entries?? I was worried this app would go south when it got bought out. I guess I was right. New users beware, don't waste your time, it's all downhill from here.\n- [rev_001879] Cool but it's really expensive (probably no regional pricing)\n- [rev_001191] Pretty good except for the expensive paywall\n- [rev_000323] Just be honest about your pricing up front. Don't ask me a serious of personal questions, give me no opportunity to evaluate/trial the app, then drop an expensive subscription wall. Give me at least a tiny indication of value before asking for money.\n- [rev_000227] You answer a few simple questions and get a mini assesment. However, there's no free trial cuz all services are behind a paywall, at higher prices than expected in 2 tiers, Felt like I was bait-and-switched when the paywall screen popped up. Uninstalled.\n- [rev_003955] Used to be a good app, but lately most of the content that used to be free is now premium only and require a rather expensive subscription. That's depressing.\n- [rev_000734] I have written a couple reviews and they started good but after I paid the expensive price for a yearly premium subscription I never recieved access to premium content. I've emailed proof if purchase and wrote several emails trying to get help and get what I paid for but have only gotten the run around and MindDoc still won't give me what I paid for. Don't waste your money on this app. Don't purchase this app because they will only steal your money and NEVER GIVE YOU WHAT YOU PAID FOR!!\n- [rev_000609] The Plus subscription is too expensive for me, but the free version is still amazingly helpful and it's really convenient\n\nGroup: AG4\nTheme: Usability and Feedback\nSummary: Users provide feedback on the app's usability, suggesting improvements to the user interface, questions, and insights.\nKeywords: usability, interface, questions, insights, feedback\nRepresentative reviews:\n- [rev_001963] Great feedback from the app\n- [rev_001356] Been super helpful!!! Great feedback and simple interface\n- [rev_001380] I like the therapy options and feedback\n- [rev_000350] Great app for mood tracking! Thanks for being responsive to user feedback too.\n- [rev_001697] Very proffessional and an easy and smooth user interface. Help you reflect and take actions on the reflections.\n- [rev_004979] nice app - its a bit annoying to have it blend \"help\" with \"advertising\" - I get that they've got a service to sell, but its not pleasant to have sales pitches pop up in the middle of a mindfulness exercise... meanwhile, they're saying it'll take 14 days of mood logging before i can get any useful feedback - who wants to bet they'll try to sell me a course when they do... anyhow the interface is nice, and its helpful to track my mood.\n- [rev_003768] Great interface. Helpful chatbot.\n- [rev_000058] Brings a lot of encouragement due to it's well-targeted personalized questions and feedback.\n\nGroup: AG5\nTheme: Value and Effectiveness\nSummary: Users share their experiences with the app's effectiveness in tracking mood, providing insights, and offering support.\nKeywords: helpful, effective, mood tracking, insights, support\nRepresentative reviews:\n- [rev_004977] mood tracking with reminder. very helpful.\n- [rev_000984] Useful mood tracking\n- [rev_004492] It's very helpful and others support lines\n- [rev_003155] Beneficial for mood tracking\n- [rev_002216] Great for mood tracking, awareness, and mindfulness. Really great information and helpful prompts.\n- [rev_001920] Very helpful for tracking moods\n- [rev_000469] MindDoc is an immaculate mental health and emotional support and mood tracking app thta I HIGHLY RECOMMEND to anyone who wishes to record their day to day experience and have a detailed analysis of a 15 day cycle; Morning, afternoon and evening, as well as GREAT insight material for mindfulness, and understanding ones mental health, keep up the amazing work, Nameste 🙏\n- [rev_001467] A great mood tracking app\n",
+    "persona_generation_raw_response": {
+      "personas": [
+        {
+          "id": "P_privacy_1",
+          "name": "Data-Conscious User",
+          "description": "A user concerned about data privacy and security",
+          "derived_from_group": "AG1",
+          "goals": [
+            "Protect personal data",
+            "Understand data usage"
+          ],
+          "pain_points": [
+            "Data shared with third parties",
+            "Lack of control over data"
+          ],
+          "context": [
+            "Reading privacy policies",
+            "Concerned about data sharing"
+          ],
+          "constraints": [
+            "Limited technical expertise"
+          ],
+          "evidence_reviews": [
+            "rev_002819",
+            "rev_002824",
+            "rev_002029"
+          ]
+        },
+        {
+          "id": "P_technical_1",
+          "name": "Frustrated User",
+          "description": "A user experiencing technical issues with the app",
+          "derived_from_group": "AG2",
+          "goals": [
+            "Resolve technical issues",
+            "Use the app effectively"
+          ],
+          "pain_points": [
+            "Login problems",
+            "Blank pages",
+            "Data loss"
+          ],
+          "context": [
+            "Encountering bugs",
+            "Trying to troubleshoot issues"
+          ],
+          "constraints": [
+            "Limited technical expertise"
+          ],
+          "evidence_reviews": [
+            "rev_000878",
+            "rev_003390",
+            "rev_000560"
+          ]
+        },
+        {
+          "id": "P_price_sensitive_1",
+          "name": "Budget-Conscious User",
+          "description": "A user sensitive to pricing and paywalls",
+          "derived_from_group": "AG3",
+          "goals": [
+            "Access features without high costs",
+            "Evaluate app value"
+          ],
+          "pain_points": [
+            "Expensive subscription model",
+            "Limited free features"
+          ],
+          "context": [
+            "Evaluating app costs",
+            "Considering alternatives"
+          ],
+          "constraints": [
+            "Limited budget"
+          ],
+          "evidence_reviews": [
+            "rev_000493",
+            "rev_001879",
+            "rev_000323"
+          ]
+        },
+        {
+          "id": "P_usability_1",
+          "name": "Feedback-Oriented User",
+          "description": "A user providing feedback on app usability",
+          "derived_from_group": "AG4",
+          "goals": [
+            "Improve app usability",
+            "Provide constructive feedback"
+          ],
+          "pain_points": [
+            "Confusing interface",
+            "Insufficient feedback"
+          ],
+          "context": [
+            "Using the app regularly",
+            "Providing feedback"
+          ],
+          "constraints": [
+            "Limited technical expertise"
+          ],
+          "evidence_reviews": [
+            "rev_001963",
+            "rev_001356",
+            "rev_001380"
+          ]
+        },
+        {
+          "id": "P_effectiveness_1",
+          "name": "Results-Driven User",
+          "description": "A user seeking effectiveness in mood tracking and support",
+          "derived_from_group": "AG5",
+          "goals": [
+            "Track mood effectively",
+            "Gain insights and support"
+          ],
+          "pain_points": [
+            "Insufficient insights",
+            "Limited support"
+          ],
+          "context": [
+            "Using the app for mood tracking",
+            "Seeking support"
+          ],
+          "constraints": [
+            "Limited time for app usage"
+          ],
+          "evidence_reviews": [
+            "rev_004977",
+            "rev_000984",
+            "rev_004492"
+          ]
+        }
+      ]
+    }
+  },
+  "notes": "This file stores the prompts used to generate automated review groups and personas for Task 4.",
+  "spec_generation": {
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "requirements_per_persona": 2,
+    "generation_records": [
+      {
+        "persona_id": "P_auto_1",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_1\nPersona Name: Data-Conscious User\nPersona Description: A user concerned about data privacy and security\nDerived Group: AG1\nGroup Theme: Privacy and Data Concerns\nGroup Summary: Users express concerns about data sharing, privacy, and access to their own data.\nGoals: Protect personal data; Understand data usage\nPain Points: Data shared with third parties; Lack of control over data\nContext: Reading privacy policies; Concerned about data sharing\nConstraints: Limited technical expertise\nKeywords: privacy, data sharing, security, access, paywall\nExample Reviews:\n- Was great until I read privacy agreement. They give your data to Facebook for marketing purposes using your mobile device's ad ID. I took screenshots of my last ~2 years of data and just uninstalled the program.\n- After reading the privacy policy I discovered that the app has facebook software development kit integrated in app, which means that all data from app is accessible for facebook. I don't recommend installing it if you don't want your mental health data used against you and sold to advertisers.\n- it is a very good it records all data of your day ....\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_raw_response": {
+          "requirements": [
+            {
+              "description": "The system shall provide a data export feature for users to download their mental health data.",
+              "acceptance_criteria": "Given the user is logged in, When they navigate to the account settings page, Then they are able to initiate a data export, and receive a downloadable file containing their mental health data within 24 hours."
+            },
+            {
+              "description": "The system shall display a clear list of third-party services used by the app and their purposes.",
+              "acceptance_criteria": "Given the user is viewing the app's privacy policy, When they scroll to the section on data sharing, Then they see a list of third-party services used by the app, including Facebook, and a brief description of why each service is used."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "You are rewriting weak requirements into stronger software requirements. Generate exactly 2 functional requirements only. They must be concrete, testable, and written as system behavior. Do not use vague words. Acceptance criteria must use Given, When, Then and define observable behavior. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
+        "retry_attempt_user_prompt": "Rewrite the requirements so they are more concrete.\nFor example, instead of saying the system should be effective or helpful, say exactly what data it displays, stores, exports, or sends.\nGenerate exactly 2 better requirements now.\n\nPersona Name: Data-Conscious User\nDerived Group: AG1\nGroup Theme: Privacy and Data Concerns\nGroup Summary: Users express concerns about data sharing, privacy, and access to their own data.\nGoals: Protect personal data; Understand data usage\nPain Points: Data shared with third parties; Lack of control over data\nKeywords: privacy, data sharing, security, access, paywall\nThe earlier requirements were weak:\n- The system shall provide a data export feature for users to download their mental health data.\n- The system shall display a clear list of third-party services used by the app and their purposes.\nProblems to avoid:\n- vague language found in description: The system shall display a clear list of third-party services used by the app and their purposes.",
+        "retry_attempt_raw_response": {
+          "requirements": [
+            {
+              "description": "The system shall export user mental health data in a CSV file format when requested by the user.",
+              "acceptance_criteria": "Given a user has created an account and logged in, When the user navigates to the account settings and clicks the 'Export Data' button, Then the system shall generate a CSV file containing the user's mental health data, including date, time, and entries, and send it to the user's registered email address."
+            },
+            {
+              "description": "The system shall display a list of third-party services used for data processing, including their names, purposes, and data sharing policies.",
+              "acceptance_criteria": "Given a user is logged in and navigates to the 'About' or 'Settings' section, When the user clicks on 'Third-Party Services', Then the system shall display a table with the following columns: 'Service Name', 'Purpose', and 'Data Sharing Policy', and populate it with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+            }
+          ]
+        },
+        "used_fallback": false
+      },
+      {
+        "persona_id": "P_auto_2",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_2\nPersona Name: Frustrated User\nPersona Description: A user experiencing technical issues with the app\nDerived Group: AG2\nGroup Theme: Technical Issues and Bugs\nGroup Summary: Users report various technical issues, such as login problems, blank pages, and data loss.\nGoals: Resolve technical issues; Use the app effectively\nPain Points: Login problems; Blank pages; Data loss\nContext: Encountering bugs; Trying to troubleshoot issues\nConstraints: Limited technical expertise\nKeywords: bug, login issue, blank page, data loss, crash\nExample Reviews:\n- I did a whole 14 days of documenting my emotions and I can't even see my results. Whenever I click on seeing my results, it's a blank page. Please correct this issue.\n- I really like it, and the exercises are good, but recently there is a persistent bug happening. When I click the notification reminding me to answer some questions, it opens the app but the page is blank.\n- I would not recommend to patients given numerous technical issues\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_raw_response": {
+          "requirements": [
+            {
+              "description": "The system shall display an error message when a user's data cannot be loaded.",
+              "acceptance_criteria": "Given a user has logged in and attempted to view their results, When the system is unable to retrieve the user's data, Then the system displays an error message with a specific error code and a link to contact support."
+            },
+            {
+              "description": "The system shall prevent data loss when a user encounters a technical issue.",
+              "acceptance_criteria": "Given a user has entered data and the system encounters a technical issue, When the issue occurs, Then the system saves the user's data and displays a recovery message with instructions on how to resume where they left off."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "persona_id": "P_auto_3",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_3\nPersona Name: Budget-Conscious User\nPersona Description: A user sensitive to pricing and paywalls\nDerived Group: AG3\nGroup Theme: Pricing and Paywall Concerns\nGroup Summary: Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.\nGoals: Access features without high costs; Evaluate app value\nPain Points: Expensive subscription model; Limited free features\nContext: Evaluating app costs; Considering alternatives\nConstraints: Limited budget\nKeywords: price, paywall, expensive, subscription, free features\nExample Reviews:\n- Wow. Cannot believe you've locked the basic bare bones feature of viewing mood history behind your $100/year paywall. I would happily pay a one time price for a premium app, but there's no way I can afford that absurdly expensive subscription model. What is the point of a mood journal app if you can't look back and see your old entries?? I was worried this app would go south when it got bought out. I guess I was right. New users beware, don't waste your time, it's all downhill from here.\n- Cool but it's really expensive (probably no regional pricing)\n- Pretty good except for the expensive paywall\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_raw_response": {
+          "requirements": [
+            {
+              "description": "The system shall display a clear price for each premium feature before the user attempts to open that feature.",
+              "acceptance_criteria": "Given the user is viewing a list of features, When the user hovers over or clicks on a premium feature, Then the system displays the price of the premium feature and a brief description of what the feature offers."
+            },
+            {
+              "description": "The system shall allow users to view a limited number of past mood history entries without requiring a subscription.",
+              "acceptance_criteria": "Given the user has created at least 5 mood history entries, When the user navigates to the mood history section, Then the system displays the 5 most recent entries without requiring the user to log in or subscribe to a premium plan."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "You are rewriting weak requirements into stronger software requirements. Generate exactly 2 functional requirements only. They must be concrete, testable, and written as system behavior. Do not use vague words. Acceptance criteria must use Given, When, Then and define observable behavior. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
+        "retry_attempt_user_prompt": "Rewrite the requirements so they are more concrete.\nFor example, instead of saying the system should be effective or helpful, say exactly what data it displays, stores, exports, or sends.\nGenerate exactly 2 better requirements now.\n\nPersona Name: Budget-Conscious User\nDerived Group: AG3\nGroup Theme: Pricing and Paywall Concerns\nGroup Summary: Users express dissatisfaction with the app's pricing model, paywalls, and limited free features.\nGoals: Access features without high costs; Evaluate app value\nPain Points: Expensive subscription model; Limited free features\nKeywords: price, paywall, expensive, subscription, free features\nThe earlier requirements were weak:\n- The system shall display a clear price for each premium feature before the user attempts to open that feature.\n- The system shall allow users to view a limited number of past mood history entries without requiring a subscription.\nProblems to avoid:\n- vague language found in description: The system shall display a clear price for each premium feature before the user attempts to open that feature.",
+        "retry_attempt_raw_response": {
+          "requirements": [
+            {
+              "description": "The system shall display a tooltip with the exact price and a link to the subscription page when a user hovers over a premium feature icon.",
+              "acceptance_criteria": "Given the user is not logged in, When the user hovers over a premium feature icon, Then the tooltip displays the price and a link to the subscription page."
+            },
+            {
+              "description": "The system shall allow users to view the last 30 days of mood history entries without requiring a subscription, with each entry including the date, mood rating, and a brief note.",
+              "acceptance_criteria": "Given the user is not subscribed, When the user navigates to the mood history section, Then the system displays the last 30 days of entries with date, mood rating, and brief note for each entry."
+            }
+          ]
+        },
+        "used_fallback": false
+      },
+      {
+        "persona_id": "P_auto_4",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_4\nPersona Name: Feedback-Oriented User\nPersona Description: A user providing feedback on app usability\nDerived Group: AG4\nGroup Theme: Usability and Feedback\nGroup Summary: Users provide feedback on the app's usability, suggesting improvements to the user interface, questions, and insights.\nGoals: Improve app usability; Provide constructive feedback\nPain Points: Confusing interface; Insufficient feedback\nContext: Using the app regularly; Providing feedback\nConstraints: Limited technical expertise\nKeywords: usability, interface, questions, insights, feedback\nExample Reviews:\n- Great feedback from the app\n- Been super helpful!!! Great feedback and simple interface\n- I like the therapy options and feedback\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_raw_response": {
+          "requirements": [
+            {
+              "description": "The system shall display a confirmation message to the user after they submit feedback on app usability.",
+              "acceptance_criteria": "Given the user is logged in and on the feedback page, When the user submits their feedback, Then the system displays a confirmation message that reads 'Thank you for your feedback.'"
+            },
+            {
+              "description": "The system shall store and display all submitted feedback on a dedicated page for review.",
+              "acceptance_criteria": "Given the user is an administrator and logged in, When they navigate to the feedback page, Then the system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "persona_id": "P_auto_5",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering for a mental health app. Generate exactly 2 functional requirements for the single persona you are given. Each requirement must describe concrete system behavior and must be testable. Avoid vague words such as easy, better, seamless, user friendly, intuitive, fast, helpful, effective, regular, personalized, transparent, clear, or useful. Do not write general product goals. Write actual system requirements. Each acceptance criteria must use Given, When, Then and be specific enough to test. Return strict JSON only with this shape: {\"requirements\": [{\"description\": \"The system shall ...\", \"acceptance_criteria\": \"Given ... When ... Then ...\"}]}",
+        "first_attempt_user_prompt": "Create exactly 2 strong functional requirements for this persona.\nThey must be concrete and testable.\n\nPersona ID: P_auto_5\nPersona Name: Results-Driven User\nPersona Description: A user seeking effectiveness in mood tracking and support\nDerived Group: AG5\nGroup Theme: Value and Effectiveness\nGroup Summary: Users share their experiences with the app's effectiveness in tracking mood, providing insights, and offering support.\nGoals: Track mood effectively; Gain insights and support\nPain Points: Insufficient insights; Limited support\nContext: Using the app for mood tracking; Seeking support\nConstraints: Limited time for app usage\nKeywords: helpful, effective, mood tracking, insights, support\nExample Reviews:\n- mood tracking with reminder. very helpful.\n- Useful mood tracking\n- It's very helpful and others support lines\n\nGood requirement style examples:\n- The system shall display a Premium label on each premium feature before the user attempts to open that feature.\n- The system shall allow users to export their saved mood history as a file.\n- The system shall store a user selected reminder time and send a notification at that time.",
+        "first_attempt_raw_response": {
+          "requirements": [
+            {
+              "description": "The system shall store a user-selected reminder time and send a notification at that time to track mood.",
+              "acceptance_criteria": "Given a user has set a reminder time, When the system reaches that time, Then it shall send a notification to the user to track their mood."
+            },
+            {
+              "description": "The system shall generate a weekly summary of the user's mood history and provide insights into their mood trends.",
+              "acceptance_criteria": "Given a user has tracked their mood for at least 7 days, When the system generates a weekly summary, Then it shall display the user's average mood score and highlight any notable trends or patterns in their mood history."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      }
+    ]
+  },
+  "test_generation": {
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "tests_per_requirement": 2,
+    "generation_records": [
+      {
+        "requirement_id": "AFR1",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR1\nDescription: The system shall export user mental health data in a CSV file format when requested by the user.\nSource Persona: Data-Conscious User\nSource Group: AG1\nAcceptance Criteria: Given a user has created an account and logged in, When the user navigates to the account settings and clicks the 'Export Data' button, Then the system shall generate a CSV file containing the user's mental health data, including date, time, and entries, and send it to the user's registered email address.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Valid Export Request",
+              "steps": [
+                "Create a new user account",
+                "Log in to the account",
+                "Navigate to account settings",
+                "Click the 'Export Data' button"
+              ],
+              "expected_result": "A CSV file containing the user's mental health data, including date, time, and entries, is sent to the user's registered email address."
+            },
+            {
+              "scenario": "Invalid Export Request - Unregistered User",
+              "steps": [
+                "Attempt to navigate to account settings without logging in",
+                "Click the 'Export Data' button (if available) or simulate the action"
+              ],
+              "expected_result": "The system prevents the export action and displays an error message indicating that the user must be logged in to export their data."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "You are rewriting weak software validation tests into stronger tests. Generate exactly 2 validation test scenarios only. Each test must be concrete, readable, and clearly executable. Each test must include a scenario, steps list, and expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "retry_attempt_user_prompt": "Rewrite the tests so they are stronger and more concrete.\nGenerate exactly 2 better validation tests now.\n\nRequirement ID: AFR1\nDescription: The system shall export user mental health data in a CSV file format when requested by the user.\nAcceptance Criteria: Given a user has created an account and logged in, When the user navigates to the account settings and clicks the 'Export Data' button, Then the system shall generate a CSV file containing the user's mental health data, including date, time, and entries, and send it to the user's registered email address.\nEarlier weak tests:\n- Valid Export Request\n- Invalid Export Request - Unregistered User\nProblems to avoid:\n- a test does not have at least 3 steps",
+        "retry_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Valid Export Request",
+              "steps": [
+                "Create a new user account with a valid email address and login credentials",
+                "Log in to the account with the created credentials",
+                "Navigate to the account settings and click the 'Export Data' button"
+              ],
+              "expected_result": "A CSV file containing the user's mental health data, including date, time, and entries, is sent to the user's registered email address within 5 minutes"
+            },
+            {
+              "scenario": "Invalid Export Request - Unregistered User",
+              "steps": [
+                "Attempt to log in with an invalid email address and login credentials",
+                "Verify that the login attempt fails and an error message is displayed",
+                "Attempt to navigate to the account settings and click the 'Export Data' button"
+              ],
+              "expected_result": "An error message is displayed indicating that the user is not registered, and no CSV file is sent to the email address"
+            }
+          ]
+        },
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR2",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR2\nDescription: The system shall display a list of third-party services used for data processing, including their names, purposes, and data sharing policies.\nSource Persona: Data-Conscious User\nSource Group: AG1\nAcceptance Criteria: Given a user is logged in and navigates to the 'About' or 'Settings' section, When the user clicks on 'Third-Party Services', Then the system shall display a table with the following columns: 'Service Name', 'Purpose', and 'Data Sharing Policy', and populate it with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Valid Third-Party Services Display",
+              "steps": [
+                "Log in to the system with a valid user account",
+                "Navigate to the 'About' section",
+                "Click on 'Third-Party Services'"
+              ],
+              "expected_result": "The system displays a table with columns 'Service Name', 'Purpose', and 'Data Sharing Policy', populated with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+            },
+            {
+              "scenario": "Third-Party Services Display from Settings Section",
+              "steps": [
+                "Log in to the system with a valid user account",
+                "Navigate to the 'Settings' section",
+                "Click on 'Third-Party Services'"
+              ],
+              "expected_result": "The system displays a table with columns 'Service Name', 'Purpose', and 'Data Sharing Policy', populated with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR3",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR3\nDescription: The system shall display an error message when a user's data cannot be loaded.\nSource Persona: Frustrated User\nSource Group: AG2\nAcceptance Criteria: Given a user has logged in and attempted to view their results, When the system is unable to retrieve the user's data, Then the system displays an error message with a specific error code and a link to contact support.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Test Successful Error Display for Unavailable User Data",
+              "steps": [
+                "Log in as an existing user",
+                "Simulate a failure in retrieving the user's data",
+                "Attempt to view the user's results"
+              ],
+              "expected_result": "The system displays an error message with a specific error code and a link to contact support."
+            },
+            {
+              "scenario": "Test Error Display with Correct Error Code and Support Link",
+              "steps": [
+                "Log in as an existing user",
+                "Simulate a failure in retrieving the user's data with a known error code",
+                "Attempt to view the user's results",
+                "Verify the error code in the displayed error message",
+                "Verify the presence and functionality of the support link"
+              ],
+              "expected_result": "The system displays an error message with the correct error code and a functional link to contact support."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR4",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR4\nDescription: The system shall prevent data loss when a user encounters a technical issue.\nSource Persona: Frustrated User\nSource Group: AG2\nAcceptance Criteria: Given a user has entered data and the system encounters a technical issue, When the issue occurs, Then the system saves the user's data and displays a recovery message with instructions on how to resume where they left off.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Successful Data Recovery",
+              "steps": [
+                "1. Log in to the system as a valid user.",
+                "2. Enter sample data into the required fields.",
+                "3. Simulate a technical issue (e.g., server crash, network error) while the user is entering data.",
+                "4. Verify the system saves the entered data.",
+                "5. Check the system displays a recovery message with instructions."
+              ],
+              "expected_result": "The system saves the user's data and displays a recovery message with instructions on how to resume where they left off."
+            },
+            {
+              "scenario": "Data Recovery with Multiple Fields",
+              "steps": [
+                "1. Log in to the system as a valid user.",
+                "2. Enter sample data into multiple required fields (e.g., name, address, phone number).",
+                "3. Simulate a technical issue (e.g., server crash, network error) while the user is entering data.",
+                "4. Verify the system saves all entered data.",
+                "5. Check the system displays a recovery message with instructions."
+              ],
+              "expected_result": "The system saves all the user's data and displays a recovery message with instructions on how to resume where they left off."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR5",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR5\nDescription: The system shall display a tooltip with the exact price and a link to the subscription page when a user hovers over a premium feature icon.\nSource Persona: Budget-Conscious User\nSource Group: AG3\nAcceptance Criteria: Given the user is not logged in, When the user hovers over a premium feature icon, Then the tooltip displays the price and a link to the subscription page.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Hover over premium feature icon as logged out user",
+              "steps": [
+                "Log out of the system",
+                "Navigate to a page containing a premium feature icon",
+                "Hover over the premium feature icon"
+              ],
+              "expected_result": "A tooltip is displayed with the exact price and a link to the subscription page"
+            },
+            {
+              "scenario": "Verify tooltip consistency across multiple premium features",
+              "steps": [
+                "Log out of the system",
+                "Navigate to a page containing multiple premium feature icons",
+                "Hover over each premium feature icon one by one"
+              ],
+              "expected_result": "For each premium feature icon, a tooltip is displayed with the exact price and a link to the subscription page"
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR6",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR6\nDescription: The system shall allow users to view the last 30 days of mood history entries without requiring a subscription, with each entry including the date, mood rating, and a brief note.\nSource Persona: Budget-Conscious User\nSource Group: AG3\nAcceptance Criteria: Given the user is not subscribed, When the user navigates to the mood history section, Then the system displays the last 30 days of entries with date, mood rating, and brief note for each entry.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "View Last 30 Days of Mood History as Non-Subscribed User",
+              "steps": [
+                "Log in as a non-subscribed user",
+                "Navigate to the mood history section",
+                "Verify the display of the last 30 days of mood history entries"
+              ],
+              "expected_result": "The system displays a list of the last 30 days of mood history entries, including date, mood rating, and brief note for each entry, without prompting for a subscription."
+            },
+            {
+              "scenario": "Verify Date Range and Details for Non-Subscribed User",
+              "steps": [
+                "Log in as a non-subscribed user",
+                "Navigate to the mood history section",
+                "Check the date range of displayed mood history entries",
+                "Verify that each entry includes date, mood rating, and brief note"
+              ],
+              "expected_result": "The system displays mood history entries for the last 30 days only, and each entry includes the date, a mood rating, and a brief note, without requiring a subscription."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR7",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR7\nDescription: The system shall display a confirmation message to the user after they submit feedback on app usability.\nSource Persona: Feedback-Oriented User\nSource Group: AG4\nAcceptance Criteria: Given the user is logged in and on the feedback page, When the user submits their feedback, Then the system displays a confirmation message that reads 'Thank you for your feedback.'\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Valid Feedback Submission",
+              "steps": [
+                "Log in to the app as a registered user",
+                "Navigate to the feedback page",
+                "Enter valid feedback on app usability",
+                "Click the submit button"
+              ],
+              "expected_result": "A confirmation message is displayed that reads 'Thank you for your feedback.'"
+            },
+            {
+              "scenario": "Empty Feedback Submission",
+              "steps": [
+                "Log in to the app as a registered user",
+                "Navigate to the feedback page",
+                "Leave the feedback field empty",
+                "Click the submit button"
+              ],
+              "expected_result": "A confirmation message is displayed that reads 'Thank you for your feedback.'"
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR8",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR8\nDescription: The system shall store and display all submitted feedback on a dedicated page for review.\nSource Persona: Feedback-Oriented User\nSource Group: AG4\nAcceptance Criteria: Given the user is an administrator and logged in, When they navigate to the feedback page, Then the system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Valid Feedback Display",
+              "steps": [
+                "Log in as an administrator with valid credentials",
+                "Navigate to the dedicated feedback page",
+                "Verify that the page displays a list of submitted feedback"
+              ],
+              "expected_result": "The system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp for each feedback entry."
+            },
+            {
+              "scenario": "No Feedback Display",
+              "steps": [
+                "Log in as an administrator with valid credentials",
+                "Navigate to the dedicated feedback page",
+                "Verify that there is no feedback submitted"
+              ],
+              "expected_result": "The system displays an empty list or a message indicating that no feedback has been submitted yet."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR9",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR9\nDescription: The system shall store a user-selected reminder time and send a notification at that time to track mood.\nSource Persona: Results-Driven User\nSource Group: AG5\nAcceptance Criteria: Given a user has set a reminder time, When the system reaches that time, Then it shall send a notification to the user to track their mood.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Valid Reminder Time Notification",
+              "steps": [
+                "Set user's reminder time to 10:00 AM",
+                "Simulate system time to 10:00 AM",
+                "Verify system sends notification to user to track mood"
+              ],
+              "expected_result": "The user receives a notification at 10:00 AM to track their mood."
+            },
+            {
+              "scenario": "Reminder Time Notification When System Time Changes",
+              "steps": [
+                "Set user's reminder time to 11:30 AM",
+                "Simulate system time to 11:29 AM",
+                "Simulate system time to 11:30 AM",
+                "Verify system sends notification to user to track mood"
+              ],
+              "expected_result": "The user receives a notification at 11:30 AM to track their mood."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      },
+      {
+        "requirement_id": "AFR10",
+        "first_attempt_system_prompt": "You are helping with software requirements engineering test design. Generate exactly 2 validation test scenarios for the single requirement you are given. Each test must be concrete and clearly linked to the requirement. Each test must contain a short scenario name, a list of execution steps, and an expected result. Return strict JSON only with this shape: {\"tests\": [{\"scenario\": \"...\", \"steps\": [\"...\", \"...\"], \"expected_result\": \"...\"}]}",
+        "first_attempt_user_prompt": "Requirement ID: AFR10\nDescription: The system shall generate a weekly summary of the user's mood history and provide insights into their mood trends.\nSource Persona: Results-Driven User\nSource Group: AG5\nAcceptance Criteria: Given a user has tracked their mood for at least 7 days, When the system generates a weekly summary, Then it shall display the user's average mood score and highlight any notable trends or patterns in their mood history.\n\nGenerate exactly 2 test scenarios for this requirement.",
+        "first_attempt_raw_response": {
+          "tests": [
+            {
+              "scenario": "Valid Weekly Summary Generation",
+              "steps": [
+                "Create a user account and log in",
+                "Track the user's mood for 7 consecutive days with varying scores",
+                "Navigate to the weekly summary page",
+                "Verify the system generates a weekly summary"
+              ],
+              "expected_result": "The system displays the user's average mood score and highlights notable trends or patterns in their mood history."
+            },
+            {
+              "scenario": "Insufficient Data for Weekly Summary",
+              "steps": [
+                "Create a user account and log in",
+                "Track the user's mood for only 3 days",
+                "Navigate to the weekly summary page"
+              ],
+              "expected_result": "The system does not display a weekly summary and instead prompts the user to track their mood for at least 7 days."
+            }
+          ]
+        },
+        "retry_attempt_system_prompt": "",
+        "retry_attempt_user_prompt": "",
+        "retry_attempt_raw_response": {},
+        "used_fallback": false
+      }
+    ]
+  }
 }

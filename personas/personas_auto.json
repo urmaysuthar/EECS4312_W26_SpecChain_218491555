@@ -1,0 +1,135 @@
+{
+  "personas": [
+    {
+      "id": "P_auto_1",
+      "name": "Data-Conscious User",
+      "description": "A user concerned about data privacy and security",
+      "derived_from_group": "AG1",
+      "goals": [
+        "Protect personal data",
+        "Understand data usage"
+      ],
+      "pain_points": [
+        "Data shared with third parties",
+        "Lack of control over data"
+      ],
+      "context": [
+        "Reading privacy policies",
+        "Concerned about data sharing"
+      ],
+      "constraints": [
+        "Limited technical expertise"
+      ],
+      "evidence_reviews": [
+        "rev_002819",
+        "rev_002824",
+        "rev_002029"
+      ]
+    },
+    {
+      "id": "P_auto_2",
+      "name": "Frustrated User",
+      "description": "A user experiencing technical issues with the app",
+      "derived_from_group": "AG2",
+      "goals": [
+        "Resolve technical issues",
+        "Use the app effectively"
+      ],
+      "pain_points": [
+        "Login problems",
+        "Blank pages",
+        "Data loss"
+      ],
+      "context": [
+        "Encountering bugs",
+        "Trying to troubleshoot issues"
+      ],
+      "constraints": [
+        "Limited technical expertise"
+      ],
+      "evidence_reviews": [
+        "rev_000878",
+        "rev_003390",
+        "rev_000560"
+      ]
+    },
+    {
+      "id": "P_auto_3",
+      "name": "Budget-Conscious User",
+      "description": "A user sensitive to pricing and paywalls",
+      "derived_from_group": "AG3",
+      "goals": [
+        "Access features without high costs",
+        "Evaluate app value"
+      ],
+      "pain_points": [
+        "Expensive subscription model",
+        "Limited free features"
+      ],
+      "context": [
+        "Evaluating app costs",
+        "Considering alternatives"
+      ],
+      "constraints": [
+        "Limited budget"
+      ],
+      "evidence_reviews": [
+        "rev_000493",
+        "rev_001879",
+        "rev_000323"
+      ]
+    },
+    {
+      "id": "P_auto_4",
+      "name": "Feedback-Oriented User",
+      "description": "A user providing feedback on app usability",
+      "derived_from_group": "AG4",
+      "goals": [
+        "Improve app usability",
+        "Provide constructive feedback"
+      ],
+      "pain_points": [
+        "Confusing interface",
+        "Insufficient feedback"
+      ],
+      "context": [
+        "Using the app regularly",
+        "Providing feedback"
+      ],
+      "constraints": [
+        "Limited technical expertise"
+      ],
+      "evidence_reviews": [
+        "rev_001963",
+        "rev_001356",
+        "rev_001380"
+      ]
+    },
+    {
+      "id": "P_auto_5",
+      "name": "Results-Driven User",
+      "description": "A user seeking effectiveness in mood tracking and support",
+      "derived_from_group": "AG5",
+      "goals": [
+        "Track mood effectively",
+        "Gain insights and support"
+      ],
+      "pain_points": [
+        "Insufficient insights",
+        "Limited support"
+      ],
+      "context": [
+        "Using the app for mood tracking",
+        "Seeking support"
+      ],
+      "constraints": [
+        "Limited time for app usage"
+      ],
+      "evidence_reviews": [
+        "rev_004977",
+        "rev_000984",
+        "rev_004492"
+      ]
+    }
+  ]
+}

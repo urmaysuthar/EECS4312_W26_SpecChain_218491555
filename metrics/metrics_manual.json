@@ -1,11 +1,25 @@
-{"pipeline": "manual",
-"dataset_size": 300,
-"persona_count": 4,
-"requirements_count": 8,
-"tests_count": 10,
-"traceability_links": 12,
-"review_coverage": 0.63,
-"traceability_ratio": 0.87,
-"testability_rate": 0.75,
-"ambiguity_ratio": 0.12
+{
+  "pipeline": "manual",
+  "dataset_size": 4267,
+  "persona_count": 5,
+  "requirements_count": 12,
+  "tests_count": 24,
+  "traceability_links": 128,
+  "review_coverage_ratio": 0.0141,
+  "traceability_ratio": 1.0,
+  "testability_rate": 1.0,
+  "ambiguity_ratio": 0.0,
+  "traceability_breakdown": {
+    "review_group_to_review_links": 60,
+    "persona_to_group_links": 5,
+    "persona_to_evidence_review_links": 15,
+    "requirement_to_persona_links": 12,
+    "requirement_to_group_links": 12,
+    "test_to_requirement_links": 24
+  },
+  "notes": {
+    "review_coverage_explanation": "60 cleaned reviews were explicitly grouped across 5 manual review groups out of 4267 total cleaned reviews.",
+    "traceability_explanation": "Traceability links were counted using all explicit references between artifacts in the manual pipeline.",
+    "ambiguity_explanation": "The manual requirements were reviewed and written to avoid vague words and non measurable language."
+  }
 }

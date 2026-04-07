@@ -1,22 +1,164 @@
-{  "personas": [
+{
+  "personas": [
     {
       "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
+      "name": "Consistent Mood Journal User",
+      "description": "A user who wants to build a steady habit of checking in with their emotions, answering guided questions, and writing short journal entries so they can better understand how they feel over time.",
       "derived_from_group": "G1",
       "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
+        "Track moods regularly",
+        "Write down thoughts in a simple way",
+        "Build a daily or weekly self-reflection habit",
+        "Look back at past entries to notice patterns"
+      ],
       "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
+        "Can lose motivation if the habit feels hard to maintain",
+        "Wants more flexibility in how emotions are recorded",
+        "Needs the app to make tracking feel simple and worth returning to"
+      ],
       "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
+        "Uses the app during the day to log moods and thoughts",
+        "Often depends on prompts or reminders to keep the habit going",
+        "May be new to journaling and wants more structure than a blank notebook"
+      ],
       "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
+        "The check-in process should be quick and easy to repeat",
+        "Past entries should remain available for later review",
+        "The app should support regular use without feeling overwhelming"
+      ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+        "rev_000035",
+        "rev_000047",
+        "rev_000132"
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Therapy Support User",
+      "description": "A user who uses MindDoc as a support tool alongside therapy, counselling, or doctor visits, and wants help organizing symptoms, feelings, and patterns before speaking to a professional.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Track symptoms and mood changes over time",
+        "Bring useful notes to therapy or doctor appointments",
+        "Better explain emotions and patterns to a professional",
+        "Feel more prepared during mental health discussions"
+      ],
+      "pain_points": [
+        "Can struggle to remember important feelings or patterns later",
+        "Needs notes and summaries that are actually useful in appointments",
+        "Wants the app to support care without replacing professional help"
+      ],
+      "context": [
+        "Uses the app between therapy sessions or appointments",
+        "May have started using the app because it was recommended by a doctor or therapist",
+        "Looks at past check-ins to prepare for conversations about mental health"
+      ],
+      "constraints": [
+        "Information should be easy to review before appointments",
+        "Tracked data should feel trustworthy and organized",
+        "The app should support, not interfere with, professional care"
+      ],
+      "evidence_reviews": [
+        "rev_000007",
+        "rev_000062",
+        "rev_000097"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Cost-Conscious User",
+      "description": "A user who is interested in improving their mental health but is very sensitive to pricing, and becomes frustrated when key features, reports, or helpful resources are locked behind a subscription.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Understand what the app offers before paying",
+        "Access useful mental health tools at a reasonable cost",
+        "Use important features without feeling misled",
+        "Decide clearly whether the app is worth subscribing to"
+      ],
+      "pain_points": [
+        "Feels disappointed when too much of the app is paywalled",
+        "May feel the app is not useful enough in the free version",
+        "Can see the app as unfair or exploitative if pricing is unclear"
+      ],
+      "context": [
+        "Usually starts with the free version before deciding whether to pay",
+        "May compare MindDoc with cheaper or fully free alternatives",
+        "Often evaluates value very early in the user experience"
+      ],
+      "constraints": [
+        "Pricing and locked features should be communicated clearly",
+        "The free experience should still provide some meaningful value",
+        "Subscription decisions should not depend on hidden limitations"
+      ],
+      "evidence_reviews": [
+        "rev_000002",
+        "rev_000031",
+        "rev_000036"
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Insight-Seeking User",
+      "description": "A user who wants the app to provide meaningful insights, reports, and feedback based on their answers, and expects those outputs to feel relevant, helpful, and more than just obvious statements.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Receive useful insight from check-ins and questions",
+        "Understand patterns in mood and mental health over time",
+        "Get reports or feedback that feel personalized",
+        "Learn something valuable from using the app regularly"
+      ],
+      "pain_points": [
+        "Gets frustrated when reports feel shallow or obvious",
+        "May lose interest if questions feel repetitive",
+        "Wants feedback that clearly matches their input and progress"
+      ],
+      "context": [
+        "Uses the app over time and expects the quality of feedback to improve with more data",
+        "Pays attention to summaries, reports, and in-app guidance",
+        "Often judges the app by whether it gives real value beyond mood logging"
+      ],
+      "constraints": [
+        "Reports should reflect the user’s recorded data in a meaningful way",
+        "Feedback should be understandable and relevant to the user’s responses",
+        "Insights should feel useful enough to justify continued use"
+      ],
+      "evidence_reviews": [
+        "rev_000009",
+        "rev_000048",
+        "rev_000058"
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Reminder-Dependent User",
+      "description": "A user who depends on notifications and reminders to remember check-ins, and needs those reminders to arrive consistently and at times that are practical instead of distracting or easy to miss.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Remember to complete regular mood check-ins",
+        "Stay engaged with the app through helpful reminders",
+        "Receive notifications at useful times",
+        "Avoid missing entries because reminders are unreliable"
+      ],
+      "pain_points": [
+        "May miss check-ins if notifications do not arrive",
+        "Gets annoyed when reminder timing feels random or inconvenient",
+        "Can feel overwhelmed if the app sends too many reminders"
+      ],
+      "context": [
+        "Uses reminders as a main trigger to open the app",
+        "May already struggle with energy, mood, or routine, so external prompts matter a lot",
+        "Notices reminder quality quickly during the first few days or weeks of use"
+      ],
+      "constraints": [
+        "Notifications should be reliable",
+        "Reminder timing should be manageable for the user",
+        "Reminder frequency should support use without becoming excessive"
+      ],
+      "evidence_reviews": [
+        "rev_000041",
+        "rev_000203",
+        "rev_000233"
+      ]
+    }
+  ]
+}

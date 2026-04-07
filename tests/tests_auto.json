@@ -2,14 +2,234 @@
   "tests": [
     {
       "test_id": "T_auto_1",
-      "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "requirement_id": "AFR1",
+      "scenario": "Valid Export Request",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Create a new user account with a valid email address and login credentials",
+        "Log in to the account with the created credentials",
+        "Navigate to the account settings and click the 'Export Data' button"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "A CSV file containing the user's mental health data, including date, time, and entries, is sent to the user's registered email address within 5 minutes"
+    },
+    {
+      "test_id": "T_auto_2",
+      "requirement_id": "AFR1",
+      "scenario": "Invalid Export Request - Unregistered User",
+      "steps": [
+        "Attempt to log in with an invalid email address and login credentials",
+        "Verify that the login attempt fails and an error message is displayed",
+        "Attempt to navigate to the account settings and click the 'Export Data' button"
+      ],
+      "expected_result": "An error message is displayed indicating that the user is not registered, and no CSV file is sent to the email address"
+    },
+    {
+      "test_id": "T_auto_3",
+      "requirement_id": "AFR2",
+      "scenario": "Valid Third-Party Services Display",
+      "steps": [
+        "Log in to the system with a valid user account",
+        "Navigate to the 'About' section",
+        "Click on 'Third-Party Services'"
+      ],
+      "expected_result": "The system displays a table with columns 'Service Name', 'Purpose', and 'Data Sharing Policy', populated with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+    },
+    {
+      "test_id": "T_auto_4",
+      "requirement_id": "AFR2",
+      "scenario": "Third-Party Services Display from Settings Section",
+      "steps": [
+        "Log in to the system with a valid user account",
+        "Navigate to the 'Settings' section",
+        "Click on 'Third-Party Services'"
+      ],
+      "expected_result": "The system displays a table with columns 'Service Name', 'Purpose', and 'Data Sharing Policy', populated with the following services: Google Analytics for usage tracking, Sentry for error tracking, and Facebook for optional social sharing, with accurate and up-to-date information."
+    },
+    {
+      "test_id": "T_auto_5",
+      "requirement_id": "AFR3",
+      "scenario": "Test Successful Error Display for Unavailable User Data",
+      "steps": [
+        "Log in as an existing user",
+        "Simulate a failure in retrieving the user's data",
+        "Attempt to view the user's results"
+      ],
+      "expected_result": "The system displays an error message with a specific error code and a link to contact support."
+    },
+    {
+      "test_id": "T_auto_6",
+      "requirement_id": "AFR3",
+      "scenario": "Test Error Display with Correct Error Code and Support Link",
+      "steps": [
+        "Log in as an existing user",
+        "Simulate a failure in retrieving the user's data with a known error code",
+        "Attempt to view the user's results",
+        "Verify the error code in the displayed error message",
+        "Verify the presence and functionality of the support link"
+      ],
+      "expected_result": "The system displays an error message with the correct error code and a functional link to contact support."
+    },
+    {
+      "test_id": "T_auto_7",
+      "requirement_id": "AFR4",
+      "scenario": "Successful Data Recovery",
+      "steps": [
+        "1. Log in to the system as a valid user.",
+        "2. Enter sample data into the required fields.",
+        "3. Simulate a technical issue (e.g., server crash, network error) while the user is entering data.",
+        "4. Verify the system saves the entered data.",
+        "5. Check the system displays a recovery message with instructions."
+      ],
+      "expected_result": "The system saves the user's data and displays a recovery message with instructions on how to resume where they left off."
+    },
+    {
+      "test_id": "T_auto_8",
+      "requirement_id": "AFR4",
+      "scenario": "Data Recovery with Multiple Fields",
+      "steps": [
+        "1. Log in to the system as a valid user.",
+        "2. Enter sample data into multiple required fields (e.g., name, address, phone number).",
+        "3. Simulate a technical issue (e.g., server crash, network error) while the user is entering data.",
+        "4. Verify the system saves all entered data.",
+        "5. Check the system displays a recovery message with instructions."
+      ],
+      "expected_result": "The system saves all the user's data and displays a recovery message with instructions on how to resume where they left off."
+    },
+    {
+      "test_id": "T_auto_9",
+      "requirement_id": "AFR5",
+      "scenario": "Hover over premium feature icon as logged out user",
+      "steps": [
+        "Log out of the system",
+        "Navigate to a page containing a premium feature icon",
+        "Hover over the premium feature icon"
+      ],
+      "expected_result": "A tooltip is displayed with the exact price and a link to the subscription page"
+    },
+    {
+      "test_id": "T_auto_10",
+      "requirement_id": "AFR5",
+      "scenario": "Verify tooltip consistency across multiple premium features",
+      "steps": [
+        "Log out of the system",
+        "Navigate to a page containing multiple premium feature icons",
+        "Hover over each premium feature icon one by one"
+      ],
+      "expected_result": "For each premium feature icon, a tooltip is displayed with the exact price and a link to the subscription page"
+    },
+    {
+      "test_id": "T_auto_11",
+      "requirement_id": "AFR6",
+      "scenario": "View Last 30 Days of Mood History as Non-Subscribed User",
+      "steps": [
+        "Log in as a non-subscribed user",
+        "Navigate to the mood history section",
+        "Verify the display of the last 30 days of mood history entries"
+      ],
+      "expected_result": "The system displays a list of the last 30 days of mood history entries, including date, mood rating, and brief note for each entry, without prompting for a subscription."
+    },
+    {
+      "test_id": "T_auto_12",
+      "requirement_id": "AFR6",
+      "scenario": "Verify Date Range and Details for Non-Subscribed User",
+      "steps": [
+        "Log in as a non-subscribed user",
+        "Navigate to the mood history section",
+        "Check the date range of displayed mood history entries",
+        "Verify that each entry includes date, mood rating, and brief note"
+      ],
+      "expected_result": "The system displays mood history entries for the last 30 days only, and each entry includes the date, a mood rating, and a brief note, without requiring a subscription."
+    },
+    {
+      "test_id": "T_auto_13",
+      "requirement_id": "AFR7",
+      "scenario": "Valid Feedback Submission",
+      "steps": [
+        "Log in to the app as a registered user",
+        "Navigate to the feedback page",
+        "Enter valid feedback on app usability",
+        "Click the submit button"
+      ],
+      "expected_result": "A confirmation message is displayed that reads 'Thank you for your feedback.'"
+    },
+    {
+      "test_id": "T_auto_14",
+      "requirement_id": "AFR7",
+      "scenario": "Empty Feedback Submission",
+      "steps": [
+        "Log in to the app as a registered user",
+        "Navigate to the feedback page",
+        "Leave the feedback field empty",
+        "Click the submit button"
+      ],
+      "expected_result": "A confirmation message is displayed that reads 'Thank you for your feedback.'"
+    },
+    {
+      "test_id": "T_auto_15",
+      "requirement_id": "AFR8",
+      "scenario": "Valid Feedback Display",
+      "steps": [
+        "Log in as an administrator with valid credentials",
+        "Navigate to the dedicated feedback page",
+        "Verify that the page displays a list of submitted feedback"
+      ],
+      "expected_result": "The system displays a list of all submitted feedback, including the user's persona ID, feedback text, and timestamp for each feedback entry."
+    },
+    {
+      "test_id": "T_auto_16",
+      "requirement_id": "AFR8",
+      "scenario": "No Feedback Display",
+      "steps": [
+        "Log in as an administrator with valid credentials",
+        "Navigate to the dedicated feedback page",
+        "Verify that there is no feedback submitted"
+      ],
+      "expected_result": "The system displays an empty list or a message indicating that no feedback has been submitted yet."
+    },
+    {
+      "test_id": "T_auto_17",
+      "requirement_id": "AFR9",
+      "scenario": "Valid Reminder Time Notification",
+      "steps": [
+        "Set user's reminder time to 10:00 AM",
+        "Simulate system time to 10:00 AM",
+        "Verify system sends notification to user to track mood"
+      ],
+      "expected_result": "The user receives a notification at 10:00 AM to track their mood."
+    },
+    {
+      "test_id": "T_auto_18",
+      "requirement_id": "AFR9",
+      "scenario": "Reminder Time Notification When System Time Changes",
+      "steps": [
+        "Set user's reminder time to 11:30 AM",
+        "Simulate system time to 11:29 AM",
+        "Simulate system time to 11:30 AM",
+        "Verify system sends notification to user to track mood"
+      ],
+      "expected_result": "The user receives a notification at 11:30 AM to track their mood."
+    },
+    {
+      "test_id": "T_auto_19",
+      "requirement_id": "AFR10",
+      "scenario": "Valid Weekly Summary Generation",
+      "steps": [
+        "Create a user account and log in",
+        "Track the user's mood for 7 consecutive days with varying scores",
+        "Navigate to the weekly summary page",
+        "Verify the system generates a weekly summary"
+      ],
+      "expected_result": "The system displays the user's average mood score and highlights notable trends or patterns in their mood history."
+    },
+    {
+      "test_id": "T_auto_20",
+      "requirement_id": "AFR10",
+      "scenario": "Insufficient Data for Weekly Summary",
+      "steps": [
+        "Create a user account and log in",
+        "Track the user's mood for only 3 days",
+        "Navigate to the weekly summary page"
+      ],
+      "expected_result": "The system does not display a weekly summary and instead prompts the user to track their mood for at least 7 days."
     }
   ]
 }
